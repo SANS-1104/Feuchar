@@ -1,0 +1,173 @@
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.Dashboardsidebar {
+  width: 13vw;
+  background-color: white;
+  color: #475569;
+  padding: 20px;
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  box-shadow: 0px 14px 42px 0px #0f1c5f0f;
+}
+
+.Dashboardsidebar .Dasboardsidebar-upper{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.Dashboardsidebar-icon img{
+  width: 150px;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.Dashboardsidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.Dashboardsidebar-menu li {
+  padding: 15px 10px;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  font-family: Plus Jakarta Sans;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.7%;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  align-content: center;
+  gap: 0.5rem;
+}
+
+.Dashboardsidebar-menu li .icon{
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+
+.Dashboardsidebar-menu li:hover {
+  text-decoration: underline;
+}
+
+.Dashboardsidebar-menu li.active {
+  background-color: black;
+  color: #FAD02C;
+}
+
+.dashboard-content {
+  margin-left: 13vw;
+  padding: 1rem;
+  flex: 1;
+  flex-grow: 1;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+
+.Dashboardsidebar .Dasboardsidebar-lower{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.Dashboardsidebar .Dasboardsidebar-lower .setting-title{
+  font-family: Plus Jakarta Sans;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 16%;
+  text-transform: uppercase;
+  color: #A7A7AA;
+}
+
+
+.Dashboardsidebar .Dasboardsidebar-lower .setting-option a{
+  font-family: Plus Jakarta Sans;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.7%;
+  color: #525255;
+  text-decoration: none;
+}
+
+
+.Dashboardsidebar .Dasboardsidebar-lower .logout a{
+  font-family: Plus Jakarta Sans;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.7%;
+  color: #F43F5E;
+  text-decoration: none;
+}
+
+
+/* Hamburger Button */
+.hamburger-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Sidebar base */
+.Dashboardsidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+/* Hide sidebar on small screens by default */
+@media screen and (max-width: 768px) {
+  .hamburger-btn {
+    display: block;
+  }
+
+  .Dashboardsidebar {
+    transform: translateX(-100%);
+  }
+
+  .Dashboardsidebar.open {
+    transform: translateX(0);
+  }
+
+  .dashboard-content {
+    margin-left: 0 !important;
+    padding: 20px;
+    padding-top: 3.5rem;
+  }
+}
+
+/* On large screens, keep sidebar always visible */
+@media screen and (min-width: 769px) {
+  .dashboard-content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+}

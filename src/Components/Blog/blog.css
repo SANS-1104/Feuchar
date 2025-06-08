@@ -1,0 +1,258 @@
+:root {
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Poppins', sans-serif;
+  --font-accent: 'Playfair Display', serif;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid white;
+    border-radius: 999px;
+    overflow: hidden;
+    background-color: black;
+    width: fit-content;
+    padding: 3px;
+    margin-top: 2rem;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    color: white;
+    font-size: 16px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.search-button {
+    background-color: #f5b620;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.search-button:hover {
+    background-color: #e0a90f;
+}
+.BlogCategoryContainer {
+  padding: 2rem;
+}
+.BlogCategoryContainer .BlogCatTitle{
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 3%;
+  margin-bottom: 3rem;
+
+}
+
+.BlogL1-Outer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: black;
+}
+
+.BlogL1-Outer .BlogL1-Inner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+  gap: 1rem;
+  text-align: center;
+  align-items: center;
+}
+
+.BlogL1-Outer .BlogL1-Inner .title1{
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 3%;
+  text-align: center;
+  color: #F8B919;
+}
+.BlogL1-Outer .BlogL1-Inner .title2{
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 3%;
+  text-align: center;
+  color: white;
+}
+
+.blogL2-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: black;
+}
+
+.blogL2-outer .blogL2-inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;  
+}
+
+.blogL2-outer .blogL2-inner .baseImg{
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.blogL2-outer .blogL2-inner .baseImg img{
+  border-radius: 2rem;
+}
+
+.blogL2-outer .blogL2-inner .overlayImg{
+  background-color: rgb(35, 34, 34);
+  border-radius: 1.5rem;
+  color: white;
+  padding: 2rem;
+  width: 40%;
+  height: auto;
+  transform: translateY(-40%);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+}
+.yc{
+  color: #F8B919;
+}
+
+.blogL2-outer .blogL2-inner .overlayImg .layer1{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.blogL2-outer .blogL2-inner .overlayImg .layer1 .l1a img{
+  width: 116px;
+  height: 41px;
+  top: 1099px;
+  left: 200px;
+  margin-right: 1rem;
+}
+
+.blogL2-outer .blogL2-inner .overlayImg .layer2{
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 3%;
+
+}
+
+.blogL2-outer .blogL2-inner .overlayImg .layer3{
+  font-family: Nunito;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+}
+
+.cr:hover{
+  text-decoration: underline;
+}
+
+
+
+body {
+  background: #111;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.filter-bar span {
+  margin: 0 10px;
+  cursor: pointer;
+  color: grey;
+}
+
+.filter-bar .active {
+  color: #F8B919;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.Blogcard {
+  background: #222;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+.Blogcard img {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.category {
+  font-size: 0.8rem;
+  color: gold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.pagination button {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background: #F8B919;
+  color: black;
+}
+
+
+.Blogcard{
+  width: 419px;
+  height: 457px;
+  gap: 32px;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0px 0px 54px 24px #000000;
+  background-color: #141313;
+}
+
+.Blogcard img.BlogcardImg{
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+}

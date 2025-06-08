@@ -1,0 +1,791 @@
+:root {
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Poppins', sans-serif;
+  --font-accent: 'Playfair Display', serif;
+}
+.outerWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+    align-items: center;
+}
+.outerWrapper .innerWrapper{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.outerWrapper .innerWrapper .level1 .top2{
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 3rem;
+}
+
+.outerWrapper .innerWrapper .level1 .top3{
+    font-family: Nunito;
+    font-weight: 400;
+    font-size: 13.36px;
+    line-height: 17.82px;
+    letter-spacing: 0%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.outerWrapper .innerWrapper .secl2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem 5rem;
+    width: 100%;
+    margin: 4rem 0;
+}
+.outerWrapper .innerWrapper .secl2 .aboutImg img{
+    width: 500px;
+    height: 450px;
+    border-radius: 20px;
+
+}
+
+.outerWrapper .innerWrapper .secl2 .aboutImgDetail{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.outerWrapper .innerWrapper .secl2 .aboutImgDetail .detl1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
+}
+.outerWrapper .innerWrapper .secl2 .aboutImgDetail .detl1 .t1{
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 17.82px;
+    letter-spacing: 0%;
+    color: #F8B919;
+    display: flex;
+    flex-wrap: wrap;;
+}
+
+.outerWrapper .innerWrapper .secl2 .aboutImgDetail .detl1 .t2{
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 44.55px;
+    letter-spacing: -2%;
+}
+
+
+.outerWrapper .innerWrapper .secl2 .aboutImgDetail .detl2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+.outerWrapper .innerWrapper .secl2 .aboutImgDetail .detl2 .t3{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.outerWrapper .innerWrapper .secl2 .aboutImgDetail .detl2 .t4{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+
+.outerWrapper .innerWrapper .secl2 .aboutImgDetail .detl2 .t3 .t3a{
+    margin-right: 1rem;
+}
+
+.outerWrapper .innerWrapper .secl2 .aboutImgDetail .detl2 .t3 .t3b{
+    margin-right: 1rem;
+}
+
+/* 
+**********************
+| Section1 Component |
+**********************
+*/
+
+.rowSec-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.rowSec-wrapper .number{
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 53.45px;
+    letter-spacing: -2%;
+    color: #F8B919;
+}
+
+.rowSec-wrapper .details{
+    font-family: Nunito;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20.79px;
+    letter-spacing: 0%;
+    color: white;
+}
+
+.outerWrapper .innerWrapper .secl3{
+    font-family: Nunito;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 3rem;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .outerWrapper .innerWrapper .level1 .top1{
+    font-size: 18px;
+  }
+  .outerWrapper .innerWrapper .level1 .top2{
+    font-size: 30px;
+    padding: 0 2rem;
+  }
+  .outerWrapper .innerWrapper .level1 .top2 .top21{
+    width: 100%;
+  }
+  .outerWrapper .innerWrapper .level1 .top3{
+    padding: 0 2rem;
+  }
+  .outerWrapper .innerWrapper .level1 .top3 .top31{
+    width: 100%;
+    padding: 0.25rem;
+  }
+  .outerWrapper .innerWrapper .secl2 .aboutImgDetail .detl1 {
+    justify-content: center;
+    align-items: center;
+  }
+  .outerWrapper .innerWrapper .secl3{
+    padding: 0 5rem;
+    width: 70%;;
+  }
+  .outerWrapper .innerWrapper .secl2 .aboutImgDetail .detl1 .t1 .t1a{
+    width: 100%;
+    justify-content: center;
+    padding-top: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+  .outerWrapper .innerWrapper .secl2 .aboutImgDetail .detl1 .t2{
+    font-size: 25px;
+  }
+  .outerWrapper .innerWrapper .secl2 .aboutImgDetail{
+    width: 100%;
+  }
+  .outerWrapper .innerWrapper .secl2 .aboutImgDetail .detl2 {
+    justify-content: center;
+    padding: 2rem 1rem;
+    gap: 1rem;
+   }
+   .rowSec-wrapper .number{
+    font-size: 35px;
+   }
+   .rowSec-wrapper .details{
+    font-size: 14px;
+   }
+}
+
+@media only screen and (min-width: 768px) {
+    .outerWrapper .innerWrapper .secl3{
+        padding: 0;
+        font-size: 20px;
+    }
+}
+
+
+
+
+/* 
+*****************************
+| Subjects Card Component   |
+*****************************
+*/
+
+.SubjectsOuterWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+}
+
+.SubjectsOuterWrapper .SubjectsInnerWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 4rem;
+}
+.SubjectsOuterWrapper .SubjectsInnerWrapper .subHeadingSection{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+}
+.SubjectsOuterWrapper .SubjectsInnerWrapper .subHeadingSection .t1{
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 32.67px;
+    letter-spacing: -2%;
+    text-align: center;
+    color: white
+}
+
+.SubjectsOuterWrapper .SubjectsInnerWrapper .subHeadingSection .t2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    font-family: Nunito;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22.27px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: white;
+}
+
+
+.SubjectsOuterWrapper .SubjectsInnerWrapper .cardSection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+}
+
+
+
+.AboutSubCardCompTitle-Wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 350px;
+    height: 200px;
+    gap: 14px;
+    border-radius: 13.65px;
+    border-width: 0.68px;
+    padding: 17.74px;
+    background-color: #141414;
+    border: 0.68px solid #2D2D2D;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.AboutSubCardCompTitle-Wrapper .AboutSubCardCompTitle{
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 21.83px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #F8B919;
+}
+
+.AboutSubCardCompTitle-Wrapper .AboutSubCardCompDesc{
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #CAC7C7;
+}
+
+/* 
+*****************************
+| Course Card Component     |
+*****************************
+*/
+.AboutCourseCardComp-Wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 450px;
+    height: 200px;
+    gap: 32px;
+    border-radius: 20px;
+    border-width: 1px;
+    padding: 20px;
+    background-color: #141313;
+    border: 1px solid #2D2D2D;
+}
+
+.AboutCourseCardComp-Wrapper .AboutCourseCardCompTitle{
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: #F8B919;
+}
+
+.AboutCourseCardComp-Wrapper .AboutCourseCardCompDesc{
+    font-family: Nunito;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: white;
+}
+
+.SubjectsOuterWrapper .SubjectsInnerWrapper .cardSectionCourse{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .SubjectsOuterWrapper .SubjectsInnerWrapper .cardSectionCourse{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .AboutCourseCardComp-Wrapper{
+        width: 300px;
+        height: auto;
+    }
+
+}
+
+
+
+/* 
+*****************
+| TESTIMONIAL   |
+*****************
+*/
+
+.StudentCardComponent-Outer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* width: 327.3333435058594px; */
+    height: 400px;
+    border: 1.2px;
+    padding: 36.09px;
+    border-right: 2px dashed rgba(255, 255 ,255,0.4);
+    border-bottom: 2px dashed rgba(255, 255 ,255,0.4);
+    justify-content: space-between;
+}
+
+.StudentCardComponent-Outer .layer3{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #81807E;
+}
+
+.StudentCardComponent-Outer .layer3 .testimonial-Tagline{
+    font-weight: bold;
+    font-size: 18px;
+    color: #cac9c8;
+    font-family: var(--font-primary);
+}
+.StudentCardComponent-Outer .layer3 .About-stu{
+    font-style: italic;
+    color: #cac9c8;
+}
+.StudentCardComponent-Outer .layer2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.StudentCardComponent-Outer .layer2 img{
+    width: 90px;
+    height: 18px;
+}
+
+.StudentCardComponent-Outer .layer1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.StudentCardComponent-Outer .layer1 .l1part1 img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #AE9B84;
+    width: fit-content;
+}
+
+.StudentCardComponent-Outer .layer1 .l1part2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding-left: 1rem;
+}
+
+.StudentCardComponent-Outer .layer1 .l1part2 .l12a{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: white;
+}
+
+.StudentCardComponent-Outer .layer1 .l1part2 .l12b{
+    font-family: Roboto Mono;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: #A2A2A2;
+}
+
+
+.outerTestimonial{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+    padding: 4rem 3rem;
+}
+
+.outerTestimonial .innerTestimonial{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 2px dashed rgba(255, 255 ,255,0.4);
+    margin: 2rem;
+    width: 100%;
+}
+
+.outerTestimonial .innerTestimonial .HeadingLayer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px dashed rgba(255, 255 ,255,0.4);
+    
+}
+.outerTestimonial .innerTestimonial .HeadingLayer .right img{
+    width: 250px;
+    height: 250px;
+    color: #F8B919;
+}
+
+.outerTestimonial .innerTestimonial .HeadingLayer .left{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    gap: 1rem;
+    padding-top: 4rem;
+}
+
+.outerTestimonial .innerTestimonial .HeadingLayer .left .head{
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 33.01px;
+    letter-spacing: -2%;
+    color: white;
+}
+
+.outerTestimonial .innerTestimonial .HeadingLayer .left .subHead{
+    font-family: Nunito;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: white;
+    width: 60%;
+}
+
+.outerTestimonial .innerTestimonial .testDesc{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+    .StudentCardComponent-Outer{
+        height: max-content;
+    }
+    .outerTestimonial{
+        padding: 4rem 0;
+    }
+    .outerTestimonial .innerTestimonial .HeadingLayer .left{
+        padding: 2rem;
+    }
+    .outerTestimonial .innerTestimonial .testDesc{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .outerTestimonial .innerTestimonial .HeadingLayer .left .subHead{
+        width: 100%;
+    }
+    .outerTestimonial .innerTestimonial .HeadingLayer .right img{
+        width: 150px;
+        height: 150px;
+        padding-left: 1rem;
+    }
+
+}
+
+
+/* 
+*******
+| FAQ |
+*******
+*/
+
+.outerTestimonial .innerTestimonial .HeadingLayer .FAQright img{
+    width: 200px;
+    height: 265.4761962890625px;
+}
+
+.outerTestimonial .innerTestimonial .FAQdesc{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.FAQCardComponent-Outer{
+    height: 180px;
+    padding: 35.71px;
+}
+
+.FAQCardComponent-Outer .layer1{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: white;
+}
+
+.FAQCardComponent-Outer .layer3{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #81807E;
+}
+
+@media (max-width: 1024px) {
+    .FAQCardComponent-Outer{
+        height: 300px;
+    }
+    .outerTestimonial .innerTestimonial .FAQdesc{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+
+
+/* 
+*********
+| CHIPS |
+*********
+*/
+
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #000;
+}
+
+.chip {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  border: 1px dashed #555;
+  background: transparent;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: white;
+}
+
+.chip.active {
+  background-color: #d6c4b4;
+  color: black;
+  font-weight: 500;
+  border: none;
+}
+
+.Values-OuterSection{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+}
+
+.Values-section {
+    display: flex;
+    padding: 2rem;
+    background-color: black;
+    color: white;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 80%;
+}
+
+.Values-left {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Values-left h2 {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: white;
+}
+
+.Values-left .Values-left-desc {
+    font-family: Urbanist;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.Values-section .Values-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 2;
+    border: 0.74px solid #262626;
+    background-color: #141414;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+}
+
+.Values-section .t3,.Values-section .t4 {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.Values-section .t3a, .Values-section .t3b,.Values-section .t4a,.Values-section .t4b {
+    flex: 1;
+}
+
+.Values-section .Values-right .t3 .t3a{
+
+}
+.ValueCard-outer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ValueCard-outer .headLayer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ValueCard-outer .headLayer .headLa img{
+    width: 50px;
+    height: 50px;
+    border-radius: 38.59px;
+    border-width: 0.74px;
+    gap: 7.42px;
+    padding: 11.88px;
+}
+
+
+.ValueCard-outer .headLayer .headLb{
+    font-family: Urbanist;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0%;
+}
+
+.ValueCard-outer .descLayer{
+    font-family: Urbanist;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #999999;
+}
+
+
+@media (max-width: 1024px) {
+    .Values-section {
+        width: 100%;
+    }
+    .Values-section .Values-right {
+        flex: 1;
+    }
+    .ValueCard-outer{
+        border-bottom: 1px solid #555;
+        padding-bottom: 2rem;
+        text-align: left;
+    }
+    .Values-left .Values-left-desc {
+        justify-content: center;
+        align-items: center;
+        padding-right: 1.25rem;
+    }
+}

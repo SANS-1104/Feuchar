@@ -1,0 +1,117 @@
+.testimonial-carousel {
+  padding: 4rem;
+  background: black;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+}
+
+.carousel-header .title {
+    margin: 0;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 39.17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+
+}
+
+.carousel-arrows button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  border-radius: 50%;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.carousel-arrows button:hover {
+  background: white;
+  color: black;
+}
+
+/* Wrapper hides scrollbar and prevents overflow */
+.carousel-track-wrapper {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0 2rem 1rem 2rem;
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar on WebKit browsers */
+.carousel-track-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-card {
+  flex: 0 0 300px;
+  border-radius: 2rem;
+  padding: 1.2rem;
+  transition: 0.3s;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.Testi-title{
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 20.29px;
+    line-height: 20.29px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+.quote {
+    margin: 0.8rem 0;
+    font-family: Syne;
+    font-weight: 400;
+    font-size: 13.53px;
+    line-height: 20.29px;
+    letter-spacing: 0%;
+}
+
+.card-TestDesc{
+    display: flex;
+    flex-direction: column;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.author img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .testimonial-carousel {
+    padding: 0;
+  }
+}
