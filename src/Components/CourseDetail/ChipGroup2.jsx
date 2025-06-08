@@ -4,7 +4,7 @@ import '../About/about.css';
 const chipOptions = ["All", "Ordering", "Shipping", "Returns", "Support"];
 
 const ChipGroup2 = ({ onSelect }) => {
-  const [active, setActive] = useState("Shipping");
+  const [active, setActive] = useState("All");
 
   const handleClick = (option) => {
     setActive(option);

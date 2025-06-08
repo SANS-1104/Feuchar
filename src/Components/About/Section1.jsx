@@ -12,7 +12,7 @@ export default function Section1(){
             det: 'Return on investment'
         },
         {
-            num: '10+' ,
+            num: '5+' ,
             det: 'Experienced Astro-Gurus'
         },
         {
@@ -27,8 +27,9 @@ export default function Section1(){
                 <div className="level1">
                     <div className="top1">About us</div>
                     <div className="top2">
-                        <div className='top21'>Our Vision, Mission,</div>
-                        <div className='top21'>&nbsp;And Impact</div>
+                        <div className='top21'>Our Vision,</div>
+                        <div className='top21'>Mission,</div>
+                        <div className='top21'>And Impact</div>
                          
                     </div>
                     <div className="top3">

@@ -178,6 +178,8 @@
 
 
 
+
+
 .error {
   color: red;
   font-size: 12px;
@@ -194,17 +196,23 @@
     color: black;
     box-shadow: 0px 2px 10px 0px #7C8DB559;
     box-shadow: 0px 4px 4px 0px #00000040;
-    padding-top: 15px;
-    padding-right: 20px;
+    padding-top: 25px;
+    padding-right: 25px;
     padding-bottom: 25px;
-    padding-left: 20px;
+    padding-left: 25px;
     border-radius: 10px;
+}
+
+
+.downloadForm-wrapper{
+    box-shadow: none;
+    padding: 0;
 }
 
 .HomeHeroForm-wrapper h2{
     font-family: Montserrat;
     font-weight: 600;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 44px;
     letter-spacing: -1.4%;
 }
@@ -212,7 +220,7 @@
 .HomeHeroForm-wrapper p{
     font-family: Plus Jakarta Sans;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 20px;
     letter-spacing: -0.6%;
     color: #F8B919;
@@ -271,7 +279,9 @@
 @media only screen and (max-width: 1024px) {
     
     .OuterHero-wrapper-courseDet {
-        padding: 4rem 0rem;
+        padding: 1rem 0rem;
+        padding-bottom: 2rem;
+        padding-top: 0;
         flex-wrap: wrap;
     }
     .OuterHero-wrapper-courseDet  .left-half{
@@ -305,5 +315,8 @@
     }
     .OuterHero-wrapper-courseDet  .left-half .layer2 .layer21 .a .a2{
         font-size: 15px;
+    }
+    .OuterHero-wrapper-courseDet .right-half{
+        display: none;
     }
 }

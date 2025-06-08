@@ -6,7 +6,7 @@ export default function WebinarCoursePrev(){
             <div className="upper">Course Preview Video</div>
             <div className="lower">
                 <div className="vid">
-                    <a href='https://youtu.be/INmhJdr-hmQ' target='blank' rel="noopener noreferrer">
+                    <a href='https://youtube.com/shorts/kyz0pIt_olo' target='blank' rel="noopener noreferrer">
                         <img src="/images/courseDet4.png" alt="YouTube" className="" />
                     </a>
                 </div>

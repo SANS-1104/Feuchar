@@ -4,7 +4,7 @@ import StudentCardComponent from './StudentCardComponent'
 export default function Testimonial() {
   const StudentTestimonial = [
     {
-      img: '/images/testimonial1.png',
+      img: '/images/randomG1.jpg',
       name: 'Meenal Joshi',
       minCTC: '4',
       maxCTC: '15',
@@ -13,7 +13,7 @@ export default function Testimonial() {
       about: '— Meenal Joshi, Aspiring Astrologer, Jaipur'
     },
     {
-      img: '/images/testimonial2.png',
+      img: '/images/randomG2.jpg',
       name: 'Ritika Sharma',
       minCTC: '4',
       maxCTC: '15',
@@ -22,7 +22,7 @@ export default function Testimonial() {
       about: ' — Ritika Sharma, Student, Delhi'
     },
     {
-      img: '/images/testimonial3.png',
+      img: '/images/randomB1.avif',
       name: 'Karan Mehta',
       minCTC: '4',
       maxCTC: '15',
@@ -31,7 +31,7 @@ export default function Testimonial() {
       about:'— Karan Mehta, IT Professional, Pune'
     },
     {
-      img: '/images/testimonial4.png',
+      img: '/images/randomG3.jpg',
       name: 'Sakshi Verma',
       minCTC: '4',
       maxCTC: '15',
@@ -40,7 +40,7 @@ export default function Testimonial() {
       about: '— Sakshi Verma, Certified Astrologer, Jaipur'
     },
     {
-      img: '/images/testimonial5.png',
+      img: '/images/randomB2.avif',
       name: 'Ramesh Iyer',
       minCTC: '4',
       maxCTC: '15',
@@ -49,7 +49,7 @@ export default function Testimonial() {
       about: '— Ramesh Iyer, Freelancer, Bengaluru'
     },
     {
-      img: '/images/testimonial6.png',
+      img: '/images/randomB3.jpg',
       name: 'Aditya Rawal',
       minCTC: '4',
       maxCTC: '15',

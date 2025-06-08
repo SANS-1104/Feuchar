@@ -1,0 +1,537 @@
+.OverviewWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.OverviewWrapper .left{
+    flex: 1;
+    overflow-y: auto;
+    height: 100vh;
+    padding: 2rem;
+    /* overflow-x: scroll; */
+    width: 100%;
+    max-width: 100%;
+}
+
+.OverviewWrapper .right{
+    width: 280px;
+    height: 100vh;
+}
+
+
+
+.RightSide-wrapper{
+    width: max-content;
+    background-color: #FFFFFF;
+    right: 0;
+    min-height: 100vh;
+    height: 100vh;
+    box-shadow: 0px 14px 42px 0px #080F340F;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.RightSide-wrapper .upper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.RightSide-wrapper .upper .l1{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1px;
+}
+
+.RightSide-wrapper .upper .l1 .a{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-gray-100, #202020);
+}
+
+.RightSide-wrapper .upper .l3{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.RightSide-wrapper .upper .l3 .a{
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #202020;
+}
+
+.RightSide-wrapper .upper .l3 .b{
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #7E7E7E;
+}
+
+.RightSide-wrapper .upper .l3 .c{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.RightSide-wrapper .upper .l3 .c .c1{
+    padding:  12px;
+    border: 1px solid var(--color-gray-60, #9E9E9E);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.RightSide-wrapper .upper .l2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.RightSide-wrapper .upper .l2 .l2a{
+    width: 100px;
+    height: 100px;
+    background: #CCCCCC4D;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(
+        #FAD02C 0deg 180deg,  
+        #CCCCCC4D 180deg 360deg    
+    );
+}
+
+.RightSide-wrapper .upper .l2 .l2b{
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    box-shadow: 0px 18px 54px 0px #14142B29;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RightSide-wrapper .upper .l2 .l2b img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+
+.Overviewsearch-bar {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  border: 1px solid #EFEFF2;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 1rem;
+  background-color: #FDFDFD;
+}
+
+.Overviewsearch-bar input {
+    flex: 1;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+    font-family: Plus Jakarta Sans;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.7%;
+    color: #818183;
+
+}
+
+.Overviewsearch-bar button {
+  /* background: #007bff; */
+  /* color: #525255; */
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+
+.OverviewSkillSharp-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start ;
+    background-color: #FAD02C;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    gap: 1rem;
+}
+
+
+.OverviewSkillSharp-wrapper .l1{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.OverviewSkillSharp-wrapper .l2{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: white;
+}
+.OverviewSkillSharp-wrapper .l3 button{
+    background-color: #202020;
+    color: #FFFFFF;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+}
+
+
+.OverviewWatchedModules-wrapper-outer{
+    overflow-x: visible;
+    width: 100%;
+}
+.OverviewWatchedModules-wrapper {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    padding: 3rem 1rem;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+}
+.OverviewWatchedModules-wrapper::-webkit-scrollbar {
+  display: none; 
+}
+
+.OverviewWatchedModules-wrapper .OverviewWatched-card{
+    flex: 0 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 14px 42px 0px #080F340F;
+    padding: 1rem 2rem ;
+    width: fit-content;
+    border-radius: 12px;
+}
+
+.OverviewWatchedModules-wrapper .OverviewWatched-card .WatchMod-left{
+    border-radius: 50%;
+    background-color: #ECEBFF;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.OverviewWatchedModules-wrapper .OverviewWatched-card .WatchMod-left img{
+    width: 16px;
+    height: 16px;
+}
+
+.OverviewWatchedModules-wrapper .OverviewWatched-card .WatchMod-mid{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: fit-content;
+}
+
+.OverviewWatchedModules-wrapper .OverviewWatched-card .WatchMod-mid .a{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #5F5F5F;
+    width: fit-content;
+}
+
+.OverviewWatchedModules-wrapper .OverviewWatched-card .WatchMod-mid .b{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #202020;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+
+.ContinueWatching-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    max-width: 100%;
+    width: 100%;
+}
+
+.ContinueWatching-wrapper .upper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ContinueWatching-wrapper .upper .title{
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: capitalize;
+    color: #202020;
+}
+
+
+.ContinueWatching-wrapper .upper .scrollControls{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ContinueWatching-wrapper .upper .scrollControls .control button{
+    border: none;
+    background-color: transparent;
+}
+
+.ContinueWatching-wrapper .upper .scrollControls .control button img{
+    width: 30px;
+    height: 30px;
+}
+
+
+.ContinueWatching-wrapper .lower{
+    display: flex;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    max-width: 100%;
+}
+.lower::-webkit-scrollbar {
+  display: none;
+}
+
+.ContinueWatching-wrapper .lower .lower-inner{
+    display: flex;
+    /* overflow-x: auto;
+    scroll-behavior: smooth; */
+    gap: 1rem;
+    max-width: 100%;
+    width: 100%;
+}
+
+
+.ContinueWatching-wrapper .lower .lower-inner .ContinueWatch-card{
+    box-shadow: 0px 14px 42px 0px #080F340F;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 0 0 auto;
+    width: 250px;
+}
+
+
+
+.ContinueWatching-wrapper .lower .lower-inner .ContinueWatch-card .l1 img{
+    width: 228px;
+    height: 113px;
+    border-radius: 12px;
+}
+
+
+.ContinueWatching-wrapper .lower .lower-inner .ContinueWatch-card .l2{
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #202020;
+}
+
+
+.ContinueWatching-wrapper .lower .lower-inner .ContinueWatch-card .l4{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ContinueWatching-wrapper .lower .lower-inner .ContinueWatch-card .l4 .l41 img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+.ContinueWatching-wrapper .lower .lower-inner .ContinueWatch-card .l4 .l42{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.ContinueWatching-wrapper .lower .lower-inner .ContinueWatch-card .l4 .l42 .a{
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #202020;
+}
+
+.ContinueWatching-wrapper .lower .lower-inner .ContinueWatch-card .l4 .l42 .b{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #202020;
+}
+
+
+/* Hide RightSide on mobile by default */
+.right.desktop-only {
+  display: block;
+}
+
+.hamburger-icon {
+  display: none;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/* Sidebar overlay for mobile */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  z-index: 999;
+  transition: right 0.3s ease-in-out;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+.sidebar-overlay.show {
+  right: 0;
+}
+
+.sidebar-close {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: right;
+  cursor: pointer;
+}
+
+
+
+/* Responsive Settings */
+@media screen and (max-width: 1024px) {
+    .OverviewWrapper .left{
+        width: 100vw;
+        padding: 0;
+        padding-top: 2rem;
+    }
+    .Overviewsearch-bar {
+        width: 90%;
+    }
+  .right.desktop-only {
+    display: none;
+  }
+  .OverviewSkillSharp-wrapper {
+        width: 90%;
+    }
+
+  .hamburger-icon {
+    display: block;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    z-index: 1000;
+  }
+  .ContinueWatching-wrapper .lower .lower-inner{
+    gap: 4rem;
+  }
+  .OverviewWatchedModules-wrapper{
+    padding: 3rem 0;
+  }
+
+  .OverviewWatchedModules-wrapper .OverviewWatched-card{
+    width: 90%;
+  }
+  .OverviewWatchedModules-wrapper .OverviewWatched-card .WatchMod-mid{
+    width: 50%;
+    padding: 0;
+  }
+  
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    .OverviewSkillSharp-wrapper {
+        width: 80%;
+    }
+}

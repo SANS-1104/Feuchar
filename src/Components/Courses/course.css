@@ -11,6 +11,7 @@
     align-items: center;
     background-color: black;
     padding: 4rem;
+    padding-bottom: 1rem;
 }
 
 .course-title-outer .course-title-inner {
@@ -55,7 +56,7 @@
   padding: 20px;
   background-color: #000;
   color: white;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -66,7 +67,8 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */ 
+  /* Will Be updated in future when more courses added */
   max-width: 1200px;
   margin: 0 auto;
   gap: 3rem;

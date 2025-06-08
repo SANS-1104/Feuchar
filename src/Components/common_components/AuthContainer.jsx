@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Login from "./Login";
 import SignUp from "./SignUp";
-import ForgetPass from "./ForgetPass";
+import ForgetPass from "./ForgetPassword/ForgetPass";
 
 const AuthContainer = () => {
   const location = useLocation();

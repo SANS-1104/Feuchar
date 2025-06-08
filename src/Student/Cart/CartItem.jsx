@@ -10,7 +10,7 @@ function CartItem({ item, onQuantityChange, onRemove }) {
       </td>
 
       <td className="cart-price">
-        ${item.price}
+        ₹ {item.price}
       </td>
 
       <td className="cart-quantity">
@@ -22,7 +22,7 @@ function CartItem({ item, onQuantityChange, onRemove }) {
       </td>
 
       <td className="cart-total">
-        ${item.price * item.quantity}
+        ₹ {item.price * item.quantity}
       </td>
     </tr>
   );

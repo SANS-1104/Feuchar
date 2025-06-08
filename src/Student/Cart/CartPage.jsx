@@ -5,7 +5,7 @@ import CartItem from './CartItem';
 import CartSummary from './CartSummary';
 import './cart.css';
 
-function Cart() {
+function CartPage() {
   const { cart, updateQuantity, removeItem } = useCart();
 
   return (
@@ -45,4 +45,4 @@ function Cart() {
   );
 }
 
-export default Cart;
+export default CartPage;

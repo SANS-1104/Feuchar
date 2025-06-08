@@ -17,7 +17,8 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  padding: 3rem 0 1rem;
+  padding: 0;
+  padding-bottom: 1rem;
   gap: 1rem;
 }
 
@@ -43,6 +44,7 @@ td.cart-product{
   font-family: Montserrat;
   font-weight: 400;
   font-size: 20px;
+  padding-top: 4rem;
   line-height: 100%;
   letter-spacing: 3%;
   text-align: center;

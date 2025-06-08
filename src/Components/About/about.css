@@ -26,7 +26,14 @@
     flex-direction: row;
     padding: 0 3rem;
 }
-
+.outerWrapper .innerWrapper .level1 .top2 .top21{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 0.5rem ;
+}
 .outerWrapper .innerWrapper .level1 .top3{
     font-family: Nunito;
     font-weight: 400;
@@ -393,12 +400,13 @@
     flex-direction: column;
     flex-wrap: wrap;
     /* width: 327.3333435058594px; */
-    height: 400px;
+    height: 450px;
     border: 1.2px;
     padding: 36.09px;
     border-right: 2px dashed rgba(255, 255 ,255,0.4);
     border-bottom: 2px dashed rgba(255, 255 ,255,0.4);
     justify-content: space-between;
+    gap: 1rem;
 }
 
 .StudentCardComponent-Outer .layer3{
@@ -446,8 +454,8 @@
 }
 
 .StudentCardComponent-Outer .layer1 .l1part1 img{
-    width: 60px;
-    height: 60px;
+    width: 40px !important;
+    height: 40px !important;
     border-radius: 50%;
     background-color: #AE9B84;
     width: fit-content;
@@ -587,7 +595,7 @@
 }
 
 .FAQCardComponent-Outer{
-    height: 180px;
+    height: 230px;
     padding: 35.71px;
 }
 
@@ -611,7 +619,7 @@
 
 @media (max-width: 1024px) {
     .FAQCardComponent-Outer{
-        height: 300px;
+        height: max-content;
     }
     .outerTestimonial .innerTestimonial .FAQdesc{
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

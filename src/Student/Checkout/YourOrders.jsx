@@ -22,7 +22,7 @@ export default function YourOrders({ cart }) {
             <tr key={index} className="checkout-item-row">
               <td className="checkout-item-name">{item.name}</td>
               <td className="checkout-item-qty">{String(item.quantity).padStart(2, '0')}</td>
-              <td className="checkout-item-price">${item.price * item.quantity}</td>
+              <td className="checkout-item-price">₹ {item.price * item.quantity}</td>
             </tr>
           ))}
         </tbody>
@@ -30,15 +30,15 @@ export default function YourOrders({ cart }) {
 
       <div className='cart-subtotal cart-tile'>
         <div className='cart-subtotal-label'>SUBTOTAL</div>
-        <div className='cart-subtotal-value'>${subtotal}</div>
+        <div className='cart-subtotal-value'>₹ {subtotal}</div>
       </div>
       <div className='cart-discount cart-tile'>
         <div className='cart-discount-label'>SHIPPING</div>
-        <div className='cart-discount-value'>${shipping}</div>
+        <div className='cart-discount-value'>₹ {shipping}</div>
       </div>
       <div className='cart-total cart-tile'>
         <div className='cart-total-label'>Total</div>
-        <div className='cart-total-value'>${total}</div>
+        <div className='cart-total-value'>₹ {total}</div>
       </div>
     </div>
   );

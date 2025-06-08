@@ -146,7 +146,7 @@
 @media only screen and (max-width: 1024px) {
     .courseDet-HeroCont-outer{
         padding: 1rem;
-        margin-top: 4rem;
+        margin-top: 0rem;
     }
     .courseDet-HeroCont-outer .courseDet-HeroCont-inner{
         padding: 1rem;
@@ -158,28 +158,57 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: space-between;
+    justify-content: space-evenly;
+    gap: 3rem;
+    align-items: center;
     gap: 3rem;
     padding: 2rem 4rem;
     width: 100%;
     border-bottom: 2px dashed #262626;
 }
 
+
 .courseDet-HeroCont-outer .courseDet-HeroCont-inner .courseDet-HeroCont-layer2 .right{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 1rem;
-    border-left: 2px dashed #262626;
+    /* border-left: 2px dashed #262626; */
 }
 
+.courseDet-HeroCont-outer .courseDet-HeroCont-inner .courseDet-HeroCont-layer2 .right .rightA{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    align-items: center;
+}
+
+
 .courseDet-HeroCont-outer .courseDet-HeroCont-inner .courseDet-HeroCont-layer2 .right .rightA img{
-    width: 500px;
-    height: 250px;
+    width: 180px;
+    height: auto;
     border-radius: 20px;
 
 }
+.courseDet-HeroCont-outer .courseDet-HeroCont-inner .courseDet-HeroCont-layer2 .right .rightA .desc{
+    color: white;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.courseDet-HeroCont-outer .courseDet-HeroCont-inner .courseDet-HeroCont-layer2 .right .rightB{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+}
+
 
 .courseDet-HeroCont-outer .courseDet-HeroCont-inner .courseDet-HeroCont-layer2 .left{
     display: flex;
@@ -188,7 +217,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding-right: 4rem;
+    /* padding-right: 4rem; */
     /* width: 50% ; */
 }
 
@@ -232,7 +261,78 @@
 }
 
 
-@media only screen and (max-width: 1024px) {
+.dotplot-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 20px;
+  gap: 2rem;
+}
+
+.dot-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dot {
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.small-dot {
+  width: 15px;
+  height: 15px;
+  background-color: #555;
+}
+
+.big-dot {
+  width: 220px;
+  height: 220px;
+  background-color: #F8B919;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  color: rgb(38, 37, 37);
+  font-weight: 500;
+  font-family: Poppins;
+  padding: 4px;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 20px;
+  margin-bottom: 2px;
+  color: #333;
+}
+
+.label-text {
+  font-size: 16px;
+  text-align: center;
+  max-width: 150px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.right-label {
+  margin-top: 10px;
+}
+
+
+
+
+@media only screen and (max-width: 1200px) {
     .courseDet-HeroCont-outer .courseDet-HeroCont-inner .courseDet-HeroCont-layer2{
         padding: 2rem;
     }
@@ -241,7 +341,7 @@
         align-items: center;
     }
     .courseDet-HeroCont-outer .courseDet-HeroCont-inner .courseDet-HeroCont-layer2 .right .rightA img{
-        width: 70vw;
+        width: 150px;
         height: auto;
     }
 
@@ -251,6 +351,20 @@
     }
 
 }
+
+@media (min-width: 550px) and (max-width: 1200px) {
+    .courseDet-HeroCont-outer .courseDet-HeroCont-inner .courseDet-HeroCont-layer2 .left .leftA{
+        width: 500px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .courseDet-HeroCont-outer .courseDet-HeroCont-inner .courseDet-HeroCont-layer2 .left .leftA{
+        width: 500px;
+        height: 450px;
+    }
+}
+
 
 
 .brdr-btm{
@@ -276,10 +390,10 @@
 
 .courseDetHero-wrapper .right-half{
     width: 49%;
+    border-left: 1.6px dashed #262626;
 }
 
 .courseDetHero-wrapper .left-half{
-    border-right: 1.6px dashed #262626;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -749,5 +863,45 @@
     }
     .CourseDetLast-outer-wrapper .CourseDetLast-inner-wrapper .b3{
         font-size: 16px;
+    }
+}
+
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  /* max-width: 500px; */
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .popup-content {
+        width: 300px;
     }
 }

@@ -6,6 +6,24 @@ import { useNavigate } from 'react-router-dom';
 
 
 export default function CourseDetailHeroPart3({course}) {
+    const handleDownloadClick = () => {
+        const token = localStorage.getItem('token'); // adjust key based on your auth logic
+
+        if (token) {
+            // User is logged in, trigger download
+            const syllabusURL = "/files/syllabus.pdf"; // Update with actual path
+            const link = document.createElement('a');
+            link.href = syllabusURL;
+            link.download = 'syllabus.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } else {
+            //  User not logged in: open your form popup
+            const popupEvent = new CustomEvent('openSyllabusForm');
+            window.dispatchEvent(popupEvent);
+        }
+    };
     const navigate = useNavigate();
     return (
         <div className="courseDetHero-wrapper">
@@ -27,7 +45,7 @@ export default function CourseDetailHeroPart3({course}) {
                             </div>
                             <div className="t7">Harness the power of numbers to create a fulfilling career! Our full Numerology Course teaches students and working professionals how to analyze life paths, uncover hidden patterns, and offer personalized guidance. Learn practical techniques to build a side income or a sustainable career. Enroll now and turn numerology into your success story!</div>
                         </div>
-                        <div className="t8"><button>Download Full Syllabus</button> </div>
+                        <div className="t8"><button onClick={handleDownloadClick}>Download Full Syllabus</button> </div>
                     </div>
                 </div>
                 <div className="left-half-layer2 w100 ">

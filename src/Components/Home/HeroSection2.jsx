@@ -56,16 +56,6 @@ function HeroSection2() {
           </div>
         </div>
         <ModalPopup isOpen={isModalOpen} onClose={closeModal} />
-      {/* <ToastContainer
-          position="top-right"
-          autoClose={4000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          pauseOnHover
-          draggable
-          theme="colored"
-        /> */}
       </>
   );
 }

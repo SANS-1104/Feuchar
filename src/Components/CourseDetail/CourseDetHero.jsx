@@ -1,6 +1,7 @@
 import './CourseDetail.css';
 import CourseDetailHeroPart1 from "./CourseDetailHeroPart1";
 import CourseDetailHeroPart3 from "./CourseDetailHeroPart3";
+import DotPlot from './DotPlot';
 
 
 export default function CourseDetHero({course}) {
@@ -23,10 +24,13 @@ export default function CourseDetHero({course}) {
                     </div>
                     <div className="right">
                         <div className="rightA">
-                            <img src="/images/courseDet2.jpg" alt="" className="" />
+                            {/* <img src="/images/courseDet2.jpg" alt="" className="" /> */}
+                            <img src='/images/seatsLeft.png' />
+                            <div className="desc">Only Few <br></br>Seats Left !!!</div>
                         </div>
-                        <div className="rightA">
-                            <img src="/images/courseDet3.jpg" alt="" className="" />
+                        <div className="rightB">
+                            {/* <img src="/images/courseDet3.jpg" alt="" className="" /> */}
+                            < DotPlot />
                         </div>
                     </div>
                 </div>

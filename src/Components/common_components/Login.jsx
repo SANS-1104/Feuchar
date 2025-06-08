@@ -2,55 +2,63 @@
 import React, { useState } from "react";
 import "./auth.css";
 import { FaArrowRight } from "react-icons/fa";
-import 'react-toastify/dist/ReactToastify.css';
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
-
+import axiosClient from "../../api/axiosClient"; 
 
 const Login = ({ onSignup, onForgot }) => {
-  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const navigate = useNavigate();
+  const navigate   = useNavigate();
 
-  // Dummy user credentials (replace with actual backend/Firebase call)
-  const dummyUser = {
-    email: "test@example.com",
-    password: "123",
-    username: 'test',
-    firstName: 'Test'
-  };
-
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    if (email === dummyUser.email && password === dummyUser.password) {
-      toast.success("Login successful!", {
-        autoClose: 2000,
-      });
-      setTimeout(() => {
-        navigate(`/dashboard/${dummyUser.username}`);
-      }, 2000);
+    try {
+      const response = await axiosClient.post("/login", { phone, password });
 
-    } else {
-       toast.error("Invalid email or password.", {
-        autoClose: 2000,
-      });
+      const { token, user } = response.data.data;
+
+      
+      localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(user));
+
+      console.log("User name:", user.name);
+      const slug = user.name.trim().replace(/\s+/g, "-").toLowerCase();
+      console.log("Slug generated:", slug);
+
+
+      toast.success("Login successful!", { autoClose: 500, onClose: () => {
+        console.log("Navigating to:", `/dashboard/${slug}/overview`);
+        navigate(`/dashboard/${slug}/overview`) }
+      }); 
+      // setTimeout(() => navigate(`/dashboard/${slug}`), 2000);
+    } catch (err) {
+      const apiMsg =
+        err.response?.data?.errors
+          ? Object.values(err.response.data.errors).flat()[0]
+          : err.response?.data?.message || "Login failed. Please try again.";
+      toast.error(apiMsg, { autoClose: 0 });
     }
   };
 
   return (
     <div className="auth-container">
       <div className="auth-left">
-        <img src="/images/login.png" alt="Login Illustration" />
+        {/* <img src="/images/login.png" alt="Login Illustration" /> */}
         <div className="auth-left-text">
           <div className="LoginContentImg"><img src="/images/navlogo3.jpg" alt="" /></div>
           <div className="LoginContentTitle">Improve your skill with Feuchar!</div>
-          <div className="LoginContentDesc">Log in to continue your spiritual learning journey. Access your personalized dashboard, track your course progress, download certificates, and stay updated with the latest webinars, offers, and exclusive student content.</div>
+          <div className="LoginContentDesc">
+            Log in to continue your spiritual learning journey...
+          </div>
         </div>
       </div>
       <div className="auth-right">
-        <div className="goToHome"><a href="/">Go To Home <FaArrowRight /></a> </div>
+        <div className="goToHome">
+          <a href="/">Go To Home <FaArrowRight /></a>
+        </div>
         <h2>Sign In</h2>
         <p className="user">
           New user? <span className="link" onClick={onSignup}>Create an account</span>
@@ -58,14 +66,15 @@ const Login = ({ onSignup, onForgot }) => {
 
         <form onSubmit={handleLogin}>
           <div className="loginGroup Group">
-            <div className="emailBox Box">
-              <label htmlFor="login-email">Email</label>
+            <div className="phoneBox Box">
+              <label htmlFor="phone">Phone No</label>
               <input
-                type="email"
-                id="login-email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="tel"
+                id="phone"
+                placeholder="Enter 10-digit Phone No"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                pattern="[0-9]{10}"
                 required
               />
             </div>
@@ -88,11 +97,9 @@ const Login = ({ onSignup, onForgot }) => {
               <input type="checkbox" id="remember-me" />
               <label htmlFor="remember-me">Remember me</label>
             </div>
-            {/* ✅ Updated Link here */}
             <p><span className="link" onClick={onForgot}>Forgot your password?</span></p>
           </div>
 
-          {error && <p style={{ color: "red", marginBottom: "10px" }}>{error}</p>}
           <button type="submit">Sign In</button>
         </form>
       </div>

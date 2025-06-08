@@ -134,6 +134,10 @@
   flex-direction: column;
   gap: 3rem;
 }
+.outerWrapper .innerWrapper .level2 .left .leftcol1 .l2 .contacts p a{
+  text-decoration: none;
+  color: #F8B919;
+}
 
 .outerWrapper .innerWrapper .level2 .left .leftcol1 .l2 .socials{
   display: flex;

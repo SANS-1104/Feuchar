@@ -91,7 +91,7 @@ export default function HomeHeroForm({ onClose }) {
               type="email"
               id="signup-email"
               name="email"
-              placeholder="Cristopher@gmail.com"
+              placeholder="Enter your e-mail"
               value={formData.email}
               onChange={handleChange}
             />
@@ -104,7 +104,7 @@ export default function HomeHeroForm({ onClose }) {
               type="tel"
               id="signup-phone"
               name="phone"
-              placeholder="+91 9978164182"
+              placeholder="Enter your Phone No"
               value={formData.phone}
               onChange={handleChange}
             />

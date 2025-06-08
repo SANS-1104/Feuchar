@@ -11,7 +11,7 @@ export default function CheckoutPage() {
   return (
     <div className="cart-container checkout-container">
       <div className='cart-Upper checkout-Upper'>
-        <div className="cart-header">Complete Your Divine Enrollment</div>
+        <div className="cart-header checkout-header">Complete Your Divine Enrollment</div>
         <div className="cart-subheader">Checkout</div>
       </div>
       <div className='cart-lower checkout-lower'>

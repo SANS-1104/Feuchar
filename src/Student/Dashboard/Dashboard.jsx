@@ -1,39 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams, Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import { FaBars } from 'react-icons/fa';
 import './dashboard.css';
-import Overview from './Overview';
-import ExploreCourse from './ExploreCourse';
-import MyCourse from './MyCourse';
-import Message from './Message';
-
-
-
 
 function Dashboard() {
-  const { username } = useParams();
-  const [activePage, setActivePage] = useState('Overview');
-  const [firstName, setFirstName] = useState('');
+  const { name } = useParams();  
+  const [fullName, setFullName] = useState('');
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
-    const storedName = localStorage.getItem('firstName');
-    setFirstName(storedName || username);
-  }, [username]);
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user?.name) {
+      setFullName(user.name);
+    } else {
+      setFullName(name);
+    }
+  }, [name]);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
-  };
-
-  const renderPage = () => {
-    switch (activePage) {
-      case 'Overview': return <Overview firstName={firstName}/>;
-      case 'ExploreCourse': return <ExploreCourse />;
-      case 'MyCourse': return <MyCourse />;
-      case 'Message': return <Message />;
-      default: return <Overview />;
-    }
   };
 
   return (
@@ -43,13 +29,13 @@ function Dashboard() {
       </button>
 
       <Sidebar 
-        setActivePage={setActivePage} 
-        activePage={activePage} 
-        sidebarOpen = {sidebarOpen}
+        fullName={fullName}
+        sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}
       />
+
       <div className="dashboard-content">
-        {renderPage()}
+        <Outlet /> {/* Render nested routes here */}
       </div>
     </div>
   );

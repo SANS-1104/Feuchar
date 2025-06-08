@@ -1,0 +1,307 @@
+.BecomeTutorPage-wrapper{
+    background-color: black;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+.TutorSection1-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 5rem 4rem;
+    margin-top: 4rem;
+}
+
+.TutorSection1-wrapper .l1{
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-align: center;
+    color: #F8B919;
+}
+
+.TutorSection1-wrapper .l2{
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-align: center;
+    color: white;
+}
+
+
+.TutorSection2-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2.6px dashed #262626;
+    border-radius: 12px;
+}
+
+.TutorSection2-wrapper .upper{
+    border-bottom: 2.6px dashed #262626;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.TutorSection2-wrapper .upper .l1{
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 27.01px;
+    line-height: 33.01px;
+    letter-spacing: -2%;
+    color: white;
+}
+
+.TutorSection2-wrapper .upper .l2{
+    font-family: Nunito;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #676665;
+}
+
+
+.TutorSection2-wrapper .lower{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #81807E;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+
+.TutorSection2-wrapper .lower .l1{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.TutorSection3-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2.6px dashed #262626;
+    border-radius: 12px;
+    color: white;
+}
+
+.TutorSection3-wrapper .upper{
+    border-bottom: 2.6px dashed #262626;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.TutorSection3-wrapper .upper .l1{
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 27.01px;
+    line-height: 33.01px;
+    letter-spacing: -2%;
+}
+
+
+.TutorSection3-wrapper .upper .l2{
+    font-family: Nunito;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #676665;
+}
+
+
+.TutorSection3-wrapper .lower{
+    padding: 2rem;
+}
+
+.TutorSection3-wrapper .lower ol li{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 27px;
+    letter-spacing: 0%;
+    color: #81807E;
+}
+
+
+
+
+
+/* src/Components/tutor.css */
+
+.TutorForm-wrapper-outer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.TutorForm-wrapper-outer .TutorForm-Heading{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+
+.TutorForm-wrapper-outer .TutorForm-Heading .l1{
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -2%;
+    color: white;
+}
+
+.TutorForm-wrapper-outer .TutorForm-Heading .l2{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -2%;
+    color: #BCBCBC;
+}
+
+.TutorForm-wrapper-outer .tutorForm-wrapper {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.TutorForm-wrapper-outer .tutorForm-wrapper .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.TutorForm-wrapper-outer .tutorForm-wrapper .form-grid .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.TutorForm-wrapper-outer .tutorForm-wrapper .form-group label{
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -2%;
+}
+
+.message-label label{
+    padding-top: 1rem;
+}
+
+.TutorForm-wrapper-outer .tutorForm-wrapper .form-grid input{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #919191;
+    border: 1px solid #606060;
+    border-radius: 0.4rem;
+    background: #0F0F0F;
+    padding: 10px 12px;
+}
+
+.TutorForm-wrapper-outer .tutorForm-wrapper textarea {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #919191;
+    border: 1px solid #606060;
+    border-radius: 0.4rem;
+    background: #0F0F0F;
+    padding: 10px 12px;
+}
+
+.TutorForm-wrapper-outer .tutorForm-wrapper textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+.TutorForm-wrapper-outer .tutorForm-wrapper .form-grid .file-upload input {
+  color: white;
+  background-color: #121212;
+}
+
+.TutorForm-wrapper-outer .tutorForm-wrapper .form-grid .full-width {
+  grid-column: 1 / -1;
+  margin-top: 20px;
+}
+
+.TutorForm-wrapper-outer .tutorForm-wrapper  button.Tutorform-submit-btn  {
+    background-color: #F8B919;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    color: black;
+    transition: background 0.3s ease;
+    width: 100%;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -2%;
+    text-align: center;
+}
+
+
+
+
+
+
+/* Responsive */
+@media only screen and (max-width: 1024px) {
+    .BecomeTutorPage-wrapper{
+        padding: 0 1rem;
+    }
+  .TutorForm-wrapper-outer .tutorForm-wrapper .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .TutorForm-wrapper-outer .tutorForm-wrapper .form-grid .full-width {
+    grid-column: 1;
+  }
+  .TutorForm-wrapper-outer .tutorForm-wrapper .form-grid input{
+    width: 100%;
+  }
+}

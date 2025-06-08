@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
-import initialCartData from '../data/cartData'; // import your default cart data
+import initialCartData from '../data/cartData'; 
 
 const CartContext = createContext();
 

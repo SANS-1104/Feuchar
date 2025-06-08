@@ -1,37 +1,17 @@
+import faqData from '../../data/faqData';
 import './about.css'
-import ChipUse from './ChipUse';
-// import ChipGroup from './ChipGroup';
+import ChipGroup from './ChipGroup';
+import { useState } from 'react';
+
 
 import FAQCardComponent from './FAQCardComponent';
 
 export default function FAQ() {
-    const faqData = [
-  {
-    question: "How can I place an order on StyleLoom?",
-    answer: "Ordering is easy! Simply browse our website, add items to your cart, and proceed to checkout. Follow the prompts to enter your details and complete your purchase."
-  },
-  {
-    question: "Can I modify or cancel my order after placing it?",
-    answer: "Unfortunately, once an order is confirmed, modifications or cancellations may not be possible. Please review your order carefully before completing the purchase."
-  },
-  {
-    question: "What payment methods do you accept?",
-    answer: "We accept a variety of payment methods, including credit/debit cards, net banking, and select digital wallets. Choose the option that suits you best during checkout."
-  },
-  {
-    question: "How do I initiate a return?",
-    answer: "Visit our Returns page and follow the provided instructions. Ensure your item meets our return criteria, and our team will guide you through the process."
-  },
-  {
-    question: "How can I track my order?",
-    answer: "Once your order is dispatched, you’ll receive a tracking number via email. Use this number to track your package in real-time on our website."
-  },
-  {
-    question: "Do you offer exchanges for products?",
-    answer: "At this time, we don't offer direct product exchanges. If you'd like a different item, please initiate a return and place a new order."
-  }
-];
-
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const filteredFAQs =
+    selectedCategory === "All"
+      ? faqData
+      : faqData.filter(faq => faq.category === selectedCategory);
   return (
     <div className='outerTestimonial'>
       <div className='innerTestimonial'>
@@ -39,18 +19,18 @@ export default function FAQ() {
           <div className='left'>
             <div className='head'>Frequently Asked Questions</div>
             <div className='subHead'>Ease into the world of Feuchar with clarity. Our FAQs cover queries of everyone.</div>
-            <div className='chips'><ChipUse /></div>
+            <div className='chips'><ChipGroup onSelect={setSelectedCategory} /></div>
           </div>
           <div className='right FAQright'>
             <img src='/images/FAQLogo.png' alt='' />
           </div>
         </div>
         <div className='testDesc FAQdesc'>
-          {faqData.map((course, index) => (
+          {filteredFAQs.map((faq, index) => (
             <FAQCardComponent
               key={index}
-              question={course.question}
-              answer={course.answer}
+              question={faq.question}
+              answer={faq.answer}
             />
           ))}
         </div>

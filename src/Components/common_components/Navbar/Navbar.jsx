@@ -1,14 +1,14 @@
 import React from 'react';
-import '../CSS/main.css';
+import './navbar.css';
 import { useRef } from 'react';
 // npm i react-icons
-import {FaBars , FaTimes} from 'react-icons/fa';
+import {FaBars , FaShoppingCart, FaTimes} from 'react-icons/fa';
 import { FiArrowUpRight } from 'react-icons/fi';
-
-
-
+import { useCart } from "../../../../src/context/CartContext"
 
 export default function Navbar(){
+    const { cart } = useCart();
+    const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
     const navRef = useRef();
     const showNavBar = ()=>{
         navRef.current.classList.toggle('responsive_nav')
@@ -27,11 +27,15 @@ export default function Navbar(){
                     <a href="/contact">Contact</a>
                 </div>
                 <div className='part2b'>
+                    <div className='cart-icon-container'>
+                        <a href='/cart' className='cartIcon'>
+                            <FaShoppingCart style={{ width: "25px", height: "25px" }} />
+                            {cartItemCount > 0 && <span className='cart-badge'>{cartItemCount}</span>}
+                        </a>
+                    </div>
+
                     <a href="/login">Login</a>
-                    <button className='all-btns'>
-                        FREE Consultation
-                        <FiArrowUpRight style={{ marginLeft: '8px' }} />
-                    </button>
+                    <button className='all-btns'> FREE Consultation <FiArrowUpRight style={{ marginLeft: '4px' }} /></button>
                 </div>
                 
                 <button onClick={showNavBar} className='nav-btn nav-close-btn'>
@@ -39,6 +43,12 @@ export default function Navbar(){
                 </button>
             </nav>
             <button onClick={showNavBar} className='nav-btn'>
+                <div className='cart-icon-container'>
+                    <a href='/cart' className='cartIcon'>
+                        <FaShoppingCart style={{ width: "25px", height: "25px" }} />
+                        {cartItemCount > 0 && <span className='cart-badge'>{cartItemCount}</span>}
+                    </a>
+                </div>
                 <FaBars />
             </button>
         </header>

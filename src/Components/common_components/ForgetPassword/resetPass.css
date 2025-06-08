@@ -1,0 +1,60 @@
+.ResetPass-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4rem 2rem;
+    gap: 2rem;
+}
+
+.ResetPass-wrapper .title{
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.ResetPass-wrapper form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.ResetPass-wrapper form .resetPass-inp{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ResetPass-wrapper form .resetPass-inp label{
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.ResetPass-wrapper form .resetPass-inp input{
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+
+.ResetPass-wrapper form button{
+    padding: 0.5rem;
+    background-color: #F8B919;
+    color: black;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: Poppins;
+}
+
+@media only screen and (max-width: 1024px) {
+    .ResetPass-wrapper{
+        align-items: center;
+        text-align: center;
+    }
+    .ResetPass-wrapper form .resetPass-inp{
+        justify-content: center;
+    }
+}
