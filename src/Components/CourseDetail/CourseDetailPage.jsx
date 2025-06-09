@@ -16,14 +16,14 @@ const CourseDetailPage = () => {
 
   const [showForm, setShowForm] = useState(false);
 
-  // ✅ Listen for custom event
+  //  Listen for custom event
   useEffect(() => {
     const handleOpenForm = () => setShowForm(true);
     window.addEventListener("openSyllabusForm", handleOpenForm);
     return () => window.removeEventListener("openSyllabusForm", handleOpenForm);
   }, []);
 
-  // ✅ After form submit: close popup and trigger download
+  // After form submit: close popup and trigger download
   const handleFormSuccess = () => {
     setShowForm(false);
 
@@ -39,7 +39,7 @@ const CourseDetailPage = () => {
   if (!course) return <div>Course not found</div>;
 
   return (
-    <div className="courseDetailPage">
+    <div className="courseDetailPage max-wdh">
       <CourseDetHero course={course} />
       <Journey />
       <CourseDetInstructor />
@@ -47,7 +47,7 @@ const CourseDetailPage = () => {
       <FAQ2 />
       <CourseDetLast />
 
-      {/* ✅ Popup for form */}
+      {/* Popup for form */}
       {showForm && (
         <div className="popup-overlay">
           <div className="popup-content">

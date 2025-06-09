@@ -33,6 +33,7 @@ body {
     color: white;
     flex-direction: column;
     padding: 2rem 3rem;
+    padding-bottom: 4rem;
 }
 
 .footer-outer-cover .footer-inner-cover .l1{
@@ -56,11 +57,11 @@ body {
 .footer-outer-cover .footer-inner-cover .l2{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row;
     padding-top: 4rem;
     padding-right: 2rem;
-    padding-bottom: 2rem;
+    gap: 4rem;
 
 }
 .footer-outer-cover .footer-inner-cover .l2 .left{
@@ -108,11 +109,14 @@ body {
     color: #C1C1C1;
 }
 
+
+
 .footer-outer-cover .footer-inner-cover .l3{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: row;
+    padding: 0 10rem;
 }
 
 .footer-outer-cover .footer-inner-cover .l3 .socials{
@@ -124,15 +128,21 @@ body {
 
 .footer-outer-cover .footer-inner-cover .l3 .socials .socialIcon a{
     margin-right: 1rem;
-    width: 17px;
-    height: 17px;
+    width: 20px;
+    height: 20px;
     color: #8E8E8E;
 }
+
+.footer-outer-cover .footer-inner-cover .l3 .socials .socialIcon a svg{
+    width: 20px;
+    height: 20px;
+}
+
 
 .footer-outer-cover .footer-inner-cover .l3 .copyright{
     font-family: var(--font-secondary);
     font-weight: 500;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
     color: #8E8E8E;
@@ -223,8 +233,27 @@ body {
     .footer-outer-cover .footer-inner-cover .l1{
         font-size: 40px;
     }
+    .footer-outer-cover .footer-inner-cover .l1 p{
+        font-size: 30px;
+    }
+    .footer-outer-cover .footer-inner-cover .l2{
+        padding-right: 0;
+        gap: 0;
+        justify-content: flex-start;
+    }
+
+    .footer-outer-cover .footer-inner-cover .l2 .left{
+        width: 100%;
+    }
     .footer-outer-cover .footer-inner-cover .l2 .left-col{
         margin-bottom: 3rem;
+        width: 100%;
+    }
+    .footer-outer-cover .footer-inner-cover .l3{
+        padding: 0;
+    }
+    .footer-outer-cover .footer-inner-cover .l3 .copyright{
+        line-height: 150%;
     }
     .footer-outer-cover .footer-inner-cover .l3 .socials{
         margin-bottom: 2rem;

@@ -25,8 +25,9 @@ export default function Footer() {
                         <h2>Career</h2>
                         <a href='/tutor'><p>Apply as Astro-Guru</p></a>
                         <h2>Support</h2>
-                        <a href='/'><p>Privacy Policy</p></a>
-                        <a href='/'><p>Term of Service</p></a>
+                        <a href='/privacy-Policy'><p>Privacy Policy</p></a>
+                        <a href='/terms-of-service'><p>Term of Service</p></a>
+                        <a href='/refund-policy'><p>Refund Policy</p></a>
                         <a href='/contact'><p>Contact us </p></a>
                     </div>
                     <div className='contact left-col'>

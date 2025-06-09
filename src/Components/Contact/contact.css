@@ -214,7 +214,7 @@
   color: #fff;
   font-family: var(--font-secondary);
   font-weight: 500;
-  font-size: 9.83px;
+  font-size: 14px;
   line-height: 16.39px;
   letter-spacing: 0%;
 
@@ -297,6 +297,18 @@
 
 
 @media only screen and (max-width: 1024px) {
+  .outerWrapper .innerWrapper{
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .outerWrapper .innerWrapper .level2{
+    padding: 2rem 1rem;
+  }
+  .form-container{
+    padding: 20px;
+    width: 100%;
+  }
   .outerWrapper .innerWrapper .level1 .top1{
     font-size: 18px;
   }
@@ -308,6 +320,7 @@
   }
   .outerWrapper .innerWrapper .level2 .left{
     justify-content: center;
+    width: 100%;
   }
   .outerWrapper .innerWrapper .level2 .left .leftcol1 {
     /* padding-left: 4rem; */ 
@@ -341,15 +354,21 @@
     align-items: center;
   }
   .form-row {
-    padding: 0 3rem;
+    padding: 0 ;
   }
   .textBox-label, .checkbox-group{
-    padding-left: 3rem;
+    /* padding-left: 3rem; */
+    padding-top: 1rem;
   }
   .submit-btn{
-    margin-left: 3rem;
+    margin-left: 0rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .form-group label{
+    padding-top: 1rem;
   }
   .textBox-label textarea{
-    width: 70%;
+    width: 100%;
   }
 }

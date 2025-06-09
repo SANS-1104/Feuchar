@@ -9,7 +9,7 @@ function CartPage() {
   const { cart, updateQuantity, removeItem } = useCart();
 
   return (
-    <div className="cart-container">
+    <div className="cart-container max-wdh">
       <div className='cart-Upper'>
         <div className="cart-header">Secure Your Spot Now</div>
         <div className="cart-subheader">Cart</div>

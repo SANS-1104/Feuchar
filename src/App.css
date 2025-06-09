@@ -36,3 +36,65 @@
     transform: rotate(360deg);
   }
 } */
+
+@media (min-width: 1700px) {
+  .max-wdh{
+    max-width: 1900px;
+    justify-content: center;
+  }
+}
+
+
+
+/* For i-pads */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .OuterHero-wrapper{
+        justify-content: center;
+    }
+    .OuterHero-wrapper  .left-half{
+        align-items: center;
+    }
+    .OuterHero-wrapper  .left-half .layer1{
+        text-align: center;
+    }
+    .outerStudentSay .innerStudentSay .testDesc{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card{
+        width: 500px;
+    }
+    .Features-Wrapper .upperContainer .content .detail{
+        padding-left: 1rem;
+    }
+    .gurukul-outer-wrapper .gurukul-inner-wrapper .right .guruRight{
+        padding: 1rem 3rem;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .Values-left{
+      flex: unset;
+    }
+    .SubjectsOuterWrapper .SubjectsInnerWrapper .cardSectionCourse{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .StudentCardComponent-Outer{
+      height: 500px;
+    }
+    .FAQCardComponent-Outer{
+      height: 350px;
+    }
+    .outerWrapper .innerWrapper .level2{
+      justify-content: center;
+    }
+    .outerWrapper .innerWrapper .secl2{
+      justify-content: center;
+    }
+    .SubjectsOuterWrapper .SubjectsInnerWrapper .cardSection{
+      gap: 1rem;
+    }
+    .SubjectsOuterWrapper .SubjectsInnerWrapper{
+      padding: 4rem 1.5rem;
+    }
+}

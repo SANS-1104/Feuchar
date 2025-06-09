@@ -291,6 +291,12 @@
 
 /* Responsive */
 @media only screen and (max-width: 1024px) {
+    .TutorSection1-wrapper {
+        padding: 5rem 2rem;
+    }
+    .TutorSection1-wrapper .l2{
+        font-size: 40px;
+    }
     .BecomeTutorPage-wrapper{
         padding: 0 1rem;
     }

@@ -16,7 +16,7 @@ function HeroSection2() {
     <>
       <div className={`OuterHero-wrapper ${isModalOpen ? "blurred" : ""}`}>
           <div className="left-half">
-            <div className="layer1">Learn Occult Sciences & <br></br>Earn UNLIMITED TODAY</div>
+            <div className="layer1">Learn Occult Sciences & Earn UNLIMITED TODAY</div>
             <div className="layer2">
               <div className="layer21">
                 <div className="a">
@@ -47,8 +47,6 @@ function HeroSection2() {
                   <div className='avatarImg'><img src='/images/avatar.png' alt=''/></div>
                   <div className='content'><p>More than 6k people trust us</p></div>
                 </div>
-              <div className="layer32">
-              </div>
             </div>
           </div>
           <div className="right-half">

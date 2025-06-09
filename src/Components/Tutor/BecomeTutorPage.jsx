@@ -7,7 +7,7 @@ import TutorForm from "./TutorForm";
 
 export default function BecomeTutorPage(){
     return(
-        <div className="BecomeTutorPage-wrapper">
+        <div className="BecomeTutorPage-wrapper max-wdh">
             <Section1 />
             <Section2 />
             <Section3 />

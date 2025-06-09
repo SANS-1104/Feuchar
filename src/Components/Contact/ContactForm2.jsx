@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './contact.css';
-import cities from '../../data/cities.json';
+import states from '../../data/states.json';
 
 function ContactForm2() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    city: "",
+    state: "",
     message: "",
     subscribe: false,
   });
@@ -31,10 +31,10 @@ function ContactForm2() {
     setError("");
     setSuccess("");
 
-    const { name, email, phone, city, message } = formData;
+    const { name, email, phone, state, message } = formData;
 
     // Simple validation
-    if (!name || !email || !phone || !city || !message) {
+    if (!name || !email || !phone || !state || !message) {
       setError("Please fill in all fields.");
       return;
     }
@@ -51,7 +51,7 @@ function ContactForm2() {
       name: "",
       email: "",
       phone: "",
-      city: "",
+      state: "",
       message: "",
       subscribe: false,
     });
@@ -95,12 +95,12 @@ function ContactForm2() {
             />
           </div>
           <div className="form-group">
-            <label>City</label>
-            <select name="city" value={formData.city} onChange={handleChange}>
-              <option value="">Select City</option>
-              {cities.map((city, index) => (
-                <option key={index} value={city}>
-                  {city}
+            <label>State</label>
+            <select name="state" value={formData.state} onChange={handleChange}>
+              <option value="">Select State</option>
+              {states.map((state, index) => (
+                <option key={index} value={state}>
+                  {state}
                 </option>
               ))}
             </select>

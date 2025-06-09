@@ -1,0 +1,77 @@
+.PrivacyPolicyPage-wrapper{
+    margin-top: 4rem;
+    padding: 6rem 4rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 3rem;
+    color: white;
+}
+
+
+.PrivacyPolicyPage-wrapper .title{
+    color: white;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-align: center;
+}
+
+.PrivacyPolicyPage-wrapper .content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.PrivacyPolicyPage-wrapper .content .box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 2.6px dashed #262626;
+    border-radius: 1rem;
+    padding: 3rem;
+}
+
+
+.PrivacyPolicyPage-wrapper .content .box .heading{
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33.01px;
+    letter-spacing: -2%;
+    color: white;
+}
+
+.PrivacyPolicyPage-wrapper .content .box .info{
+    font-family: Nunito;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #7c7b7a;
+}
+
+.PrivacyPolicyPage-wrapper .content .box .info .desc{
+    padding: 8px 0;
+}
+
+.PrivacyPolicyPage-wrapper .content .box .info ul li a{
+    text-decoration: none;
+    color: #7c7b7a;
+}
+
+@media only screen and (max-width: 1024px) {
+    .PrivacyPolicyPage-wrapper{
+        padding: 4rem 1.5rem;
+    }
+    .PrivacyPolicyPage-wrapper .title{
+        font-size: 40px;
+    }
+    .PrivacyPolicyPage-wrapper .content .box{
+        padding: 2rem;
+    }
+}

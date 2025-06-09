@@ -45,11 +45,11 @@ export default function Navbar(){
             <button onClick={showNavBar} className='nav-btn'>
                 <div className='cart-icon-container'>
                     <a href='/cart' className='cartIcon'>
-                        <FaShoppingCart style={{ width: "25px", height: "25px" }} />
+                        <FaShoppingCart style={{ width: "25px", height: "25px", color: "#fff"}} />
                         {cartItemCount > 0 && <span className='cart-badge'>{cartItemCount}</span>}
                     </a>
                 </div>
-                <FaBars />
+                <FaBars style={{paddingTop: "6px"}}/>
             </button>
         </header>
     )

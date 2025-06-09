@@ -11,7 +11,7 @@ import WebinarSeats from './WebinarSeats';
 
 export default function WebinarPage() {
     return(
-        <div className="webinarPage">
+        <div className="webinarPage max-wdh">
             <WebinarHero/>
             <WebinarAgenda />
             <WebinarLearn />

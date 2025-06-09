@@ -1,5 +1,5 @@
-// src/components/YourMentors.js
 import React, { useState } from "react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // Import icons
 import mentorData from "../../data/mentorData";
 import MentorCard from "./MentorCard";
 import "./YourMentors.css";
@@ -7,8 +7,8 @@ import "./YourMentors.css";
 export default function YourMentors() {
   const [showAll, setShowAll] = useState(false);
 
-  const handleSeeAll = () => {
-    setShowAll(true);
+  const toggleShowAll = () => {
+    setShowAll((prev) => !prev);
   };
 
   const visibleMentors = showAll ? mentorData : mentorData.slice(0, 2);
@@ -17,9 +17,17 @@ export default function YourMentors() {
     <div className="mentor-container">
       <div className="mentor-header">
         <h2>Your Mentor</h2>
-        {!showAll && (
-          <button onClick={handleSeeAll} className="see-all-btn">See All</button>
-        )}
+        <button onClick={toggleShowAll} className="see-all-btn">
+          {showAll ? (
+            <>
+              See Less <FaChevronUp />
+            </>
+          ) : (
+            <>
+              See All <FaChevronDown />
+            </>
+          )}
+        </button>
       </div>
 
       <div className="mentor-table">

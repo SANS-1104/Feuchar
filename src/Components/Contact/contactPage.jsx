@@ -8,7 +8,7 @@ import "./contact.css";
 
 export default function ContactPage(){
     return(
-        <div className="outerWrapper">
+        <div className="outerWrapper max-wdh">
             <div className="innerWrapper">
                 <div className="level1">
                     <div className="top1">Contact Us</div>

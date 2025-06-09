@@ -6,12 +6,10 @@ import OverviewWatchedModules from "./OverviewWatchedModules";
 import RightSide from "./RightSide";
 import YourMentors from "./YourMentors";
 import "./overview.css";
-import { FaBars } from "react-icons/fa";
 
 export default function OverviewPage({ fullName }) {
   const [showSidebar, setShowSidebar] = useState(false);
 
-  // Optional: Prevent body scroll when sidebar is open (for mobile)
   useEffect(() => {
     document.body.style.overflow = showSidebar ? "hidden" : "auto";
   }, [showSidebar]);
@@ -26,21 +24,22 @@ export default function OverviewPage({ fullName }) {
         <YourMentors />
       </div>
 
-      {/* Hamburger Icon */}
-      <div className="hamburger-icon" onClick={() => setShowSidebar(true)}>
-        <FaBars />
-      </div>
-
-      {/* Sidebar Overlay for smaller screens */}
-      <div className={`sidebar-overlay ${showSidebar ? "show" : ""}`}>
-        <div className="sidebar-close" onClick={() => setShowSidebar(false)}>
-          ✖
-        </div>
+      {/* This will show up on large screens */}
+      <div className="right desktop-only">
         <RightSide />
       </div>
 
-      {/* Normal RightSide for large screens */}
-      <div className="right desktop-only">
+      {/* Hamburger/dp icon for mobile */}
+      <div className="dp-icon" onClick={() => setShowSidebar(!showSidebar)}>
+        {showSidebar ? (
+          <span className="cross-icon">✖</span>
+        ) : (
+          <img src="/images/dp.jpg" alt="Profile" />
+        )}
+      </div>
+
+      {/* Overlay sidebar for mobile */}
+      <div className={`sidebar-overlay ${showSidebar ? "show" : ""}`}>
         <RightSide />
       </div>
     </div>

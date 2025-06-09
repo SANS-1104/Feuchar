@@ -25,6 +25,11 @@ import ForgetPass from '../Components/common_components/ForgetPassword/ForgetPas
 import MainNavbar from '../Components/common_components/Navbar/MainNavbar';
 import ProtectedRoute from './ProtectedRoute';
 import CourseDetailPage from '../Components/CourseDetail/CourseDetailPage';
+import "../App.css"
+import PrivacyPolicyPage from '../Components/ExtraPages/PrivacyPolicyPage';
+import ToS from '../Components/ExtraPages/ToS';
+import RefundPolicy from '../Components/ExtraPages/RefundPolicy';
+import WebinarCheckoutPage from '../Components/Webinar/WebinarCheckoutPage';
 
 const AllRoutes = () => {
   const location = useLocation();
@@ -71,6 +76,10 @@ const AllRoutes = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/resetPass" element={<ResetPass />} />
+        <Route path="/privacy-Policy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms-of-service" element={<ToS />} />
+        <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/webinar-tickets" element={<WebinarCheckoutPage />} />
 
         {/* Dashboard routes - protected */}
         <Route

@@ -22,9 +22,6 @@
     text-transform: capitalize;
     color: #202020;
 }
-
-
-
 .see-all-btn {
     background: transparent;
     border: none;
@@ -136,17 +133,80 @@
 }
 
 .details-btn {
-    background: black;
-    color: #FAD02C;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-transform: uppercase;
+  background: black;
+  color: #FAD02C;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
 
+}
+
+
+
+/* Responsive Styles for screens below 1024px */
+@media screen and (max-width: 1024px) {
+  .mentor-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .mentor-header-row,
+  .mentor-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+    gap: 0.5rem;
+  }
+
+  .mentor-header-row > div,
+  .mentor-row > div {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .mentor-container {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .mentor-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mentor-name {
+    font-size: 13px;
+  }
+
+  .mentor-role {
+    font-size: 12px;
+  }
+
+  .mentor-info .mentor-course-title {
+    font-size: 13px;
+  }
+
+  .course-pill,
+  .details-btn {
+    font-size: 13px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .see-all-btn {
+    font-size: 14px;
+    padding: 0.2rem 0;
+  }
+
+  .mentor-header-row .t3{
+    padding-left: 0px;
+  }
 }

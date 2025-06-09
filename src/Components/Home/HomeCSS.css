@@ -439,13 +439,13 @@
         font-size: 30px;
         display: flex;
         justify-content: center;
-        padding-left: 2rem;
+        /* padding-left: 2rem; */
         flex-wrap: wrap;
         text-align: center;
     }
     .Features-Wrapper .upperContainer .content .detail{
         justify-content: center;
-        padding-left: 2rem;
+        /* padding-left: 2rem; */
     }
 }
 
@@ -493,12 +493,13 @@
 
 @media only screen and (max-width: 1024px) {
     .card{
-        width: 300px;
+        width: 100%;
         height: fit-content;
+        padding: 1rem;
     }
     .card img{
-        width: 250px;
-        height: 120px;
+        width: 100%;
+        height: auto;
         min-width: 250px;
     }
     .card h3{
@@ -560,6 +561,8 @@
     line-height: 100%;
     letter-spacing: 0%;
     text-transform: capitalize;
+    text-align: center;
+    max-width: 600px;
 }
 
 .enroll-wrapper .inner-cont .enroll-details{
@@ -608,6 +611,7 @@
         font-size: 23px;
         padding-top: 2rem;
         text-align: center;
+        max-width: 100%;
     }
     .enroll-wrapper{
         padding: 0;
@@ -729,6 +733,7 @@
     .gurukul-outer-wrapper .gurukul-inner-wrapper{
         padding-left: 1rem;
         padding-right: 1rem;
+        width: 90%;
     }
     .gurukul-outer-wrapper .gurukul-inner-wrapper .guruImg{
         justify-content: center;
@@ -737,6 +742,9 @@
         width: 300px;
         height: 350px;
         margin-left: 3rem;
+    }
+    .gurukul-outer-wrapper .gurukul-inner-wrapper .right{
+        align-items: center;
     }
     .gurukul-outer-wrapper .gurukul-inner-wrapper .right .rightTitle{
         padding-left: 2rem;
@@ -969,12 +977,17 @@
     line-height: 100%;
     letter-spacing: 0%;
     text-transform: capitalize;
+    max-width: 600px;
+    text-align: center;
 }
 
 
 @media only screen and (max-width: 1024px) {
     .Outer-Teacher .inner-teacher{
         padding-left: 1rem;
+    }
+    .Outer-Teacher .heading-teacher{
+        max-width: 100%;
     }
 }
 
@@ -1277,6 +1290,7 @@
 @media (max-width: 1024px) {
     .outerStudentSay .innerStudentSay{
         width: 100%;
+        margin: 1rem;
     }
     .outerStudentSay .innerStudentSay .HeadingLayer .left{
         padding: 2rem;
@@ -1314,3 +1328,4 @@
 .HomeTestimonialCard-outer .layer1 .l1part2 .l12b{
     font-size: 15px !important;
 }
+

@@ -291,8 +291,9 @@
        align-items: center;
     }
     .OuterHero-wrapper-courseDet  .left-half .layer1 .title{
-        padding-left: 2rem;
-        font-size: 30px;
+        /* padding-left: 2rem; */
+        font-size: 25px;
+        line-height: 30px;
     }
     .OuterHero-wrapper-courseDet  .left-half .layer1 .prices{
         align-items: center;
@@ -306,7 +307,7 @@
         justify-content: center;
     }
     .OuterHero-wrapper-courseDet  .left-half .layer2 .layer21 .a{
-        width: 260px;
+        width: 100%;
         height: 100px;
         gap: 1rem;
     }

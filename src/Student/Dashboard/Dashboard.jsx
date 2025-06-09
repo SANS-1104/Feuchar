@@ -8,7 +8,7 @@ function Dashboard() {
   const { name } = useParams();  
   const [fullName, setFullName] = useState('');
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user?.name) {
@@ -17,6 +17,10 @@ function Dashboard() {
       setFullName(name);
     }
   }, [name]);
+
+
+  
+
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -28,7 +32,7 @@ function Dashboard() {
         <FaBars />
       </button>
 
-      <Sidebar 
+      <Sidebar
         fullName={fullName}
         sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}

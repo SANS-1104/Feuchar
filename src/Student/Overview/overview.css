@@ -7,7 +7,7 @@
     overflow-y: auto;
     height: 100vh;
     padding: 2rem;
-    /* overflow-x: scroll; */
+    overflow-x: hidden;
     width: 100%;
     max-width: 100%;
 }
@@ -360,6 +360,7 @@
     scroll-behavior: smooth;
     width: 100%;
     max-width: 100%;
+    overflow-x: hidden;
 }
 .lower::-webkit-scrollbar {
   display: none;
@@ -369,6 +370,7 @@
     display: flex;
     /* overflow-x: auto;
     scroll-behavior: smooth; */
+    overflow-x: auto;
     gap: 1rem;
     max-width: 100%;
     width: 100%;
@@ -467,7 +469,7 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 80%;
+  width: fit-content;
   height: 100%;
   background-color: white;
   z-index: 999;
@@ -489,29 +491,40 @@
 
 
 
+
 /* Responsive Settings */
 @media screen and (max-width: 1024px) {
     .OverviewWrapper .left{
-        width: 100vw;
+        width: 100%;
         padding: 0;
         padding-top: 2rem;
     }
     .Overviewsearch-bar {
-        width: 90%;
+        width: 100%;
     }
   .right.desktop-only {
     display: none;
   }
   .OverviewSkillSharp-wrapper {
-        width: 90%;
+        width: 100%;
     }
 
-  .hamburger-icon {
+  .dp-icon {
     display: block;
     position: absolute;
-    top: 0rem;
-    right: 0rem;
+    top: 25px;
+    right: 15px;
     z-index: 1000;
+    box-shadow: 0px 14px 42px 0px #080F340F;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dp-icon img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
   }
   .ContinueWatching-wrapper .lower .lower-inner{
     gap: 4rem;
@@ -530,8 +543,8 @@
   
 }
 
-@media (min-width: 760px) and (max-width: 1024px) {
-    .OverviewSkillSharp-wrapper {
-        width: 80%;
-    }
+@media screen and (min-width: 1024px) {
+  .dp-icon {
+    display: none;
+  }
 }

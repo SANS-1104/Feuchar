@@ -11,6 +11,12 @@
 ************************
 */
 
+.webinar-outer-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* gap: 2rem; */
+    color: white;
+}
 
 .WebinarHero-wrapper{
     display: flex;
@@ -144,6 +150,27 @@
     border: none;
 }
 
+
+.btn-click-content{
+    padding: 0rem 10rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.btn-click-content .upper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+.btn-click-content .upper .l2{
+    display: flex;
+    gap: 2rem;
+}
 
 @media only screen and (max-width: 1024px) {
     .WebinarHero-wrapper{
@@ -699,4 +726,147 @@
     .WebinarAbt-wrapper .right .l3 .b{
         font-size: 10px;
     }
+}
+
+
+/* 
+*************************
+| WEBINAR CHECKOUT PAGE |
+*************************
+*/
+
+.WebinarCheckoutPage-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    padding: 7em 2rem;
+    background-color: black;
+}
+
+.WebinarCheckoutPage-wrapper .left {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.WebinarCheckoutPage-wrapper .right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.WebinarCheckoutPage-wrapper .left .l1{
+    color: white;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.WebinarCheckoutPage-wrapper .left .l2 form.billing-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* background-color: #ede9e954; */
+    background-color: rgba(250, 251, 255,0.8);
+}
+
+.WebinarCheckoutPage-wrapper .left .l2 form.billing-form .form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.WebinarCheckoutPage-wrapper .left .l2 form.billing-form .form-row  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.WebinarCheckoutPage-wrapper .left .l2 form.billing-form .form-row  .form-group label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: black;
+    font-size: 16px;
+    
+}
+
+.WebinarCheckoutPage-wrapper .left .l2 form.billing-form .form-row  .form-group input {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    color: black;
+}
+
+.WebinarCheckoutPage-wrapper .left .l2 form.billing-form .form-row  .form-group input:focus {
+    outline: none;
+    border-color: rgb(64, 64, 64);
+}
+
+.error {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+
+
+.summary-card {
+    background: #f8faff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.summary-card h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.icon {
+    color: #555;
+}
+
+.summary-card h3 {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.summary-row.total {
+    font-weight: bold;
+    margin-top: 1rem;
+    border-top: 1px solid #ddd;
+    padding-top: 0.5rem;
+}
+
+.payment-btn {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 12px;
+    background-color: #F8B919;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
 }

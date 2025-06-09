@@ -18,7 +18,7 @@ import React, { useState } from "react";
 export default function Homepage(){
   const [modalOpen, setModalOpen] = useState(false);
     return (
-      <>
+      <div className="max-wdh">
        <HeroSection2 />
         <Journey />
         <CourseLive2 />
@@ -33,7 +33,7 @@ export default function Homepage(){
           isOpen={modalOpen}
           onClose={() => setModalOpen(false)}
         />
-      </>
+      </div>
     );
 }
 

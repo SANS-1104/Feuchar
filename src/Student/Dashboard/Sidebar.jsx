@@ -33,27 +33,27 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
 
         <ul className="Dashboardsidebar-menu">
           <li>
-            <NavLink to={`/dashboard/${name}/overview`} className={({ isActive }) => isActive ? 'active' : ''}>
+            <NavLink to={`/dashboard/${name}/overview`} className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setSidebarOpen(false)} >
               <FaThLarge className='icon' style={{ fontSize: 20 }} /> Overview
             </NavLink>
           </li>
           <li>
-            <NavLink to={`/dashboard/${name}/explorecourse`} className={({ isActive }) => isActive ? 'active' : ''}>
+            <NavLink to={`/dashboard/${name}/explorecourse`} className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setSidebarOpen(false)} >
               <FaSearch className='icon' style={{ fontSize: 20 }} /> Explore Courses
             </NavLink>
           </li>
           <li>
-            <NavLink to={`/dashboard/${name}/mycourse`} className={({ isActive }) => isActive ? 'active' : ''}>
+            <NavLink to={`/dashboard/${name}/mycourse`} className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setSidebarOpen(false)} >
               <FaPlayCircle className='icon' style={{ fontSize: 20 }} /> My Courses
             </NavLink>
           </li>
           <li>
-            <NavLink to={`/dashboard/${name}/message`} className={({ isActive }) => isActive ? 'active' : ''}>
+            <NavLink to={`/dashboard/${name}/message`} className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setSidebarOpen(false)} >
               <FaRegCommentDots className='icon' style={{ fontSize: 20 }} /> Message
             </NavLink>
           </li>
           <li>
-            <NavLink to={`/dashboard/${name}/updateprofile`} className={({ isActive }) => isActive ? 'active' : ''}>
+            <NavLink to={`/dashboard/${name}/updateprofile`} className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setSidebarOpen(false)} >
               <FaUser className='icon' style={{ fontSize: 20 }} /> Update Profile
             </NavLink>
           </li>

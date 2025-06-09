@@ -11,7 +11,7 @@ import Values from "./Values";
 
 export default function AboutPage(){
     return(
-        <>
+        <div className="max-wdh">
             <Section1 />
             <Values />
             <Subjects />
@@ -20,6 +20,6 @@ export default function AboutPage(){
             <Testimonial />
             <FAQ />
             <Future />
-        </>
+        </div>
     );
 }

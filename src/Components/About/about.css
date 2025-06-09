@@ -734,9 +734,7 @@
     flex: 1;
 }
 
-.Values-section .Values-right .t3 .t3a{
 
-}
 .ValueCard-outer{
     display: flex;
     flex-direction: column;
@@ -795,5 +793,19 @@
         justify-content: center;
         align-items: center;
         padding-right: 1.25rem;
+    }
+    .Values-section .Values-right .t3 .t3a{
+        width: 100%;
+        flex: unset;
+    }
+    .Values-section .Values-right .t3 .t3b{
+        width: 100%;
+    }
+    .Values-section .Values-right .t4 .t4a{
+        width: 100%;
+        flex: unset;
+    }
+    .Values-section .Values-right .t4 .t4b{
+        width: 100%;
     }
 }
