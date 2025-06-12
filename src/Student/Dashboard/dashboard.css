@@ -53,9 +53,13 @@
   color: black;
 }
 
-.Dashboardsidebar-menu li a .icon{
+.Dashboardsidebar-menu li .icon{
   padding-top: 5px;
-  font-size: 16px;
+  font-size: 20px;
+}
+
+.Dashboardsidebar-menu li  .active .icon {
+  color: #FAD02C;
 }
 
 
@@ -67,6 +71,8 @@
   background-color: black;
   color: #FAD02C;
 }
+
+
 
 .dashboard-content {
   margin-left: 13vw;

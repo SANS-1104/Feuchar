@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 export default function Future(){
     const navigate = useNavigate();
     return(
-        <div className='Outer-future'>
-            <div className='inner-future'>
+        <div className='Outer-future out-max-wdh'>
+            <div className='inner-future max-wdh'>
                 <div className='l1'><img src='/images/icon.png' alt=''/></div>
                 <div className='l2'>Built for the future. <br></br>Available today.</div>
                 <div className='l3'>

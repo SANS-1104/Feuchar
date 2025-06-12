@@ -1,8 +1,9 @@
 import '../About/about.css'
+import "./CourseDetail.css"
 
 export default function StudentCardComponent2({img, name, minCTC, maxCTC, tagline,testimonial, about}){
     return(
-        <div className='StudentCardComponent-Outer'>
+        <div className='StudentCardComponent-Outer CourseDetailCardComponent-outer'>
             <div className='layer1'>
                 <div className='l1part1'><img src={img} alt='' /></div>
                 <div className='l1part2'>
@@ -13,10 +14,7 @@ export default function StudentCardComponent2({img, name, minCTC, maxCTC, taglin
             </div>
             <div className='layer2'><img src='/images/ratingStar.png' alt=''/></div>
             <div className='layer3'>
-                {/* <div className="testimonial-Tagline">{tagline} </div> */}
-                <div className="Testimonial">{testimonial} </div>
-                {/* <div className="About-stu">{about}</div> */}
-                
+                <div className="Testimonial">{testimonial} </div>                
             </div>
         </div>
     )

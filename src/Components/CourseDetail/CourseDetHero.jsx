@@ -15,7 +15,7 @@ export default function CourseDetHero({course}) {
                     <div className="left">
                         <div className="leftA">
                             <div className="img2">
-                                <a href='https://youtu.be/INmhJdr-hmQ' target='blank' rel="noopener noreferrer">
+                                <a href={course.ytVideo} target='blank' rel="noopener noreferrer">
                                     <img src="/images/courseDet4.png" alt="YouTube" className="" />
                                 </a>
                             </div>

@@ -40,6 +40,7 @@ const CourseSection2 = () => {
             title={project.title}
             subtitle={project.subtitle}
             image={project.image}
+            tutor={project.tutor[0].name}
           />
           </div>
         ))}

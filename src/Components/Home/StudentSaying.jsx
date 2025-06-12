@@ -40,13 +40,13 @@ export default function StudentSaying() {
   ];
 
   return (
-    <div className='outerStudentSay'>
-      <div className='innerStudentSay'>
+    <div className='outerStudentSay out-max-wdh'>
+      <div className='innerStudentSay max-wdh'>
         <div className='HeadingLayer'>
           <div className='left'>
             <div className='head'>What Our Students are Earning</div>
             <div className='subHead'>
-                Discover the real success stories of students who transformed their careers <br></br>after learning numerology with us. From side income to packages up to <br></br>₹2 Cr—your journey could be next.            </div>
+                Discover the real success stories of students who transformed their careers after learning numerology with us. From side income to packages up to ₹2 Cr—your journey could be next.            </div>
           </div>
           <div className='right'>
             <img src='/images/studentDesign.png' alt='' />

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function YourOrders({ cart }) {
   const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-  const shipping = 100; 
+  const shipping = 0; 
   const total = subtotal + shipping;
 
   return (
@@ -32,10 +32,10 @@ export default function YourOrders({ cart }) {
         <div className='cart-subtotal-label'>SUBTOTAL</div>
         <div className='cart-subtotal-value'>₹ {subtotal}</div>
       </div>
-      <div className='cart-discount cart-tile'>
+      {/* <div className='cart-discount cart-tile'>
         <div className='cart-discount-label'>SHIPPING</div>
         <div className='cart-discount-value'>₹ {shipping}</div>
-      </div>
+      </div> */}
       <div className='cart-total cart-tile'>
         <div className='cart-total-label'>Total</div>
         <div className='cart-total-value'>₹ {total}</div>

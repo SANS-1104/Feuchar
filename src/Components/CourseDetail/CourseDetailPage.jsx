@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 import { projects } from "../../data/courseData";
 import Journey from "../Home/Journey";
 import FAQ2 from "./FAQ2";
@@ -16,21 +18,19 @@ const CourseDetailPage = () => {
 
   const [showForm, setShowForm] = useState(false);
 
-  //  Listen for custom event
   useEffect(() => {
     const handleOpenForm = () => setShowForm(true);
     window.addEventListener("openSyllabusForm", handleOpenForm);
     return () => window.removeEventListener("openSyllabusForm", handleOpenForm);
   }, []);
 
-  // After form submit: close popup and trigger download
   const handleFormSuccess = () => {
     setShowForm(false);
 
-    const syllabusURL = "/files/syllabus.pdf";
+    const syllabusURL = course.syllabus;
     const link = document.createElement("a");
     link.href = syllabusURL;
-    link.download = "syllabus.pdf";
+    link.download = course.syllabus;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -40,14 +40,18 @@ const CourseDetailPage = () => {
 
   return (
     <div className="courseDetailPage max-wdh">
+      <Helmet>
+        <title>{course.title} - Feuchar Course Details</title>
+        <meta name="description" content={course.description || `Learn more about the ${course.title} course at Feuchar.`} />
+      </Helmet>
+
       <CourseDetHero course={course} />
       <Journey />
-      <CourseDetInstructor />
-      <Testimonial2 />
-      <FAQ2 />
-      <CourseDetLast />
+      <CourseDetInstructor course={course}/>
+      <Testimonial2 course={course}/>
+      <FAQ2 course={course}/>
+      <CourseDetLast course={course}/>
 
-      {/* Popup for form */}
       {showForm && (
         <div className="popup-overlay">
           <div className="popup-content">

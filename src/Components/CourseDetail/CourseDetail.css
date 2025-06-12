@@ -55,16 +55,16 @@
 .courDetIns-outer .courDetIns-inner .courseDetIns-nameImg .courseDetIns-name .courseDetIns-nameText{
     font-family: Roboto;
     font-weight: 500;
-    font-size: 16.04px;
-    line-height: 150%;
+    font-size: 18px;
+    line-height: 32px;
     letter-spacing: 0px;
 } 
 
 .courDetIns-outer .courDetIns-inner .courseDetIns-nameImg .courseDetIns-name .courseDetIns-nameSubText{
     font-family: Nunito;
     font-weight: 500;
-    font-size: 14.44px;
-    line-height: 150%;
+    font-size: 16px;
+    line-height: 25px;
     letter-spacing: 0px;
     color: #676665;
 }
@@ -72,8 +72,8 @@
 .courDetIns-outer .courDetIns-inner .courseDetIns-desc{
     font-family: Nunito;
     font-weight: 400;
-    font-size: 16.17px;
-    line-height: 150%;
+    font-size: 20px;
+    line-height: 32px;
     letter-spacing: 0%;
     color: linear-gradient(0deg, #676665, #676665),
     linear-gradient(93.46deg, #C4C4C4 4.94%, #FFFFFF 98.78%);
@@ -459,6 +459,7 @@
     letter-spacing: 0%;
     border-radius: 2rem;
     padding: 0.5rem 1rem;
+    border: none;
 }
 
 .courseDetHero-wrapper .left-half .left-half-layer2{
@@ -596,6 +597,7 @@
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    border: none;
 }
 
 .courseDetHero-wrapper .right-half .right-half-layer3{
@@ -844,6 +846,7 @@
     letter-spacing: 0%;
     padding: 1rem;
     border-radius: 2rem;
+    border: none;
 }
 
 
@@ -910,5 +913,27 @@
 @media only screen and (max-width: 1024px) {
     .popup-content {
         width: 300px;
+    }
+}
+
+.CourseDetailCardComponent-outer{
+    height: 400px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .CourseDetailCardComponent-outer{
+        height: max-content;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .CourseDetailCardComponent-outer{
+        height: 500px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .CourseDetailCardComponent-outer{
+        height: 450px;
     }
 }

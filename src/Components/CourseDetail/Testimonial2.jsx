@@ -1,8 +1,7 @@
 import '../About/about.css';
 import StudentCardComponent2 from './StudentCardComponent2';
-import StudentTestimonial from '../../data/Testimonial2data';  // Adjust the path as needed
 
-export default function Testimonial2() {
+export default function Testimonial2({ course }) {
   return (
     <div className='outerTestimonial'>
       <div className='innerTestimonial'>
@@ -15,17 +14,16 @@ export default function Testimonial2() {
             <img src='/images/studentDesign.png' alt='' />
           </div>
         </div>
+
         <div className='testDesc'>
-          {StudentTestimonial.map((course, index) => (
+          {course.StudentTestimonial?.map((student, index) => (
             <StudentCardComponent2
               key={index}
-              img={course.img}
-              name={course.name}
-              minCTC={course.minCTC}
-              maxCTC={course.maxCTC}
-              tagline={course.tagline}
-              testimonial={course.testimonial}
-              about={course.about}
+              img={student.img}
+              name={student.name}
+              minCTC={student.minCTC}
+              maxCTC={student.maxCTC}
+              testimonial={student.testimonial}
             />
           ))}
         </div>

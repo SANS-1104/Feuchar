@@ -3,7 +3,7 @@ import './HomeCSS.css'
 
 export default function Journey(){
     return(
-        <div className="outerJourney-wrapper">
+        <div className="outerJourney-wrapper max-wdh">
                 <div className="journey-heading">Your Journey at Feuchar</div>
                 <div className='journey-data'>
                     <div className='journey-card'>

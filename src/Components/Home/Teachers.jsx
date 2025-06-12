@@ -36,9 +36,9 @@ export default function Teachers(){
 
         ]
     return(
-            <div className='Outer-Teacher'>
+            <div className='Outer-Teacher out-max-wdh'>
                 <div className='heading-teacher'>Our Astro-Guru</div>
-                <div className='inner-teacher'>
+                <div className='inner-teacher max-wdh'>
                     {TeachercardData.map((teacher, index) => (
                         <TeacherComponent
                             key={index}

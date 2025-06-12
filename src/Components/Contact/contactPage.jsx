@@ -2,6 +2,7 @@
 import { FaInstagram, FaTiktok, FaXTwitter, FaPhone, FaEnvelope, FaYoutube  } from "react-icons/fa6";
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import ContactForm2 from "./ContactForm2";
+import { Helmet } from 'react-helmet';
 import "./contact.css";  
  // adjust the path as needed
 
@@ -9,6 +10,12 @@ import "./contact.css";
 export default function ContactPage(){
     return(
         <div className="outerWrapper max-wdh">
+            <Helmet>
+                <title>Contact Us - Feuchar</title>
+                <meta name="description" content="Reach out to Feuchar via phone, email, or visit us. We're here to help and answer your queries." />
+                <meta name="keywords" content="Contact Feuchar, Feuchar Support, Feuchar email, Feuchar phone, Feuchar Delhi" />
+                <meta name="author" content="Feuchar" />
+            </Helmet>
             <div className="innerWrapper">
                 <div className="level1">
                     <div className="top1">Contact Us</div>

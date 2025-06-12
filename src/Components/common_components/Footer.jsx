@@ -9,7 +9,7 @@ export default function Footer() {
     <div className='footer-outer-cover'>
         <div className='footer-inner-cover'>
             <div className='l1'>
-                <p>Make Astrology Great Again with Feuchar </p><span className='footerImg'><img  src='/images/footerImg.png' alt=''/></span>
+                Make Astrology Great Again with Feuchar<span className='footerImg'>  <img  src='/images/footerImg.png' alt=''/></span>
             </div>
             <div className='l2'>
                 <div className='left'>

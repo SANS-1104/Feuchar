@@ -4,7 +4,7 @@ import ChipGroup2 from './ChipGroup2';
 import FAQCardComponent from '../About/FAQCardComponent';
 import courseDetFAQ from '../../data/courseDetFAQ';
 
-export default function FAQ2() {
+export default function FAQ2({course}) {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredFAQs = courseDetFAQ.filter((faq) =>

@@ -7,20 +7,20 @@ import "./auth.css";
 const VerifyOtp = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
-  const phone = state?.phone;
+  const email = state?.email;
 
   const [otp, setOtp] = useState(Array(6).fill(""));
   const [secondsLeft, setSecondsLeft] = useState(10); // 3 minutes
   const [resendEnabled, setResendEnabled] = useState(false);
   const inputsRef = useRef([]);
 
-  // Redirect to signup if phone is not available
+  // Redirect to signup if email is not available
   useEffect(() => {
-    if (!phone) {
+    if (!email) {
       toast.error("Access denied. Please Fill All Details First.");
       navigate("/signup");
     }
-  }, [phone, navigate]);
+  }, [email, navigate]);
 
   // Countdown timer effect
   useEffect(() => {
@@ -88,7 +88,7 @@ const VerifyOtp = () => {
     }
 
     try {
-      const res = await axiosClient.post("/verify-otp", { phone, otp: joinedOtp, "channel": "sms" });
+      const res = await axiosClient.post("/verify-otp", { email, otp: joinedOtp, "channel": "sms" });
       toast.success("OTP Verified! You can now log in.");
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {
@@ -100,7 +100,7 @@ const VerifyOtp = () => {
 
   const handleResendOtp = async () => {
     try {
-      const res = await axiosClient.post("/resend-otp", { phone,"channel": "sms"  });
+      const res = await axiosClient.post("/resend-otp", { email,"channel": "sms"  });
       toast.success("OTP resent successfully.");
       setSecondsLeft(180); // Restart timer
       setResendEnabled(false);
@@ -116,7 +116,7 @@ const VerifyOtp = () => {
     <div className="verifyOTP-container">
       <div className="verifyOTP-inner">
         <div className="title">Enter the OTP to verify your account</div>
-        <div className="No">A OTP has been sent to &nbsp;<strong>{phone}</strong></div>
+        <div className="No">A OTP has been sent to &nbsp;<strong>{email}</strong></div>
         
         <form onSubmit={handleVerify}>
           <div className="otp-input-group">

@@ -1,14 +1,14 @@
 import "./CourseDetail.css"
 import { useNavigate } from 'react-router-dom';
 
-export default function CourseDetLast(){
+export default function CourseDetLast({course}){
     const navigate = useNavigate();
     return(
         <div className="CourseDetLast-outer-wrapper">
             <div className="CourseDetLast-inner-wrapper">
                 <div className="b1">
-                    <div className="b2">Unlock the Power of Numbers in Your Life</div>
-                    <div className="b3">Master numerology from basics to advanced. Transform lives including your own through certified knowledge and real-world practice.</div>
+                    <div className="b2">{course.unlockPowerTitle} </div>
+                    <div className="b3">{course.unlockPowerDesc}</div>
                 </div>
                 <div className="b4">
                     <button onClick={() => navigate('/login?view=signup')}>

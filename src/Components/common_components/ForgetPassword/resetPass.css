@@ -5,6 +5,9 @@
     align-items: center;
     padding: 4rem 2rem;
     gap: 2rem;
+    background-color: #141414;
+    height: 100vh;
+    color: white;
 }
 
 .ResetPass-wrapper .title{

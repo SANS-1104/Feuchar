@@ -7,37 +7,42 @@ export default function Features() {
       imageSrc: '/images/card1.png',
       title: 'Daily Live Classes + Recorded classes',
       description1: 'With Doubt Solving via Live Chat. Classes Accessible for Year long',
-      description2 : ''
+      height: '300px',
+      width: '470px'
     },
     {
       imageSrc: '/images/card2.png',
       title: 'Certificates for All Courses',
-      description1: 'Earn certificates upon completion to validate your skills',
-      description2 : 'and Get job on Our and other Astro platforms'
+      description1: 'Earn certificates upon completion to validate your skills and Get job on Our and other Astro platforms',
+      height: '350px',
+      width: '392px'
     },
     {
       imageSrc: '/images/card3.png',
       title: '100% Placement Opportunity',
-      description1: 'Internship and Job - Premium access',
-      description2 : 'of Our Astrology Marketplace for FREE'
+      description1: 'Internship and Job - Premium access of Our Astrology Marketplace for FREE',
+      height: '400px',
+      width: '236px'
     },
     {
       imageSrc: '/images/card4.png',
       title: 'Personalized Mentorship',
-      description1: 'Get a personal mentor and Ask all your Doubts ',
-      description2 : 'via Chat or Get on call with them anytime'
+      description1: 'Get a personal mentor and Ask all your Doubts via Chat or Get on call with them anytime',
+      height: '400px',
+      width: '306px'
     },
     {
       imageSrc: '/images/card5.png',
       title: 'Short Course Duration',
-      description1: 'Make yourself market-ready in just 2-3 months',
-      description2 : 'with master-grade experience and knowledge'
+      description1: 'Make yourself market-ready in just 2-3 months with master-grade experience and knowledge',
+      height: '400px',
+      width: '254px'
     },
   ];
 
   return (
-    <div className='Features-Wrapper-outer'>
-      <div className='Features-Wrapper'>
+    <div className='Features-Wrapper-outer out-max-wdh'>
+      <div className='Features-Wrapper max-wdh'>
         <div className='upperContainer'>
           <div className='Animations'>
             <img src='/images/featureImg.png' alt=''/>
@@ -64,7 +69,8 @@ export default function Features() {
                 imageSrc={card.imageSrc}
                 title={card.title}
                 description1={card.description1}
-                description2={card.description2}
+                width={card.width}
+                height={card.height}
               />
             ))}
           </div>
@@ -77,7 +83,8 @@ export default function Features() {
                 imageSrc={card.imageSrc}
                 title={card.title}
                 description1={card.description1}
-                description2={card.description2}
+                width={card.width}
+                height={card.height}
               />
             ))}
           </div>

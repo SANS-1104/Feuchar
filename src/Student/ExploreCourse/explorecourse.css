@@ -93,8 +93,8 @@
 }
 
 .MyCourse-wrapper .l3 .l3-inner .exploreCourse-card .l1 img{
-    width: 250px;
-    height: 113px;
+    width: 100%;
+    height: 220px;
     border-radius: 12px;
 }
 

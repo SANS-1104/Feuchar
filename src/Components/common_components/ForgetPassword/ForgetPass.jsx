@@ -7,48 +7,48 @@ import { useNavigate } from "react-router-dom";
 import axiosClient from "../../../api/axiosClient";
 
 const ForgetPass = ({ onSignup }) => {
-  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (!/^\d{10}$/.test(phone)) {
-    toast.error("Please enter a valid 10-digit phone number.");
-    return;
-  }
-
-  try {
-    setLoading(true);
-    const response = await axiosClient.post("/forgot-password/send-otp", {
-      phone,
-      channel: "sms"
-    });
-
-    if (response?.data?.status) {
-      toast.success("OTP sent to your mobile number");
-      setPhone("");
-      navigate("/forgetPass-verify-otp", { state: { phone } });
-    } else {
-      toast.error(response?.data?.message || "Phone not found.");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error("Please enter a valid email address.");
+      return;
     }
-  } catch (error) {
-    if (
-      error.response &&
-      error.response.data &&
-      error.response.data.message
-    ) {
-      toast.error(error.response.data.message);  // e.g. "Phone number not registered"
-    } else {
-      toast.error("An error occurred. Please try again.");
-    }
-    console.error("Forget password error:", error);
-  } finally {
-    setLoading(false);
-  }
-};
 
+    try {
+      setLoading(true);
+      const response = await axiosClient.post("/forgot-password/send-otp", {
+        email,
+        channel: "email"
+      });
+
+      if (response?.data?.status) {
+        toast.success("OTP sent to your email");
+        setEmail("");
+        navigate("/forgetPass-verify-otp", { state: { email } });
+      } else {
+        toast.error(response?.data?.message || "Email not found.");
+      }
+    } catch (error) {
+      if (
+        error.response &&
+        error.response.data &&
+        error.response.data.message
+      ) {
+        toast.error(error.response.data.message); // e.g. "Email not registered"
+      } else {
+        toast.error("An error occurred. Please try again.");
+      }
+      console.error("Forget password error:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="auth-container">
@@ -75,14 +75,14 @@ const ForgetPass = ({ onSignup }) => {
 
         <form onSubmit={handleSubmit}>
           <div className="loginGroup Group">
-            <div className="phoneBox Box">
-              <label htmlFor="phone">Phone No</label>
+            <div className="emailBox Box">
+              <label htmlFor="email">Email</label>
               <input
-                type="tel"
-                id="phone"
-                placeholder="Enter your 10-digit Phone No"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                type="email"
+                id="email"
+                placeholder="Enter your email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>

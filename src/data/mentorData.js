@@ -5,7 +5,7 @@ const mentorData = [
     designation: "Numerologist",
     courseType: "Numerology",
     courseTitle: "Understanding Concept Of React",
-    image: "/images/person1.png", // use real image URLs
+    image: "/images/person1.png", 
   },
   {
     name: "Abhishek S",
@@ -28,7 +28,6 @@ const mentorData = [
     courseTitle: "Understanding Concept Of React",
     image: "/images/person4.jpg",  
   },
-  // Add more mentors here...
 ];
 
 export default mentorData;

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './contact.css';
 import states from '../../data/states.json';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ContactForm2() {
   const [formData, setFormData] = useState({
@@ -11,9 +13,6 @@ function ContactForm2() {
     message: "",
     subscribe: false,
   });
-
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -27,35 +26,35 @@ function ContactForm2() {
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setError("");
-    setSuccess("");
+  e.preventDefault();
+  const { name, email, phone, state, message } = formData;
 
-    const { name, email, phone, state, message } = formData;
+  // Validate all fields
+  if (!name.trim()) return toast.error("Name is required.");
+  if (!email.trim()) return toast.error("Email is required.");
+  if (!validateEmail(email)) return toast.error("Please enter a valid email address.");
 
-    // Simple validation
-    if (!name || !email || !phone || !state || !message) {
-      setError("Please fill in all fields.");
-      return;
-    }
+  if (!phone.trim()) return toast.error("Phone number is required.");
+  if (!/^\d{10}$/.test(phone)) return toast.error("Please enter a valid 10-digit phone number.");
 
-    if (!validateEmail(email)) {
-      setError("Please enter a valid email address.");
-      return;
-    }
+  if (!state.trim()) return toast.error("Please select a state.");
+  if (!message.trim()) return toast.error("Message cannot be empty.");
 
-    // Simulate form submission
-    console.log("Form submitted successfully:", formData);
-    setSuccess("Your message has been sent successfully!");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      state: "",
-      message: "",
-      subscribe: false,
-    });
-  };
+  // Success
+  console.log("Form submitted successfully:", formData);
+  toast.success("Your message has been sent successfully!");
+
+  // Reset form
+  setFormData({
+    name: "",
+    email: "",
+    phone: "",
+    state: "",
+    message: "",
+    subscribe: false,
+  });
+};
+
 
   return (
     <div className="form-container">
@@ -66,7 +65,7 @@ function ContactForm2() {
             <input
               type="text"
               name="name"
-              placeholder=" "
+              placeholder="enter name"
               value={formData.name}
               onChange={handleChange}
             />
@@ -76,7 +75,7 @@ function ContactForm2() {
             <input
               type="email"
               name="email"
-              placeholder="abc@"
+              placeholder="abc@example.com"
               value={formData.email}
               onChange={handleChange}
             />
@@ -89,7 +88,7 @@ function ContactForm2() {
             <input
               type="text"
               name="phone"
-              placeholder="+1 012 3456 789"
+              placeholder="phone no"
               value={formData.phone}
               onChange={handleChange}
             />
@@ -129,11 +128,6 @@ function ContactForm2() {
             subscribe to receive the latest news and exclusive offers
           </label>
         </div>
-
-        {/* Feedback Messages */}
-        {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
-        {success && <p style={{ color: "green", marginTop: "10px" }}>{success}</p>}
-
         <button type="submit" className="submit-btn">Send Message</button>
         <img src='/images/letter_send.png' alt='' className='letterSend' />
       </form>

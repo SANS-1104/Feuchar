@@ -48,6 +48,7 @@ body {
     letter-spacing: 0%;
     text-align: center;
     text-transform: capitalize;
+    /* align-items: center; */
 }
 .footer-outer-cover .footer-inner-cover .l1 .footerImg img{
     width: 150px;
@@ -231,7 +232,8 @@ body {
         padding: 2rem;
     }
     .footer-outer-cover .footer-inner-cover .l1{
-        font-size: 40px;
+        font-size: 30px;
+        line-height: 35px;
     }
     .footer-outer-cover .footer-inner-cover .l1 p{
         font-size: 30px;

@@ -1,29 +1,26 @@
 import React, { useState } from 'react';
-import "../Overview/overview.css"
 import { FaMagnifyingGlass } from 'react-icons/fa6';
+import '../Overview/overview.css';
 
 const ExploreCourseSearchbar = ({ onSearch }) => {
   const [query, setQuery] = useState('');
 
-  const handleInputChange = (e) => {
-    setQuery(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (onSearch) onSearch(query);
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setQuery(value);
+    onSearch?.(value); // call onSearch as user types
   };
 
   return (
-    <form className="Overviewsearch-bar MyCourseSearchBar" onSubmit={handleSubmit}>
+    <div className="Overviewsearch-bar MyCourseSearchBar">
       <input
         type="text"
         placeholder="Search Course Name, Mentor...."
         value={query}
-        onChange={handleInputChange}
+        onChange={handleChange}
       />
-      <button type="submit"><FaMagnifyingGlass /></button>
-    </form>
+      <FaMagnifyingGlass />
+    </div>
   );
 };
 

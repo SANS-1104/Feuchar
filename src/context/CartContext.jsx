@@ -1,10 +1,32 @@
-import React, { createContext, useState, useContext } from 'react';
-import initialCartData from '../data/cartData'; 
+import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState(initialCartData);
+  const getInitialCart = () => {
+    const storedCart = localStorage.getItem('cart');
+    return storedCart ? JSON.parse(storedCart) : [];
+  };
+
+  const [cart, setCart] = useState(getInitialCart);
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
+
+  const addToCart = (newItem) => {
+    setCart(prevCart => {
+      const existingItem = prevCart.find(item => item.productId === newItem.productId);
+      if (existingItem) {
+        return prevCart.map(item =>
+          item.productId === newItem.productId
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      } else {
+        return [...prevCart, { ...newItem, quantity: 1 }];
+      }
+    });
+  };
 
   const updateQuantity = (id, amount) => {
     setCart(prev =>
@@ -21,11 +43,10 @@ export const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cart, updateQuantity, removeItem }}>
+    <CartContext.Provider value={{ cart, addToCart, updateQuantity, removeItem }}>
       {children}
     </CartContext.Provider>
   );
 };
 
-// Custom hook for easy access
 export const useCart = () => useContext(CartContext);

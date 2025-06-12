@@ -134,6 +134,7 @@
     line-height: 100%;
     letter-spacing: 0%;
     text-transform: capitalize;
+    border: none;
 }
 
 
@@ -180,19 +181,20 @@
 .courseLive2-outer .courseLive2-inner .layer2 .courseLive2-left .courseLive2-info .courseLive2-t3{
     background-color: black;
     color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     padding: 2rem;
     border-radius: 1rem;
     font-family: Poppins;
     font-weight: 400;
     font-size: 22px;
-    line-height: 28px;
+    line-height: 35px;
     letter-spacing: 0%;
     text-transform: capitalize;
     width: 80%;
+    text-align: left;
+}
+
+.courseLive2-outer .courseLive2-inner .layer2 .courseLive2-left .courseLive2-info .courseLive2-t3 span.bolding{
+    font-weight: bold;
 }
 
 
@@ -238,34 +240,80 @@
     .courseLive2-outer{
         padding: 4rem 0;
     }
+    .courseLive2-outer .courseLive2-inner .layer2 .courseLive2-left{
+        width: 100%;
+    }
     .courseLive2-outer .courseLive2-inner{
         padding: 1rem;
+    }
+    .courseLive2-outer .courseLive2-inner .layer2 .courseLive2-left .courseLive2-info .courseLive2-t1{
+        font-size: 40px;
+        line-height: 45px;
     }
     .courseLive2-outer .courseLive2-inner .layer2{
         flex-wrap: wrap;
         justify-content: center;
     }
     .courseLive2-outer .courseLive2-inner .layer2 .courseLive2-left .courseLive2-info{
-        padding-left: 2rem;
+        padding-left: 0;
         align-items: center;
+        gap: 1rem;
     }
     .courseLive2-outer .courseLive2-inner .layer2 .courseLive2-left .courseLive2-info .courseLive2-t3{
         width: 100%;
-        padding: 1.5rem;
+        padding: 1rem;
+        font-size: 16px;
     }
     .courseLive2-outer .courseLive2-inner .layer2 .courseLive2-left .courseLive2-title{
-        left: -80px;
-        top: 70%;
+        /* left: -80px;
+        top: 70%; */
+        display: none;
     }
     .courseLive2-outer .courseLive2-inner .layer2 .courseLive2-right .courseLive2-upper .upperTitle .courseLive2-p1{
         padding-top: 2rem;
+        font-size: 24px;
+        line-height: 25px;
+    }
+    .courseLive2-outer .courseLive2-inner .layer2 .courseLive2-right .courseLive2-upper .upperTitle .courseLive2-p2{
+        font-size: 14px;
+    }
+    .courseLive2-outer .courseLive2-inner .layer2 .courseLive2-right .courseLive2-upper .courseLive2-benefits .courseLive2-benefitTitle{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .courseLive2-outer .courseLive2-inner .layer2 .courseLive2-right .courseLive2-upper .courseLive2-benefits ul li{
+        font-size: 14px;
+        line-height: 16px;
     }
     .courseLive2-outer .layer1 img{
-        transform: translate(50%,50%);
+        /* transform: translate(50%,50%);
         width: 100px;
-        height: 100px;
+        height: 100px; */
+        display: none;
     }
     .courseLive2-outer .layer3 img{
-        transform: translate(-30%,-80%);
+        /* transform: translate(-30%,-80%); */
+        display: none;
+    }
+    .courseLive2-outer .courseLive2-inner .layer2 .courseLive2-right .courseLive2-price .courseLive2-amt{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .courseLive2-outer .courseLive2-inner .layer2 .courseLive2-right .courseLive2-price button{
+        font-size: 14px;
+    }
+}
+
+
+@media (min-width: 1275px) and (max-width: 1450px) {
+    .courseLive2-outer .layer1 img{
+        transform: translate(-45%,70%);
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1275px) {
+    .courseLive2-outer .layer1 img{
+        transform: translate(-10%,70%);
     }
 }

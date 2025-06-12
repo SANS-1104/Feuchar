@@ -14,6 +14,7 @@ export default function RightSide() {
   }, []);
 
   const firstName = user?.name ? user.name.split(" ")[0] : "";
+  
 
   return (
     <div className="RightSide-wrapper">

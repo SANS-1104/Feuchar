@@ -1,13 +1,13 @@
 import React from "react";
 import "./course.css";
 
-const CourseCard = ({ title, subtitle, image }) => {
+const CourseCard = ({ title, tutor, image }) => {
   return (
     <div className="Coursecard">
       <div className="Coursecard-image"><img src={image} alt={title}  /></div>
       <div className="Coursecard-text">
         <div className="Coursetitle">{title}</div>
-        {/* {subtitle && <p>{subtitle}</p>} */}
+        <div className="Coursetutor">~ By: {tutor}</div>
       </div>
     </div>
   );

@@ -198,7 +198,7 @@ td.cart-price, td.cart-total{
   border-radius: 2rem;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap ;
 }
@@ -264,7 +264,7 @@ td.cart-price, td.cart-total{
   }
 
   .cart-table tr {
-    margin-bottom: 15px;
+    margin-bottom: 0;
     border: 1px solid #444;
     padding: 10px;
     border-radius: 8px;
@@ -452,10 +452,9 @@ td.cart-price, td.cart-total{
   font-family: Poppins;
   font-weight: 400;
   font-size: 16px;
-  line-height: 100%;
+  line-height: 24px;
   letter-spacing: 0%;
   text-transform: capitalize;
-
 }
 
 .checkout-order-table td.checkout-item-qty{
@@ -483,7 +482,7 @@ td.cart-price, td.cart-total{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 3rem;
   padding: 2rem 4rem;
@@ -519,6 +518,9 @@ td.cart-price, td.cart-total{
   .checkout-container .checkout-lower .checkout-right{
     width: 100%;
   }
+  .billing-form .billingCheckout-input-field{
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 560px) {
@@ -526,7 +528,7 @@ td.cart-price, td.cart-total{
     padding: 0;
   }
   .billing-form .billingCheckout-input-field{
-    width: 50%;
+    width: 100%;
   }
   
   .billing-form {
@@ -538,7 +540,7 @@ td.cart-price, td.cart-total{
   }
   .cart-summary .cart-tile{
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2rem;
   }
 }

@@ -155,13 +155,17 @@
 }
 .outerWrapper .innerWrapper .level2 .left .leftcol1 .l2 .socials .socialIcon .socialIcon1{
   background-color: white;
-  padding: 0.25rem;
-  padding-left: 0.5rem;
-  padding-bottom: 2rem;
+  /* padding: 0.25rem; */
+  /* padding-left: 0.5rem; */
+  /* padding-bottom: 2rem; */
   color: #000000;
   border-radius: 50%;
   width: 2rem;
-  height: 1rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4px;
 }
 .outerWrapper .innerWrapper .level2 .left .leftcol1 .l2 .socials .socialIcon .socialIcon1 a{
   text-decoration: none;

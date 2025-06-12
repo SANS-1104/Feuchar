@@ -14,7 +14,7 @@ function HeroSection2() {
   const closeModal = () => setIsModalOpen(false);
   return (
     <>
-      <div className={`OuterHero-wrapper ${isModalOpen ? "blurred" : ""}`}>
+      <div className={`OuterHero-wrapper max-wdh ${isModalOpen ? "blurred" : ""}`}>
           <div className="left-half">
             <div className="layer1">Learn Occult Sciences & Earn UNLIMITED TODAY</div>
             <div className="layer2">

@@ -67,7 +67,7 @@
 
 .grid-container {
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */ 
+  grid-template-columns: repeat(2, 1fr); 
   /* Will Be updated in future when more courses added */
   max-width: 1200px;
   margin: 0 auto;
@@ -79,17 +79,18 @@
 .Coursecard {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: column;
     align-items: flex-start;
     background-color: #111;
     border-radius: 10px;
     transition: transform 0.3s ease;
     border-radius: 20px;
-    gap: 2rem;
-    width: 100%; 
+    gap: 1rem;
+    width: 400px; 
     max-width: 450px;
     height: auto; 
+    border: 2px solid #cbc9c9d9;
 }
 
 .Coursecard:hover {
@@ -119,18 +120,32 @@
 .Coursecard-text .Coursetitle {
     font-family: var(--font-primary);
     font-weight: 500;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 24px;
+    line-height: 35px;
     letter-spacing: 0%;
     color: linear-gradient(93.46deg, #C4C4C4 4.94%, #FFFFFF 98.78%);
     padding: 1rem;
+}
 
+
+.Coursecard-text .Coursetutor {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 35px;
+    letter-spacing: 0%;
+    color: linear-gradient(93.46deg, #C4C4C4 4.94%, #FFFFFF 98.78%);
+    padding: 1rem;
+    padding-top: 0;
 }
 
 
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr; /* 1 column on small devices */
+  }
+  .Coursecard{
+    width: 100%;
   }
   .Coursecard-image img{
     height: auto;

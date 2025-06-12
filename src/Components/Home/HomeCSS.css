@@ -463,38 +463,40 @@
     color: white;
     border-radius: 1rem;
     margin: 1rem;
-    padding: 2rem;
-    height: 400px;
-    width: 450px;
+    padding: 8px;
+    /* height: 450px;
+    width: 350px; */
     align-items: center;
 }
 .card h3{
     font-family: var(--font-primary);
     font-weight: 500;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 150%;
     letter-spacing: 0%;
     text-align: center;
     margin-top: 2rem;
 }
 .card img{
-    width: 400px;
-    height: 150px;
-    min-width: 300px;
+    width: 100%;
+    height: auto;
+    /* max-height: 150px;
+    min-width: 300px; */
 }
 
 .card p{
     font-family: var(--font-secondary);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 12px;
     letter-spacing: 0%;
     text-align: center;
+    color: #999999;
 }
 
 @media only screen and (max-width: 1024px) {
     .card{
-        width: 100%;
-        height: fit-content;
+        width: 100% !important;
+        height: fit-content !important;
         padding: 1rem;
     }
     .card img{
@@ -521,6 +523,7 @@
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
+    gap: 15px;
 
 }
 .Features-Wrapper-outer .lowerContainer .lowerCardsRow{
@@ -531,6 +534,7 @@
     justify-content: center;
     justify-content: center;
     padding: 0 1rem;
+    gap: 15px;
 }
 
 
@@ -561,8 +565,8 @@
     line-height: 100%;
     letter-spacing: 0%;
     text-transform: capitalize;
-    text-align: center;
-    max-width: 600px;
+    /* text-align: center;
+    max-width: 600px; */
 }
 
 .enroll-wrapper .inner-cont .enroll-details{
@@ -587,6 +591,7 @@
     border-color: #2D2D2D;
     margin-right: 2rem;
     gap: 1rem;
+    max-width: 350px;
 }
 
 .enroll-wrapper .inner-cont .enroll-details .single-det h3{
@@ -600,7 +605,7 @@
 .enroll-wrapper .inner-cont .enroll-details .single-det p{
     font-weight: 400;
     font-size: 18px;
-    line-height: 25px;
+    line-height: 32px;
     letter-spacing: 0%;
     text-transform: capitalize;
     color: #CAC7C7;
@@ -618,6 +623,14 @@
     }
     .enroll-wrapper .inner-cont .enroll-details .single-det{
         padding: 1.5rem;
+        margin: 1rem;
+    }
+    .enroll-wrapper .inner-cont .enroll-details .single-det h3{
+        font-size: 20px;
+    }
+    .enroll-wrapper .inner-cont .enroll-details .single-det p{
+        font-size: 14px;
+        line-height: 25px;
     }
 }
 
@@ -647,7 +660,7 @@
     padding: 3rem;
     padding-left: 1rem;
     justify-content: center;
-    width: 80%;
+    /* width: 80%; */
     border-radius: 2rem;
     font-family: var(--font-type3);
     gap: 4rem;
@@ -667,6 +680,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 50%;
 }
 
 .gurukul-outer-wrapper .gurukul-inner-wrapper .right .rightTitle{
@@ -711,6 +725,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 80%;
 }
 
 .gurukul-outer-wrapper .gurukul-inner-wrapper .right .guruRight .info h3{
@@ -745,15 +760,16 @@
     }
     .gurukul-outer-wrapper .gurukul-inner-wrapper .right{
         align-items: center;
+        width: 100%;
     }
     .gurukul-outer-wrapper .gurukul-inner-wrapper .right .rightTitle{
-        padding-left: 2rem;
+        /* padding-left: 2rem; */
         font-size: 25px;
         text-align: center;
     }
     .gurukul-outer-wrapper .gurukul-inner-wrapper .right .rightTitleP{
-        padding-left: 3rem;
-        padding-right: 2rem;
+        /* padding-left: 3rem;
+        padding-right: 2rem; */
         text-align: center;
         font-size: 16px;
     }
@@ -762,11 +778,12 @@
         height: 45px;
     }
     .gurukul-outer-wrapper .gurukul-inner-wrapper .right .guruRight{
-        padding: 0 3rem;
+        padding: 1rem ;
         width: fit-content;
         height: auto;
         justify-content: center;
         align-items: center;
+        gap: 8px;
     }
     .gurukul-outer-wrapper .gurukul-inner-wrapper .right .guruRight .info h3{
         font-size: 12px;
@@ -781,13 +798,14 @@
         font-size: 20px;
     }
     .gurukul-outer-wrapper .gurukul-inner-wrapper .right .rightTitleP{
-        font-size: 15px;
+        font-size: 16px;
     }
     .gurukul-outer-wrapper .gurukul-inner-wrapper .right .guruRight .info h3{
             font-size: 15px;
     }
     .gurukul-outer-wrapper .gurukul-inner-wrapper .right .guruRight .info p{
-        font-size: 12px;
+        font-size: 14px;
+        line-height: 25px;
     }
 }
 /* 
@@ -873,6 +891,7 @@
     padding: 1rem;
     border-radius: 1rem;
     margin-right: 1rem;
+    border: none;
 }
 
 .Outer-future .inner-future .l4 button.register{
@@ -885,6 +904,7 @@
     vertical-align: middle;
     padding: 1rem;
     border-radius: 1rem;
+    border: none;
 }
 @media only screen and (max-width: 1024px) {
     .Outer-future .inner-future .l2{
@@ -977,8 +997,8 @@
     line-height: 100%;
     letter-spacing: 0%;
     text-transform: capitalize;
-    max-width: 600px;
-    text-align: center;
+    /* max-width: 600px;
+    text-align: center; */
 }
 
 
@@ -1025,6 +1045,7 @@
     padding-left: 22px;
     border-radius: 100px;
     background-color: #F8B919;
+    border: none;
 }
 
 
@@ -1091,6 +1112,8 @@
 
 }
 
+
+
 .outerJourney-wrapper  .journey-data .journey-card img{
     width: 80px;
     height: 80px;
@@ -1100,7 +1123,7 @@
     font-family: var(--font-secondary);
     font-weight: 400;
     font-size: 20px;
-    line-height: 25px;
+    line-height: 30px;
     letter-spacing: 0%;
     text-align: center;
     text-transform: capitalize;
@@ -1132,9 +1155,30 @@
     }
 }
 
+
+@media (min-width: 1024px) and (max-width: 1290px) {
+    .OuterHero-wrapper  .left-half{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1320px) {
+    .outerJourney-wrapper  .journey-data .journey-card{
+        width: 300px;
+        /* height: 220px; */
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1500px) {
+    .outerJourney-wrapper  .journey-data{
+        gap: 2rem;
+    }
+}
+
 .home-BookBtn-button-container{
     background-color: black;
 }
+
 
 
 
@@ -1261,6 +1305,7 @@
     padding: 2rem 4rem;
     gap: 1rem;
     padding-top: 4rem;
+    width: 50%;
 }
 
 .outerStudentSay .innerStudentSay .HeadingLayer .left .head{
@@ -1294,6 +1339,7 @@
     }
     .outerStudentSay .innerStudentSay .HeadingLayer .left{
         padding: 2rem;
+        width: 100%;
     }
     .outerStudentSay .innerStudentSay .testDesc{
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

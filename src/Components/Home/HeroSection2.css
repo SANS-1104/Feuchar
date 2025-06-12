@@ -5,6 +5,12 @@
   --font-type3: 'Inter', sans-serif;
 }
 
+.ovx{
+    overflow-x: hidden;
+    justify-content: center;
+    background-color: black;
+}
+
 
 .OuterHero-wrapper {
     display: flex;
@@ -101,7 +107,7 @@
 }
 .OuterHero-wrapper  .left-half .layer3 .layer31 Button{
     padding: 0 1.25rem;
-    
+    border: none;
 }
 
 .OuterHero-wrapper  .left-half .layer3 .layer32{

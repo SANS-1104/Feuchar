@@ -40,6 +40,8 @@
 @media (min-width: 1700px) {
   .max-wdh{
     max-width: 1900px;
+  }
+  .out-max-wdh{
     justify-content: center;
   }
 }

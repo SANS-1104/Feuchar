@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './checkout.css'; // Ensure you have the correct CSS file for styling
+import './checkout.css';
+import { toast } from 'react-toastify';
 
 export default function BillingDetails({ cart }) {
   const [formData, setFormData] = useState({
@@ -13,36 +14,39 @@ export default function BillingDetails({ cart }) {
     zip: '',
   });
 
-  const [errors, setErrors] = useState({});
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const validate = () => {
-    const newErrors = {};
-    if (!formData.fname.trim()) newErrors.fname = 'First name is required';
-    if (!formData.lname.trim()) newErrors.lname = 'Last name is required';
-    if (!formData.email.trim()) newErrors.email = 'Email is required';
-    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Invalid email';
-    if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
-    else if (!/^\d{10}$/.test(formData.phone)) newErrors.phone = 'Invalid phone number';
-    if (!formData.street.trim()) newErrors.street = 'Street address is required';
-    if (!formData.city.trim()) newErrors.city = 'City is required';
-    if (!formData.country.trim()) newErrors.country = 'Country is required';
-    if (!formData.zip.trim()) newErrors.zip = 'Postcode/Zip is required';
+    const errors = [];
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    if (!formData.fname.trim()) errors.push('First name is required');
+    if (!formData.lname.trim()) errors.push('Last name is required');
+    if (!formData.email.trim()) errors.push('Email is required');
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) errors.push('Invalid email address');
+    if (!formData.phone.trim()) errors.push('Phone number is required');
+    else if (!/^\d{10}$/.test(formData.phone)) errors.push('Phone number must be 10 digits');
+    if (!formData.street.trim()) errors.push('Street address is required');
+    if (!formData.city.trim()) errors.push('City is required');
+    if (!formData.country.trim()) errors.push('Country is required');
+    if (!formData.zip.trim()) errors.push('Postcode / Zip is required');
+
+    if (errors.length > 0) {
+      errors.forEach(err => toast.error(err));
+      return false;
+    }
+
+    return true;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!validate()) return;
 
     try {
-      // Replace with your actual backend endpoint
       const res = await fetch('/api/save-billing-details', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -50,8 +54,7 @@ export default function BillingDetails({ cart }) {
       });
 
       if (res.ok) {
-        alert('Billing details saved successfully!');
-        // Optionally reset form
+        toast.success('Billing details saved successfully!');
         setFormData({
           fname: '',
           lname: '',
@@ -62,125 +65,122 @@ export default function BillingDetails({ cart }) {
           country: '',
           zip: '',
         });
-        setErrors({});
       } else {
-        alert('Failed to save billing details.');
+        const errRes = await res.json().catch(() => ({}));
+        toast.error(errRes.message || 'Failed to save billing details.');
       }
     } catch (err) {
-      console.error(err);
-      alert('An error occurred while saving billing details.');
+      console.error('Network error:', err);
+      toast.error('Server not reachable. Try again later.');
     }
   };
 
   return (
     <form className="cart-summary" onSubmit={handleSubmit}>
-  <div className='cart-summar-title'>Billing details</div>
+      <div className='cart-summar-title'>Billing details</div>
+      <div className="billing-form">
+        <div className="form-row">
+          <div className="billingCheckout-input-field">
+            <label htmlFor='fname'>First Name*</label>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              value={formData.fname}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="billingCheckout-input-field">
+            <label htmlFor="lname">Last Name*</label>
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              value={formData.lname}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        </div>
 
-  <div className="billing-form">
-    <div className="form-row">
-      <div className="billingCheckout-input-field">
-        <label htmlFor='fname'>First Name*</label>
-        <input
-          type="text"
-          id="fname"
-          name="fname"
-          value={formData.fname}
-          onChange={handleChange}
-        />
-        {errors.fname && <small className="error">{errors.fname}</small>}
+        <div className="form-row">
+          <div className="billingCheckout-input-field">
+            <label htmlFor="email">Email Address*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="billingCheckout-input-field">
+            <label htmlFor="phone">Phone Number*</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        </div>
+
+        <div className="billingCheckout-input-field">
+          <label htmlFor="street">Street Address*</label>
+          <input
+            type="text"
+            id="street"
+            name="street"
+            value={formData.street}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="billingCheckout-input-field">
+          <label htmlFor="city">Town / City*</label>
+          <input
+            type="text"
+            id="city"
+            name="city"
+            value={formData.city}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="billingCheckout-input-field">
+          <label htmlFor="country">Country*</label>
+          <input
+            type="text"
+            id="country"
+            name="country"
+            value={formData.country}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="billingCheckout-input-field">
+          <label htmlFor="zip">Postcode / Zip*</label>
+          <input
+            type="text"
+            id="zip"
+            name="zip"
+            value={formData.zip}
+            onChange={handleChange}
+            required
+          />
+        </div>
       </div>
 
-      <div className="billingCheckout-input-field">
-        <label htmlFor="lname">Last Name*</label>
-        <input
-          type="text"
-          id="lname"
-          name="lname"
-          value={formData.lname}
-          onChange={handleChange}
-        />
-        {errors.lname && <small className="error">{errors.lname}</small>}
+      <div className="checkout-button">
+        <button type="submit">Make a payment</button>
       </div>
-    </div>
-
-    <div className="form-row">
-      <div className="billingCheckout-input-field">
-        <label htmlFor="email">Email Address*</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        {errors.email && <small className="error">{errors.email}</small>}
-      </div>
-
-      <div className="billingCheckout-input-field">
-        <label htmlFor="phone">Phone Number*</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-        />
-        {errors.phone && <small className="error">{errors.phone}</small>}
-      </div>
-    </div>
-
-    <div className="billingCheckout-input-field">
-      <label htmlFor="street">Street Address*</label>
-      <input
-        type="text"
-        id="street"
-        name="street"
-        value={formData.street}
-        onChange={handleChange}
-      />
-      {errors.street && <small className="error">{errors.street}</small>}
-    </div>
-
-    <div className="billingCheckout-input-field">
-      <label htmlFor="city">Town / City*</label>
-      <input
-        type="text"
-        id="city"
-        name="city"
-        value={formData.city}
-        onChange={handleChange}
-      />
-      {errors.city && <small className="error">{errors.city}</small>}
-    </div>
-
-    <div className="billingCheckout-input-field">
-      <label htmlFor="country">Country*</label>
-      <input
-        type="text"
-        id="country"
-        name="country"
-        value={formData.country}
-        onChange={handleChange}
-      />
-      {errors.country && <small className="error">{errors.country}</small>}
-    </div>
-
-    <div className="billingCheckout-input-field">
-      <label htmlFor="zip">Postcode / Zip*</label>
-      <input
-        type="text"
-        id="zip"
-        name="zip"
-        value={formData.zip}
-        onChange={handleChange}
-      />
-      {errors.zip && <small className="error">{errors.zip}</small>}
-    </div>
-  </div>
-  <div className="checkout-button">
-    <button className="">Make a payment</button>
-  </div>
-</form>
-
+    </form>
   );
 }

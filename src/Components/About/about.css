@@ -162,8 +162,8 @@
 .outerWrapper .innerWrapper .secl3{
     font-family: Nunito;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 32px;
     letter-spacing: 0%;
     text-align: center;
     display: flex;
@@ -231,6 +231,7 @@
     .outerWrapper .innerWrapper .secl3{
         padding: 0;
         font-size: 20px;
+        line-height: 35px;
     }
 }
 
@@ -280,8 +281,8 @@
     justify-content: center;
     font-family: Nunito;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 22.27px;
+    font-size: 22px;
+    line-height: 25px;
     letter-spacing: 0%;
     text-align: center;
     color: white;
@@ -292,7 +293,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 4rem;
+    gap: 2rem;
 }
 
 
@@ -301,8 +302,8 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 350px;
-    height: 200px;
+    width: 400px;
+    height: 250px;
     gap: 14px;
     border-radius: 13.65px;
     border-width: 0.68px;
@@ -325,8 +326,8 @@
 .AboutSubCardCompTitle-Wrapper .AboutSubCardCompDesc{
     font-family: var(--font-secondary);
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 28px;
     letter-spacing: 0%;
     text-transform: capitalize;
     color: #CAC7C7;
@@ -340,9 +341,9 @@
 .AboutCourseCardComp-Wrapper{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    width: 450px;
-    height: 200px;
+    flex-direction: column;
+    width: 700px;
+    height: 220px;
     gap: 32px;
     border-radius: 20px;
     border-width: 1px;
@@ -363,8 +364,8 @@
 .AboutCourseCardComp-Wrapper .AboutCourseCardCompDesc{
     font-family: Nunito;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 30px;
     letter-spacing: 0%;
     color: white;
 }
@@ -387,6 +388,28 @@
 
 }
 
+@media (min-width: 1100px) and (max-width: 1500px) {
+    .AboutCourseCardComp-Wrapper{
+        width: 500px;
+        height: 220px;
+    }
+    .AboutCourseCardComp-Wrapper .AboutCourseCardCompDesc{
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1100px) {
+    .AboutCourseCardComp-Wrapper{
+        width: 400px;
+        height: 230px;
+    }
+    .AboutCourseCardComp-Wrapper .AboutCourseCardCompDesc{
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
 
 
 /* 
@@ -597,6 +620,8 @@
 .FAQCardComponent-Outer{
     height: 230px;
     padding: 35.71px;
+    justify-content: flex-start;
+    gap: 1.2rem;
 }
 
 .FAQCardComponent-Outer .layer1{
@@ -704,8 +729,8 @@
 .Values-left .Values-left-desc {
     font-family: Urbanist;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 150%;
+    font-size: 20px;
+    line-height: 30px;
     letter-spacing: 0%;
     display: flex;
     flex-wrap: wrap;
@@ -771,7 +796,7 @@
     font-family: Urbanist;
     font-weight: 500;
     font-size: 18px;
-    line-height: 150%;
+    line-height: 28px;
     letter-spacing: 0%;
     color: #999999;
 }

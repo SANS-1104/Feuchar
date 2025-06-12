@@ -1,0 +1,94 @@
+.AdminStudentDetails-wrapper {
+  padding: 2rem;
+  width: 100%;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Ensures table fills the container but scrolls if necessary */
+.responsive-table {
+  width: 100%;
+  min-width: 600px; /* Adjust as needed */
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.responsive-table th {
+  background-color: #f4f4f4;
+}
+
+/* Optional: Improve mobile padding */
+@media screen and (max-width: 1024px) {
+  .AdminStudentDetails-wrapper {
+    padding: 10px;
+  }
+}
+
+
+.AdminDash-outer-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.AdminDash-outer-wrapper .AdminDash-inner-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.AdminDash-outer-wrapper .AdminDash-inner-wrapper .a{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+
+.AdminDash-outer-wrapper .AdminDash-inner-wrapper .a .a1{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  /* border: 2px solid black; */
+  border-radius: 1rem;
+  width: 300px;
+  height: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: Poppins;
+  transition: transform 400ms ease-in-out 0s;
+}
+
+.AdminDash-outer-wrapper .AdminDash-inner-wrapper .a .a1 .l1{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.AdminDash-outer-wrapper .AdminDash-inner-wrapper .a .a1 .l2{
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.AdminDash-outer-wrapper .AdminDash-inner-wrapper .a .a1:hover{
+  transition: transform 400ms ease-in-out 0s;
+}

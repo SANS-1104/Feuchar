@@ -1,15 +1,20 @@
 import React from 'react';
-import { useNavigate, useParams } from 'react-router-dom'; 
+import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify'; // ✅ toast import
 
 export default function YourOrders({ cart }) {
   const navigate = useNavigate();
-  const { username } = useParams(); 
+  const { username } = useParams();
 
   const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const discount = 0;
   const total = subtotal - discount;
 
   const handleCheckout = () => {
+    if (cart.length === 0 || total === 0) {
+      toast.error("Cart Cannot Be Empty!!"); 
+      return;
+    }
     navigate(`/checkout`);
   };
 

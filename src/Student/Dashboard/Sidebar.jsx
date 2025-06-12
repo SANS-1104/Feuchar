@@ -8,7 +8,7 @@ import axiosClient from '../../api/axiosClient';
 
 function Sidebar({ sidebarOpen, setSidebarOpen }) {
   const navigate = useNavigate();
-  const { name } = useParams(); // username from URL
+  const { name } = useParams(); 
 
   const handleLogout = async () => {
     try {
@@ -34,27 +34,27 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
         <ul className="Dashboardsidebar-menu">
           <li>
             <NavLink to={`/dashboard/${name}/overview`} className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setSidebarOpen(false)} >
-              <FaThLarge className='icon' style={{ fontSize: 20 }} /> Overview
+              <FaThLarge className='icon'/> Overview
             </NavLink>
           </li>
           <li>
             <NavLink to={`/dashboard/${name}/explorecourse`} className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setSidebarOpen(false)} >
-              <FaSearch className='icon' style={{ fontSize: 20 }} /> Explore Courses
+              <FaSearch className='icon'/> Explore Courses
             </NavLink>
           </li>
           <li>
             <NavLink to={`/dashboard/${name}/mycourse`} className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setSidebarOpen(false)} >
-              <FaPlayCircle className='icon' style={{ fontSize: 20 }} /> My Courses
+              <FaPlayCircle className='icon'/> My Courses
             </NavLink>
           </li>
           <li>
             <NavLink to={`/dashboard/${name}/message`} className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setSidebarOpen(false)} >
-              <FaRegCommentDots className='icon' style={{ fontSize: 20 }} /> Message
+              <FaRegCommentDots className='icon'/> Message
             </NavLink>
           </li>
           <li>
             <NavLink to={`/dashboard/${name}/updateprofile`} className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setSidebarOpen(false)} >
-              <FaUser className='icon' style={{ fontSize: 20 }} /> Update Profile
+              <FaUser className='icon'/> Update Profile
             </NavLink>
           </li>
         </ul>

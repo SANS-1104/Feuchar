@@ -1,24 +1,18 @@
-import TestimonialCarousel from './TestimonialCarousel';
-import './webinar.css';
-import WebinarAbt from './WebinarAbt';
-import WebinarAgenda from './WebinarAgenda';
-import WebinarCoursePrev from './WebinarCoursePrev';
-import WebinarHero from './WebinarHero';
-import WebinarLearn from './WebinarLearn';
-import WebinarSeats from './WebinarSeats';
+import React from "react";
+import { Helmet } from "react-helmet";
+import WebinarSection2 from './WebinarSection2';
 
+export default function CoursePage() {
+  return (
+    <div className="max-wdh">
+      <Helmet>
+        <title>Webinar - Learn & Grow with Us</title>
+        <meta name="description" content="Join our webinar to learn about latest trends and get insights from industry experts." />
+        <meta name="keywords" content="webinar, learning, online course, education" />
+        <meta name="author" content="Feuchar" />
+      </Helmet>
 
-
-export default function WebinarPage() {
-    return(
-        <div className="webinarPage max-wdh">
-            <WebinarHero/>
-            <WebinarAgenda />
-            <WebinarLearn />
-            <WebinarCoursePrev />
-            <TestimonialCarousel />
-            <WebinarSeats />
-            <WebinarAbt />
-        </div>
-    )
+      <WebinarSection2 />
+    </div>
+  );
 }
