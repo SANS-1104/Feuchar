@@ -4,8 +4,12 @@ function CartItem({ item, onQuantityChange, onRemove }) {
   return (
     <tr className="cart-item-row">
       <td className="cart-product">
-        <div className="remove-cartItem-btn"><button className="" onClick={() => onRemove(item.productId)}>✕</button></div>
-        <div className="cart-item-image"><img className="" src={item.image} alt='' /></div>
+        <div className="remove-cartItem-btn">
+          <button onClick={() => onRemove(item.productId)}>✕</button>
+        </div>
+        <div className="cart-item-image">
+          <img src={item.image} alt='' />
+        </div>
         <div className="item-name">{item.name}</div>
       </td>
 
@@ -15,7 +19,15 @@ function CartItem({ item, onQuantityChange, onRemove }) {
 
       <td className="cart-quantity">
         <div className="cart-qty-inner">
-          <button onClick={() => onQuantityChange(item.productId, -1)}>−</button>
+          <button
+            onClick={() => {
+              if (item.quantity === 1) {
+                onRemove(item.productId);
+              } else {
+                onQuantityChange(item.productId, -1);
+              }
+            }}
+          >−</button>
           <span>{item.quantity}</span>
           <button onClick={() => onQuantityChange(item.productId, 1)}>＋</button>
         </div>

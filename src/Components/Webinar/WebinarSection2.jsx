@@ -6,6 +6,7 @@ import { webinarData as mockProjects } from "../../data/webinarData.js";
 import WebinarCard from './WebinarCard';
 
 const WebinarSection2 = () => {
+  
   const [projects, setProjects] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
@@ -30,6 +31,7 @@ const WebinarSection2 = () => {
       setCurrentPage(page);
     }
   };
+
 
   return (
     <div className="webinar-app-container">

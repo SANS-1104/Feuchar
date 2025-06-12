@@ -201,7 +201,7 @@ export const projects = [
         img: "/images/randomB4.jpg",
         name: "Rajeev Nair, Kochi",
         minCTC: 9,
-        maxCTC: 9,
+        maxCTC: 10,
         testimonial: "Enrolling in the astrology course at feuchar.live was the best decision I made last year. The guidance on birth chart analysis and transit predictions was extremely insightful. I now run my own online consultation service and earn ₹9 lakh per annum. Clients appreciate the accuracy and depth of my readings."
       },
       {
@@ -212,7 +212,7 @@ export const projects = [
         testimonial: "Coming from a teaching background, I was curious about astrology but had no experience. The structured modules and expert mentorship helped me learn from scratch. Today, I work part-time as an astrologer and earn ₹4.5 lakh annually while continuing my teaching career. It’s a perfect balance!"
       },
       {
-        img: "/images/randomB5.jpg",
+        img: "/images/randomB2.avif",
         name: "Anirudh Mishra, Bhopal",
         minCTC: 7,
         maxCTC: 8,
@@ -222,42 +222,42 @@ export const projects = [
         img: "/images/randomG5.jpg",
         name: "Pooja Iyer, Chennai",
         minCTC: 10,
-        maxCTC: 10,
+        maxCTC: 14,
         testimonial: "I wanted to add astrology to my spiritual counseling practice. The modules on planetary yogas and dasha systems were spot on. My consultations are now more comprehensive, and my income has increased to ₹10 lakh per year. Clients often refer others because of the accuracy in my guidance."
       },
       {
-        img: "/images/randomG6.jpg",
+        img: "/images/randomB1.avif",
         name: "Samarjeet Kaur, Ludhiana",
         minCTC: 6,
         maxCTC: 7,
         testimonial: "I was looking for a course that was both traditional and modern in its approach. Feuchar.live exceeded expectations. The course covered everything from basics to advanced techniques like KP astrology. I now work independently and earn around ₹6.5 lakh per annum. It’s fulfilling to help people through such a powerful science."
       },
       {
-        img: "/images/randomB6.jpg",
+        img: "/images/randomB4.jpg",
         name: "Nikhil Joshi, Indore",
-        minCTC: 8,
+        minCTC: 6,
         maxCTC: 8,
         testimonial: "I joined the astrology course during a career break, and within months, I started getting paid consultations. The training on chart interpretation and practical remedies made a huge impact. I now earn ₹8 lakh per annum and consult clients across India through Zoom. It feels amazing to earn doing what I love."
       },
       {
-        img: "/images/randomG7.jpg",
+        img: "/images/randomG2.jpg",
         name: "Divya Menon, Thiruvananthapuram",
         minCTC: 5,
-        maxCTC: 5,
+        maxCTC: 8,
         testimonial: "Feuchar.live helped me turn my hobby into a thriving profession. Their detailed modules on astrology and ethics were very helpful. I currently earn ₹5 lakh per annum through part-time consultations while managing my household. It’s given me both income and purpose."
       },
       {
-        img: "/images/randomB7.jpg",
-        name: "Yash Gupta, Nagpur",
+        img: "/images/randomG1.jpg",
+        name: "Yashi Gupta, Nagpur",
         minCTC: 11,
-        maxCTC: 11,
+        maxCTC: 15,
         testimonial: "I had explored astrology casually for years, but this course gave me proper structure and clarity. The focus on real-world case studies and client interaction prepared me well. I now run a local astrology consultancy and make around ₹11 lakh a year. Couldn’t have done it without feuchar.live."
       },
       {
-        img: "/images/randomG8.jpg",
+        img: "/images/randomG5.jpg",
         name: "Reena D’Souza, Goa",
         minCTC: 6,
-        maxCTC: 6,
+        maxCTC: 7,
         testimonial: "The astrology course gave me the tools to counsel people professionally. I specialize in relationship and career astrology now, and my annual income is around ₹6 lakh. The flexible learning model suited my lifestyle perfectly. It’s been a meaningful journey."
       }
     ],

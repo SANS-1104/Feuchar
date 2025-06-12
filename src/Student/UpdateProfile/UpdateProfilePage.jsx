@@ -101,13 +101,13 @@ export default function UpdateProfilePage() {
 
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" value={formData.email} disabled/>
+            <input type="email" id="email" name="email" value={formData.email} disabled className="disabled-field"/>
           </div>
 
           {/* Phone & DOB */}
           <div className="form-group">
             <label htmlFor="phone">Phone</label>
-            <input type="text" id="phone" name="phone" value={formData.phone} disabled/>
+            <input type="text" id="phone" name="phone" value={formData.phone} disabled className="disabled-field"/>
           </div>
 
           <div className="form-group">
@@ -128,7 +128,7 @@ export default function UpdateProfilePage() {
 
           <div className="form-group">
             <label htmlFor="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="******" disabled />
+            <input type="password" id="password" name="password" placeholder="******" disabled className="disabled-field"/>
           </div>
 
           {/* Language & Avatar */}

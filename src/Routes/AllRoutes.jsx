@@ -37,6 +37,7 @@ import AdminWebinarDetails from '../ADMIN/AdminWebinarDetails';
 import AdminCourseDetails from '../ADMIN/AdminCourseDetails';
 import AdminDash from '../ADMIN/AdminDash';
 import WebinarPage from '../Components/Webinar/WebinarPage';
+import ErrorPage from '../Components/common_components/ErrorPage';
 
 const AllRoutes = () => {
   const location = useLocation();
@@ -53,6 +54,7 @@ const AllRoutes = () => {
     location.pathname ==='/admin-dashboard/courseDet' ||
     location.pathname ==='/admin-dashboard/webinarDet' ||
     location.pathname ==='/admin-dashboard/dash' ||
+    location.pathname ==='/error' ||
     /^\/dashboard\/[^/]+/.test(location.pathname)
   );
 
@@ -70,6 +72,7 @@ const AllRoutes = () => {
     location.pathname ==='/admin-dashboard/courseDet' ||
     location.pathname ==='/admin-dashboard/webinarDet' ||
     location.pathname ==='/admin-dashboard/dash' ||
+    location.pathname ==='/error' ||
     /^\/dashboard\/[^/]+/.test(location.pathname)
   );
 
@@ -149,6 +152,9 @@ const AllRoutes = () => {
           <Route path="courseDet" element={<AdminCourseDetails />} />
           <Route path="webinarDet" element={<AdminWebinarDetails />} />
         </Route>
+
+        <Route path="/error" element={<ErrorPage />} />
+        <Route path="*" element={<Navigate to="/error" replace />} />
       </Routes>
 
       {!shouldHideLayoutFooter && <Footer />}
