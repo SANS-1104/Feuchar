@@ -3,10 +3,13 @@ import { useState } from 'react';
 import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import axiosClient from '../../api/axiosClient';
+
 
 export default function WebinarCheckoutPage() {
   const location = useLocation();
   const passedWebinar = location.state?.webinar;
+  const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -47,18 +50,55 @@ export default function WebinarCheckoutPage() {
     return true;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validate()) {
-      console.log('✅ Form Submitted:', formData);
-      toast.success('Form submitted! Proceeding to payment...');
-      // simulate payment redirect
-    }
-  };
-
   const basePrice = 99;
   const discount = 70;
   const totalPrice = basePrice - discount;
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    const user = JSON.parse(localStorage.getItem("user"));
+    const userId = user?.id;
+
+    if (!userId) {
+      toast.error("Please log in to continue.");
+      return;
+    }
+
+    const payload = {
+      user_id: userId,
+      course_id: passedWebinar?.id, 
+      course_type: "webinar",
+      total_amount: basePrice,          
+      discount_amount: discount,
+      payable_amount: totalPrice,
+      currency: "INR",
+      remarks: `Enrolling for webinar ${passedWebinar?.id}`,
+    };
+
+    try {
+      setLoading(true);
+      const res = await axiosClient.post('/payment/create', payload); 
+
+      if (res.data?.payment_link) {
+        toast.success("Redirecting to payment...");
+        setTimeout(() => {
+          window.location.href = res.data.payment_link;
+        }, 1000);
+      } else {
+        toast.error("Payment link not received.");
+      }
+
+    } catch (err) {
+      toast.error("Payment initiation failed. Please try again.");
+      console.error("Payment Error:", err);
+    }finally{
+      setLoading(false);
+    }
+  };
+
+  
 
   return (
     <div className="WebinarCheckoutPage-wrapper">
