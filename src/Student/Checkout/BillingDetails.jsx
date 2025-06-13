@@ -2,11 +2,11 @@ import React, { useState, useContext } from 'react';
 import './checkout.css';
 import { toast } from 'react-toastify';
 import axiosClient from '../../api/axiosClient';
-import { CartProvider } from '../../context/CartContext';
+import { useCart } from '../../context/CartContext';
 
 
 export default function BillingDetails() {
-  const { cart } = useContext(CartContext);
+  const { cart } = useCart();
 
   const [formData, setFormData] = useState({
     fname: '',
@@ -63,22 +63,24 @@ export default function BillingDetails() {
       return;
     }
 
-    // calculate totals
+    // calculate total and payable amounts
     const totalAmount = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    const discountAmount = 0;
+    const discountAmount = 0; // placeholder for future use
     const payableAmount = totalAmount - discountAmount;
 
-    // prepare course list
-    const courseItems = cart.map(item => ({
-      course_id: item.productId,
-      course_type: "course",
-      name: item.name,
-      price: item.price,
-      quantity: item.quantity
-    }));
+    // prepare array of course items
+    // const courseItems = cart.map(item => ({
+    //   course_id: item.productId,
+    //   course_type: "course",
+    //   name: item.name,
+    //   price: item.price,
+    //   quantity: item.quantity,
+    // }));
 
     const paymentPayload = {
       user_id: userId,
+      course_id: 1,
+      course_type:"course",
       total_amount: totalAmount,
       discount_amount: discountAmount,
       payable_amount: payableAmount,
@@ -92,7 +94,6 @@ export default function BillingDetails() {
       town_city: formData.city,
       country: formData.country,
       postcode: formData.zip,
-      courses: courseItems // ✅ array of courses
     };
 
     try {
@@ -101,26 +102,124 @@ export default function BillingDetails() {
 
       if (res.status === 200 && result.payment_link) {
         toast.success("Redirecting to payment...");
-        window.open(result.payment_link, "_blank"); // ✅ open in new tab
-      } else {
-        toast.error(result.message || "Failed to initiate payment.");
+        setTimeout(() => {
+          window.open(result.payment_link, "_blank");
+        }, 2000); 
+      }else {
+        toast.error("Failed to initiate payment." || result.message );
       }
     } catch (err) {
-      console.error("Error creating order:", err);
-      toast.error("Server error. Try again later.");
+      console.error("Payment error:", err);
+      toast.error("Something went wrong. Try again later.");
     }
   };
 
-  return (
+
+   return (
     <form className="cart-summary" onSubmit={handleSubmit}>
       <div className='cart-summar-title'>Billing details</div>
       <div className="billing-form">
-        {/* Input fields */}
-        {/* same as before... keep your input components here unchanged */}
-        {/* Submit Button */}
-        <div className="checkout-button">
-          <button type="submit">Make a payment</button>
+        <div className="form-row">
+          <div className="billingCheckout-input-field">
+            <label htmlFor='fname'>First Name*</label>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              value={formData.fname}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="billingCheckout-input-field">
+            <label htmlFor="lname">Last Name*</label>
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              value={formData.lname}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
+
+        <div className="form-row">
+          <div className="billingCheckout-input-field">
+            <label htmlFor="email">Email Address*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="billingCheckout-input-field">
+            <label htmlFor="phone">Phone Number*</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        </div>
+
+        <div className="billingCheckout-input-field">
+          <label htmlFor="street">Street Address*</label>
+          <input
+            type="text"
+            id="street"
+            name="street"
+            value={formData.street}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="billingCheckout-input-field">
+          <label htmlFor="city">Town / City*</label>
+          <input
+            type="text"
+            id="city"
+            name="city"
+            value={formData.city}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="billingCheckout-input-field">
+          <label htmlFor="country">Country*</label>
+          <input
+            type="text"
+            id="country"
+            name="country"
+            value={formData.country}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="billingCheckout-input-field">
+          <label htmlFor="zip">Postcode / Zip*</label>
+          <input
+            type="text"
+            id="zip"
+            name="zip"
+            value={formData.zip}
+            onChange={handleChange}
+            required
+          />
+        </div>
+      </div>
+
+      <div className="checkout-button">
+        <button type="submit">Make a payment</button>
       </div>
     </form>
   );
