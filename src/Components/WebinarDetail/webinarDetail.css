@@ -750,7 +750,7 @@
     gap: 2rem;
     flex-wrap: wrap;
     margin-top: 4rem;
-    padding: 7em 2rem;
+    padding: 7rem 2rem;
     background-color: black;
 }
 
@@ -895,4 +895,14 @@
 
 .WebinarCheckoutPage-wrapper .right .payment-btn:hover {
     background-color: #e3a814;
+}
+
+@media only screen and (max-width: 1024px) {
+    .WebinarCheckoutPage-wrapper {
+        margin-top: 0;
+        padding: 7rem 1rem;
+    }
+    .WebinarCheckoutPage-wrapper form.billing-form{
+        justify-content: center;
+    }
 }
