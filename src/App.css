@@ -63,7 +63,8 @@
         grid-template-columns: repeat(3, 1fr);
     }
     .card{
-        width: 500px;
+        width: 400px !important;
+        height: fit-content !important;
     }
     .Features-Wrapper .upperContainer .content .detail{
         padding-left: 1rem;
@@ -98,4 +99,20 @@
     .SubjectsOuterWrapper .SubjectsInnerWrapper{
       padding: 4rem 1.5rem;
     }
+}
+
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .card{
+    width: 400px !important;
+    height: fit-content !important;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .card{
+    width: 300px!important;
+    height: fit-content !important;
+  }
 }

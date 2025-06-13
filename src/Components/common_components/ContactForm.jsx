@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import '../CSS/main.css';
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import axiosClient from '../../api/axiosClient';
 
 const ContactForm = ({ onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
-    phone: ''
+    email: '',
+    phone: '',
   });
 
   const handleChange = (e) => {
@@ -17,15 +19,20 @@ const ContactForm = ({ onClose }) => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic validation
-    const { name, phone } = formData;
+    const { name, email, phone } = formData;
     const phoneRegex = /^[0-9]{10}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!name.trim()) {
       toast.error("Please enter your name.");
+      return;
+    }
+
+    if (!emailRegex.test(email)) {
+      toast.error("Please enter a valid email address.");
       return;
     }
 
@@ -34,14 +41,29 @@ const ContactForm = ({ onClose }) => {
       return;
     }
 
-    // If validation passes
-    console.log('Form Data:', formData);
+    // API request body
+    const payload = {
+      full_name: name,
+      email: email,
+      phone_number: `+91${phone}`,
+      type: "request callback"
+    };
 
-    toast.success("Signed Up Successfully, Now you will receive Latest Updates");
+    try {
+      const response = await axiosClient.post('/book-demo-class', payload);
 
-    // Optional: Clear form or close
-    setFormData({ name: '', phone: '' });
-    if (onClose) onClose();
+      if (response?.data?.status) {
+        toast.success("Successfully Signed Up for Latest News!!");
+        setFormData({ name: '', email: '', phone: '' });
+
+        if (onClose) onClose();
+      } else {
+        toast.error(response?.data?.message || "Something went wrong.");
+      }
+    } catch (error) {
+      console.error("API Error:", error);
+      toast.error("Failed to signup for Latest News. Please try again later.");
+    }
   };
 
   return (
@@ -53,6 +75,16 @@ const ContactForm = ({ onClose }) => {
           value={formData.name}
           onChange={handleChange}
           placeholder='Your Name'
+          className='inputBox'
+        />
+      </label>
+      <label className='formComplete'>
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder='Email'
           className='inputBox'
         />
       </label>

@@ -10,7 +10,7 @@ import './CourseDetail.css';
 import CourseDetHero from "./CourseDetHero";
 import CourseDetLast from "./CourseDetLast";
 import Testimonial2 from "./Testimonial2";
-import DownloadForm from "./DownloadForm"; 
+import DownloadForm from "./DownloadForm";
 
 const CourseDetailPage = () => {
   const { id } = useParams();
@@ -26,14 +26,7 @@ const CourseDetailPage = () => {
 
   const handleFormSuccess = () => {
     setShowForm(false);
-
-    const syllabusURL = course.syllabus;
-    const link = document.createElement("a");
-    link.href = syllabusURL;
-    link.download = course.syllabus;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Download handled in DownloadForm now, no need to do it here
   };
 
   if (!course) return <div>Course not found</div>;
@@ -42,21 +35,32 @@ const CourseDetailPage = () => {
     <div className="courseDetailPage max-wdh">
       <Helmet>
         <title>{course.title} - Feuchar Course Details</title>
-        <meta name="description" content={course.description || `Learn more about the ${course.title} course at Feuchar.`} />
+        <meta
+          name="description"
+          content={
+            course.description ||
+            `Learn more about the ${course.title} course at Feuchar.`
+          }
+        />
       </Helmet>
 
       <CourseDetHero course={course} />
       <Journey />
-      <CourseDetInstructor course={course}/>
-      <Testimonial2 course={course}/>
-      <FAQ2 course={course}/>
-      <CourseDetLast course={course}/>
+      <CourseDetInstructor course={course} />
+      <Testimonial2 course={course} />
+      <FAQ2 course={course} />
+      <CourseDetLast course={course} />
 
       {showForm && (
         <div className="popup-overlay">
           <div className="popup-content">
-            <button className="close-btn" onClick={() => setShowForm(false)}>X</button>
-            <DownloadForm onSuccess={handleFormSuccess} />
+            <button className="close-btn" onClick={() => setShowForm(false)}>
+              X
+            </button>
+            <DownloadForm
+              onSuccess={handleFormSuccess}
+              syllabusURL={course.syllabus}
+            />
           </div>
         </div>
       )}

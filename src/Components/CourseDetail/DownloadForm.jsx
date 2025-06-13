@@ -1,61 +1,73 @@
 import { useState } from "react";
 import "../Home/HeroSection2.css";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./CourseDetHero.css"
+import "./CourseDetHero.css";
+import axiosClient from "../../api/axiosClient";
 
-
-export default function DownloadForm({ onClose, onSuccess }) {
+export default function DownloadForm({ onClose, onSuccess, syllabusURL }) {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
   });
 
-  const [errors, setErrors] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-  });
+  const [loading, setLoading] = useState(false);
 
-  const validate = () => {
-    let isValid = true;
-    const newErrors = { fullName: "", email: "", phone: "" };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const { fullName, email, phone } = formData;
+
+    // Basic validations
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^[6-9]\d{9}$/;
 
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = "Full name is required.";
-      isValid = false;
+    if (!fullName || !email || !phone) {
+      toast.error("Please fill all the fields.");
+      return;
+    }
+    if (!emailRegex.test(email)) {
+      toast.error("Please enter a valid email.");
+      return;
+    }
+    if (!phoneRegex.test(phone)) {
+      toast.error("Please enter a valid 10-digit Indian phone number.");
+      return;
     }
 
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required.";
-      isValid = false;
-    } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Enter a valid email.";
-      isValid = false;
-    }
+    setLoading(true);
 
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required.";
-      isValid = false;
-    } else if (!phoneRegex.test(formData.phone)) {
-      newErrors.phone = "Enter a valid 10-digit Indian number.";
-      isValid = false;
-    }
+    try {
+      const response = await axiosClient.post("/book-demo-class", {
+        full_name: fullName,
+        email,
+        phone_number: phone,
+        type: "download syllabus",
+      });
 
-    setErrors(newErrors);
-    return isValid;
-  };
+      if (response.data?.status) {
+        // toast.success("Syllabus Downloaded successfully!");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validate()) {
-      setFormData({ fullName: "", email: "", phone: "" });
-      if (onSuccess) onSuccess(); 
-    } else {
-      toast.error("Please fill all fields correctly.");
+        // Reset form
+        setFormData({ fullName: "", email: "", phone: "" });
+
+        // Trigger syllabus download
+        const link = document.createElement("a");
+        link.href = syllabusURL;
+        link.download = syllabusURL;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        if (onSuccess) onSuccess();
+      } else {
+        toast.error("Submission failed. Try again.");
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -64,7 +76,7 @@ export default function DownloadForm({ onClose, onSuccess }) {
   };
 
   return (
-    <div className="HomeHeroForm-wrapper downloadForm-wrapper ">
+    <div className="HomeHeroForm-wrapper downloadForm-wrapper">
       <h2>Contact Us</h2>
 
       <form onSubmit={handleSubmit}>
@@ -79,7 +91,6 @@ export default function DownloadForm({ onClose, onSuccess }) {
               value={formData.fullName}
               onChange={handleChange}
             />
-            {errors.fullName && <span className="error">{errors.fullName}</span>}
           </div>
 
           <div className="emailBox demoBox">
@@ -92,7 +103,6 @@ export default function DownloadForm({ onClose, onSuccess }) {
               value={formData.email}
               onChange={handleChange}
             />
-            {errors.email && <span className="error">{errors.email}</span>}
           </div>
 
           <div className="phoneBox demoBox">
@@ -105,11 +115,12 @@ export default function DownloadForm({ onClose, onSuccess }) {
               value={formData.phone}
               onChange={handleChange}
             />
-            {errors.phone && <span className="error">{errors.phone}</span>}
           </div>
         </div>
 
-        <button type="submit">Register Now</button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Submitting..." : "Register Now"}
+        </button>
       </form>
     </div>
   );

@@ -53,39 +53,39 @@ export default function UpdateProfilePage() {
 
   // Submit form
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const { name, email, phone, gender, language } = formData;
+    const { name, email, phone, gender, language } = formData;
 
-  // Basic validation
-  if (!name || !email || !phone || !gender || !language) {
-    toast.error("Please fill all required fields.");
-    return;
-  }
+    // Basic validation
+    if (!name || !email || !phone) {
+      toast.error("Please fill all required fields.");
+      return;
+    }
 
-  // Email format validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    toast.error("Please enter a valid email address.");
-    return;
-  }
+    // Email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
 
-  // Phone number validation
-  const phoneRegex = /^[0-9]{10}$/;
-  if (!phoneRegex.test(phone)) {
-    toast.error("Phone number must be exactly 10 digits.");
-    return;
-  }
+    // Phone number validation
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(phone)) {
+      toast.error("Phone number must be exactly 10 digits.");
+      return;
+    }
 
-  try {
-    const payload = { ...formData };
-    const res = await axiosClient.put("/profile/update", payload);
-    toast.success("Profile updated successfully!");
-  } catch (error) {
-    console.error("Error updating profile:", error);
-    toast.error("Failed to update profile.");
-  }
-};
+    try {
+      const payload = { ...formData };
+      const res = await axiosClient.put("/profile/update", payload);
+      toast.success("Profile updated successfully!");
+    } catch (error) {
+      console.error("Error updating profile:", error);
+      toast.error("Failed to update profile.");
+    }
+  };
 
 
   return (
@@ -112,13 +112,13 @@ export default function UpdateProfilePage() {
 
           <div className="form-group">
             <label htmlFor="dob">Date of Birth</label>
-            <input type="date" id="dob" name="dob" value={formData.dob} onChange={handleChange} required/>
+            <input type="date" id="dob" name="dob" value={formData.dob} onChange={handleChange}/>
           </div>
 
           {/* Gender & Password */}
           <div className="form-group">
             <label htmlFor="gender">Gender</label>
-            <select id="gender" name="gender" value={formData.gender} onChange={handleChange} required>
+            <select id="gender" name="gender" value={formData.gender} onChange={handleChange}>
               <option value="">Select</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -134,7 +134,7 @@ export default function UpdateProfilePage() {
           {/* Language & Avatar */}
           <div className="form-group">
             <label htmlFor="language">Language</label>
-            <input type="text" id="language" name="language" value={formData.language} onChange={handleChange} required/>
+            <input type="text" id="language" name="language" value={formData.language} onChange={handleChange}/>
           </div>
 
           <div className="form-group">

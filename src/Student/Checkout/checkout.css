@@ -422,11 +422,13 @@ td.cart-price, td.cart-total{
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
+  border: none;
 }
 
 
 .cart-summary .cart-checkoutBtn{
   background-color: #F8B919;
+  border: none;
 }
 
 .checkout-order-table {

@@ -10,7 +10,7 @@ const VerifyOtp = () => {
   const email = state?.email;
 
   const [otp, setOtp] = useState(Array(6).fill(""));
-  const [secondsLeft, setSecondsLeft] = useState(10); // 3 minutes
+  const [secondsLeft, setSecondsLeft] = useState(120); // 2 minutes
   const [resendEnabled, setResendEnabled] = useState(false);
   const inputsRef = useRef([]);
 
@@ -102,7 +102,7 @@ const VerifyOtp = () => {
     try {
       const res = await axiosClient.post("/resend-otp", { email,"channel": "sms"  });
       toast.success("OTP resent successfully.");
-      setSecondsLeft(180); // Restart timer
+      setSecondsLeft(120);
       setResendEnabled(false);
       setOtp(Array(6).fill(""));
       inputsRef.current[0]?.focus();

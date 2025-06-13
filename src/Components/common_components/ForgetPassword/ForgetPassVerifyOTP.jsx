@@ -7,20 +7,19 @@ import axiosClient from "../../../api/axiosClient";
 const ForgetPassVerifyOTP = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
-  const phone = state?.phone;
+  const email = state?.email;
 
   const [otp, setOtp] = useState(Array(6).fill(""));
-  const [secondsLeft, setSecondsLeft] = useState(180); // 3 minutes
+  const [secondsLeft, setSecondsLeft] = useState(120); // 2 minutes
   const [resendEnabled, setResendEnabled] = useState(false);
   const inputsRef = useRef([]);
 
-  // Redirect to signup if phone is not available
   useEffect(() => {
-    if (!phone) {
+    if (!email) {
       toast.error("Access denied. Please Fill All Details First.");
       navigate("/forgetPass");
     }
-  }, [phone, navigate]);
+  }, [email, navigate]);
 
   // Countdown timer effect
   useEffect(() => {
@@ -81,42 +80,41 @@ const ForgetPassVerifyOTP = () => {
   };
 
   const handleVerify = async (e) => {
-  e.preventDefault();
-  const joinedOtp = otp.join("");
-  if (joinedOtp.length !== 6) {
-    return toast.error("Please enter a 6-digit OTP.");
-  }
-
-  try {
-    const res = await axiosClient.post("/forgot-password/verify-otp", {
-      phone,
-      otp: joinedOtp,
-      channel: "sms"
-    });
-
-    const token = res?.data?.data?.reset_token;
-
-    if (token) {
-      toast.success("OTP Verified! You can now update your password.");
-      setTimeout(() => {
-        navigate("/resetPass", { state: { phone, token } });
-      }, 1500);
-    } else {
-      toast.error("Token not received. Please try again.");
+    e.preventDefault();
+    const joinedOtp = otp.join("");
+    if (joinedOtp.length !== 6) {
+      return toast.error("Please enter a 6-digit OTP.");
     }
-  } catch (err) {
-    const msg = err.response?.data?.message || "OTP verification failed!";
-    setOtp(Array(6).fill(""));
-    toast.error(msg);
-  }
-};
+
+    try {
+      const res = await axiosClient.post("/forgot-password/verify-otp", {
+        email,
+        otp: joinedOtp,
+      });
+
+      const token = res?.data?.data?.reset_token;
+
+      if (token) {
+        toast.success("OTP Verified! You can now update your password.");
+        setTimeout(() => {
+          navigate("/resetPass", { state: { email, token } });
+        }, 1500);
+      } else {
+        toast.error("Token not received. Please try again.");
+      }
+    } catch (err) {
+      const msg = err.response?.data?.message || "OTP verification failed!";
+      setOtp(Array(6).fill(""));
+      toast.error(msg);
+    }
+  };
 
 
   const handleResendOtp = async () => {
     try {
-      const res = await axiosClient.post("/resend-otp", { phone,"channel": "sms"  });
+      const res = await axiosClient.post("/resend-otp", { email });
       toast.success("OTP resent successfully.");
-      setSecondsLeft(180); // Restart timer
+      setSecondsLeft(120); // Restart timer
       setResendEnabled(false);
       setOtp(Array(6).fill(""));
       inputsRef.current[0]?.focus();
@@ -130,7 +128,7 @@ const ForgetPassVerifyOTP = () => {
     <div className="verifyOTP-container">
       <div className="verifyOTP-inner">
         <div className="title">Enter the OTP to verify your account</div>
-        <div className="No">A OTP has been sent to &nbsp;<strong>{phone}</strong></div>
+        <div className="No">A OTP has been sent to &nbsp;<strong>{email}</strong></div>
         
         <form onSubmit={handleVerify}>
           <div className="otp-input-group">

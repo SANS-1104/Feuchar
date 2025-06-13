@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./HeroSection2.css";
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-
+import axiosClient from "../../api/axiosClient";
 
 export default function HomeHeroForm({ onClose }) {
   const [formData, setFormData] = useState({
@@ -11,54 +11,58 @@ export default function HomeHeroForm({ onClose }) {
     phone: "",
   });
 
-  const [errors, setErrors] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-  });
-
-  const validate = () => {  
-    let isValid = true;
-    const newErrors = { fullName: "", email: "", phone: "" };
-
+  const validate = () => {
     // Full Name validation
     if (!formData.fullName.trim()) {
-      newErrors.fullName = "Full name is required.";
-      isValid = false;
+      toast.error("Full name is required.");
+      return false;
     }
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required.";
-      isValid = false;
+      toast.error("Email is required.");
+      return false;
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Enter a valid email.";
-      isValid = false;
+      toast.error("Enter a valid email.");
+      return false;
     }
 
     // Phone validation
     const phoneRegex = /^[6-9]\d{9}$/;
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required.";
-      isValid = false;
+      toast.error("Phone number is required.");
+      return false;
     } else if (!phoneRegex.test(formData.phone)) {
-      newErrors.phone = "Enter a valid 10-digit Indian number.";
-      isValid = false;
+      toast.error("Enter a valid 10-digit Indian phone number.");
+      return false;
     }
 
-    setErrors(newErrors);
-    return isValid;
+    return true;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validate()) {
-      toast.success("Live demo class booked successfully! Check your email for details.");
-      setFormData({ fullName: "", email: "", phone: "" });
-    } else {
-      toast.error("Please fill all fields correctly.");
+    if (!validate()) return;
+
+    const requestBody = {
+      full_name: formData.fullName,
+      email: formData.email,
+      phone_number: `+91${formData.phone}`,
+      type: "book demo class"
+    };
+
+    try {
+      const response = await axiosClient.post("/book-demo-class", requestBody);
+      if (response.data.status) {
+        toast.success("Live demo class booked successfully! Check your email for details.");
+        setFormData({ fullName: "", email: "", phone: "" });
+      } else {
+        toast.error("Booking failed. Please try again.");
       }
+    } catch (error) {
+      toast.error("An error occurred while booking. Please try again later.");
+    }
   };
 
   const handleChange = (e) => {
@@ -82,7 +86,6 @@ export default function HomeHeroForm({ onClose }) {
               value={formData.fullName}
               onChange={handleChange}
             />
-            {errors.fullName && <span className="error">{errors.fullName}</span>}
           </div>
 
           <div className="emailBox demoBox">
@@ -95,7 +98,6 @@ export default function HomeHeroForm({ onClose }) {
               value={formData.email}
               onChange={handleChange}
             />
-            {errors.email && <span className="error">{errors.email}</span>}
           </div>
 
           <div className="phoneBox demoBox">
@@ -108,7 +110,6 @@ export default function HomeHeroForm({ onClose }) {
               value={formData.phone}
               onChange={handleChange}
             />
-            {errors.phone && <span className="error">{errors.phone}</span>}
           </div>
         </div>
 

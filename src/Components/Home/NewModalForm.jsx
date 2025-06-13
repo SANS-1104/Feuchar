@@ -74,7 +74,7 @@ export default function NewModalForm({ isOpen, onClose }) {
           <label>
             Name:
             <input
-              name="fullName"  // <-- here was the problem, changed from 'name' to 'fullName'
+              name="fullName"  
               type="text"
               value={formData.fullName}
               onChange={handleChange}

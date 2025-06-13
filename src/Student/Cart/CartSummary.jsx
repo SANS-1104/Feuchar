@@ -1,10 +1,11 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { toast } from 'react-toastify'; // ✅ toast import
+import { toast } from 'react-toastify'; 
 
 export default function YourOrders({ cart }) {
   const navigate = useNavigate();
   const { username } = useParams();
+  const token = localStorage.getItem('token');
 
   const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const discount = 0;
@@ -13,6 +14,10 @@ export default function YourOrders({ cart }) {
   const handleCheckout = () => {
     if (cart.length === 0 || total === 0) {
       toast.error("Cart Cannot Be Empty!!"); 
+      return;
+    }
+    if(!token){
+      toast.error("Login First to Proceed to Checkout!");
       return;
     }
     navigate(`/checkout`);

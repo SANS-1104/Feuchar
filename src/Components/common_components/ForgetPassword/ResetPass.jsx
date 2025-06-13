@@ -9,11 +9,11 @@ export default function ResetPass() {
   const navigate = useNavigate();
   const { state } = useLocation();
 
-  const phone = state?.phone;
+  const email = state?.email;
   const token = state?.token;
 
-  // Redirect if token or phone missing
-  if (!phone || !token) {
+  // Redirect if token or email missing
+  if (!email || !token) {
     toast.error("Access denied. Please verify OTP first.");
     navigate("/forgetPass");
     return null;
@@ -33,7 +33,7 @@ export default function ResetPass() {
 
     try {
       const res = await axiosClient.post("/forgot-password/reset", {
-        phone,
+        email,
         reset_token: token,
         new_password: newPassword,
         new_password_confirmation: confirmPassword,

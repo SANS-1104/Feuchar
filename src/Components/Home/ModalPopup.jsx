@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./modal.css";
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
-
+import axiosClient from "../../api/axiosClient";
 
 function ModalPopup({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
@@ -17,13 +17,32 @@ function ModalPopup({ isOpen, onClose }) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Replace with your backend API or email service call
-    toast.success(`Callback requested for: ${formData.name}`);
-    onClose();
-    setFormData({ name: "", email: "", phone: "" });
+
+    const payload = {
+      full_name: formData.name,
+      email: formData.email,
+      phone_number: formData.phone,
+      type: "request callback",
+    };
+
+    try {
+      const response = await axiosClient.post("/book-demo-class", payload);
+
+      if (response?.data?.status) {
+        toast.success( "Callback Requested successfully!" || response.data.message);
+        onClose();
+        setFormData({ name: "", email: "", phone: "" });
+      } else {
+        toast.error( "Something went wrong." || response?.data?.message);
+      }
+    } catch (error) {
+      console.error("API Error:", error);
+      toast.error("Failed to request Callback. Please try again.");
+    }
   };
+
 
   return (
     <>
@@ -67,16 +86,6 @@ function ModalPopup({ isOpen, onClose }) {
           <button type="submit">Submit</button>
         </form>
       </div>
-      {/* <ToastContainer
-        position="top"
-        autoClose={4000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        pauseOnHover
-        draggable
-        theme="colored"
-      /> */}
     </>
   );
 }
