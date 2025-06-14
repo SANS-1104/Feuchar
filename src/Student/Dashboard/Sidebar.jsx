@@ -1,6 +1,6 @@
 import './dashboard.css';
 import {
-  FaThLarge, FaSearch, FaPlayCircle, FaRegCommentDots, FaCog, FaSignOutAlt, FaUser
+  FaThLarge, FaSearch, FaPlayCircle, FaRegCommentDots, FaCog, FaSignOutAlt, FaUser, FaChalkboardTeacher
 } from "react-icons/fa";
 import { useNavigate, useParams, NavLink } from "react-router-dom";
 import { toast } from 'react-toastify';
@@ -45,6 +45,11 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
           <li>
             <NavLink to={`/dashboard/${name}/mycourse`} className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setSidebarOpen(false)} >
               <FaPlayCircle className='icon'/> My Courses
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to={`/dashboard/${name}/mywebinar`} className={({ isActive }) => isActive ? 'active' : ''} onClick={() => setSidebarOpen(false)} >
+              <FaChalkboardTeacher className='icon'/> My Webinar
             </NavLink>
           </li>
           <li>

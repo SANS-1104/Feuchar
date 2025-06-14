@@ -1,11 +1,11 @@
 import myCourseData from '../../data/myCourseData';
 import React, { useState } from 'react'
 import '../Overview/overview.css'
-import './mycourse.css'
-import MyCourseSearchBar from './MyCourseSearchBar'
+import './mywebinar.css'
+import MyWebinarSearchBar from './MyWebinarSearchBar'
 
 
-export default function MyCourse(){
+export default function MyWebinar(){
     const [courses, setCourses] = useState(myCourseData);
     const handleSearch = (query) => {
         const filtered = myCourseData.filter((topic) =>
@@ -27,9 +27,9 @@ export default function MyCourse(){
 
     return(
         <div className="MyCourse-wrapper">
-            <div className="l1">My Courses</div>
+            <div className="l1">My Webinar</div>
             <div className="l2">
-                <div className="l21"><MyCourseSearchBar /> </div>
+                <div className="l21"><MyWebinarSearchBar /> </div>
                 <div className="l22">
                     <div className="a">
                         <div className="a1">
@@ -55,7 +55,7 @@ export default function MyCourse(){
             <div className="l3">
         <div className="l3-inner">
           {courses.length === 0 ? (
-            <div className="no-courses">No Courses Found!</div>
+            <div className="no-courses">No Webinars Found!</div>
           ) : (
             courses.map((topic, idx) => (
               <div className="myCourse-card" key={idx}>

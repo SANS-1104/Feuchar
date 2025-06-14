@@ -39,7 +39,7 @@ function Dashboard() {
       />
 
       <div className="dashboard-content">
-        <Outlet /> {/* Render nested routes here */}
+        <Outlet /> 
       </div>
     </div>
   );

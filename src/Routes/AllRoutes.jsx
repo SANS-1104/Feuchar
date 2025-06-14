@@ -12,6 +12,7 @@ import Dashboard from '../Student/Dashboard/Dashboard';
 import OverviewPage from '../Student/Overview/OverviewPage';
 import ExploreCoursePage from '../Student/ExploreCourse/ExploreCoursePage';
 import MyCoursePage from '../Student/MyCourse/MyCoursePage';
+import MyWebinar from '../Student/Webinar/MyWebinarPage';
 import MessagePage from '../Student/Message/MessagePage';
 import UpdateProfilePage from '../Student/UpdateProfile/UpdateProfilePage';
 import SignUp from '../Components/common_components/SignUp';
@@ -38,6 +39,7 @@ import AdminCourseDetails from '../ADMIN/AdminCourseDetails';
 import AdminDash from '../ADMIN/AdminDash';
 import WebinarPage from '../Components/Webinar/WebinarPage';
 import ErrorPage from '../Components/common_components/ErrorPage';
+
 
 const AllRoutes = () => {
   const location = useLocation();
@@ -121,6 +123,7 @@ const AllRoutes = () => {
           <Route path="overview" element={<OverviewPage />} />
           <Route path="explorecourse" element={<ExploreCoursePage />} />
           <Route path="mycourse" element={<MyCoursePage />} />
+          <Route path="mywebinar" element={<MyWebinar />} />
           <Route path="message" element={<MessagePage />} />
           <Route path="updateprofile" element={<UpdateProfilePage />} />
         </Route>

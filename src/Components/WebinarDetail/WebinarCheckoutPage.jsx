@@ -10,7 +10,7 @@ export default function WebinarCheckoutPage() {
   const location = useLocation();
   const passedWebinar = location.state?.webinar;
   const [loading, setLoading] = useState(false);
-
+  const token = localStorage.getItem('token');
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -62,6 +62,10 @@ export default function WebinarCheckoutPage() {
     const userId = user?.id;
 
     if (!userId) {
+      toast.error("Please log in to continue.");
+      return;
+    }
+    if (!token) {
       toast.error("Please log in to continue.");
       return;
     }
