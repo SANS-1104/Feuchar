@@ -84,7 +84,7 @@ const SignUp = ({ onLogin }) => {
         {/* <img src="/images/login.png" alt="Sign‑up Illustration" /> */}
         <div className="auth-left-text">
           <div className="LoginContentImg">
-            <img src="/images/navlogo3.jpg" alt="Feuchar logo" />
+            <img src="/images/navlogo3.jpg" alt="" />
           </div>
           <div className="LoginContentTitle">New Here? Join Feuchar Today</div>
           <div className="LoginContentDesc">

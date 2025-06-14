@@ -50,8 +50,8 @@ export default function WebinarCheckoutPage() {
     return true;
   };
 
-  const basePrice = 99;
-  const discount = 70;
+  const basePrice = passedWebinar.oldPrice || 499;
+  const discount = passedWebinar.discount || 470;
   const totalPrice = basePrice - discount;
 
   const handleSubmit = async(e) => {
@@ -175,7 +175,7 @@ export default function WebinarCheckoutPage() {
               <span>₹{basePrice.toFixed(2)}</span>
             </div>
             <div className="summary-row">
-              <span>Discount</span>
+              <span>Early Bird Discount</span>
               <span>- ₹{discount.toFixed(2)}</span>
             </div>
             <div className="summary-row total">

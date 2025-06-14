@@ -15,7 +15,7 @@ const MyWebinarSearchBar = ({ onSearch }) => {
   };
 
   return (
-    <form className="Overviewsearch-bar MyCourseSearchBar" onSubmit={handleSubmit}>
+    <form className="Overviewsearch-bar MyWebinarSearchBar" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Search Webinar Name...."

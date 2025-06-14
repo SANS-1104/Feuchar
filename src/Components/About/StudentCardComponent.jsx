@@ -7,7 +7,7 @@ export default function StudentCardComponent({img, name, minCTC, maxCTC, tagline
                 <div className='l1part1'><img src={img} alt='' /></div>
                 <div className='l1part2'>
                     <div className='l12a'>{name} </div>
-                    <div className='l12b'>CTC: {minCTC}-{maxCTC}LPA</div>
+                    <div className='l12b'>CTC: {minCTC}-{maxCTC} LPA</div>
                 </div>
                 <div className='l1part3'><img src='/images/twitterBird.png' alt=''/></div>
             </div>

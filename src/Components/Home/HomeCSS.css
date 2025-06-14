@@ -1387,7 +1387,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .HomeTestimonialCard-outer{
+    /* .HomeTestimonialCard-outer{
         height: fit-content !important;
-    }
+    } */
 }

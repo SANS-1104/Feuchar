@@ -41,7 +41,7 @@ function ContactForm2() {
   if (!message.trim()) return toast.error("Message cannot be empty.");
 
   // Success
-  console.log("Form submitted successfully:", formData);
+  // console.log("Form submitted successfully:", formData);
   toast.success("Your message has been sent successfully!");
 
   // Reset form

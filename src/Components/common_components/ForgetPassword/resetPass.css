@@ -33,6 +33,7 @@
 .ResetPass-wrapper form .resetPass-inp label{
     font-family: Poppins;
     font-weight: 500;
+    text-align: left;
 }
 
 .ResetPass-wrapper form .resetPass-inp input{
@@ -58,6 +59,9 @@
         text-align: center;
     }
     .ResetPass-wrapper form .resetPass-inp{
-        justify-content: center;
+        justify-content: flex-start;
+    }
+    .ResetPass-wrapper form .resetPass-inp input{
+        width: 100%;
     }
 }

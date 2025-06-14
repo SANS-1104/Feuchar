@@ -55,7 +55,7 @@ const ForgetPass = ({ onSignup }) => {
       <div className="auth-left">
         <div className="auth-left-text">
           <div className="LoginContentImg">
-            <img src="/images/navlogo3.jpg" alt="logo" />
+            <img src="/images/navlogo3.jpg" alt="" />
           </div>
           <div className="LoginContentTitle">Improve your skill with Feuchar!</div>
           <div className="LoginContentDesc">

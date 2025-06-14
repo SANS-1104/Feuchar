@@ -19,8 +19,8 @@ export default function OverviewPage({ fullName }) {
       <div className="left">
         <OverviewSearchBar />
         <OverviewSkillSharp />
-        {/* <OverviewWatchedModules />
-        <ContinueWatching /> */}
+        {/* <OverviewWatchedModules /> */}
+        <ContinueWatching />
         <YourMentors />
       </div>
 

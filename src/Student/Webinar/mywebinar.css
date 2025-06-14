@@ -1,4 +1,4 @@
-.MyCourse-wrapper{
+.MyWebinar-wrapper{
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -6,7 +6,7 @@
     width: 100%;
 }
 
-.MyCourse-wrapper .l1{
+.MyWebinar-wrapper .l1{
     font-family: Plus Jakarta Sans;
     font-weight: 600;
     font-size: 30px;
@@ -15,7 +15,7 @@
     color: #141522;
 }
 
-.MyCourse-wrapper .l2{
+.MyWebinar-wrapper .l2{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -23,7 +23,7 @@
     flex-wrap: wrap;
 }
 
-.MyCourse-wrapper .l2 .l22{
+.MyWebinar-wrapper .l2 .l22{
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
@@ -31,7 +31,7 @@
     justify-content: flex-start;
 }
 
-.MyCourse-wrapper .l2 .l22 .a{
+.MyWebinar-wrapper .l2 .l22 .a{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -45,37 +45,37 @@
     color: #525255;
 }
 
-.MyCourse-wrapper .l2 .l22 .b{
+.MyWebinar-wrapper .l2 .l22 .b{
     border: 1px solid #CBD5E1;
     padding: 10px 14px;
     border-radius: 12px;
 }
 
-.MyCourseSearchBar{
+.MyWebinarSearchBar{
     width: 200%;
 }
 
 @media only screen and (max-width: 1300px) {
-    .MyCourseSearchBar{
+    .MyWebinarSearchBar{
         width: 150%;
     }
 }
 
 @media only screen and (max-width: 1150px) {
-    .MyCourseSearchBar{
+    .MyWebinarSearchBar{
         width: 100%;
     }
 }
 
 
-.MyCourse-wrapper .l3 .l3-inner{
+.MyWebinar-wrapper .l3 .l3-inner{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 2rem;
 }
 
-.MyCourse-wrapper .l3 .l3-inner .myCourse-card{
+.MyWebinar-wrapper .l3 .l3-inner .MyWebinar-card{
     box-shadow: 0px 14px 42px 0px #080F340F;
     background-color: #FFFFFF;
     border-radius: 20px;
@@ -89,14 +89,14 @@
 
 
 
-.MyCourse-wrapper .l3 .l3-inner .myCourse-card .l1 img{
+.MyWebinar-wrapper .l3 .l3-inner .MyWebinar-card .l1 img{
     width: 228px;
     height: 113px;
     border-radius: 12px;
 }
 
 
-.MyCourse-wrapper .l3 .l3-inner .myCourse-card .l2{
+.MyWebinar-wrapper .l3 .l3-inner .MyWebinar-card .l2{
     font-family: Inter;
     font-weight: 500;
     font-size: 14px;
@@ -107,7 +107,7 @@
 }
 
 
-.MyCourse-wrapper .l3 .l3-inner .myCourse-card .l4{
+.MyWebinar-wrapper .l3 .l3-inner .MyWebinar-card .l4{
     display: flex;
     flex-direction: row;
     justify-content: space-between;

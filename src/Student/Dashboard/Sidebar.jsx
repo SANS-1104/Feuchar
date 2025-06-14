@@ -67,7 +67,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
 
       <div className="Dasboardsidebar-lower">
         <div className="setting-title">SETTINGS</div>
-        <div className="setting-option"><a href="#"><FaCog />&nbsp; Settings</a></div>
+        {/* <div className="setting-option"><a href="#"><FaCog />&nbsp; Settings</a></div> */}
         <button className="logout" onClick={handleLogout}>
           <FaSignOutAlt />&nbsp; Logout
         </button>

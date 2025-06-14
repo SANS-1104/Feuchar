@@ -389,6 +389,30 @@
     width: 250px;
 }
 
+.ContinueWatching-wrapper .lower .no-courses-message{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: max-content;
+    max-width: 100vw;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.ContinueWatching-wrapper .lower .no-courses-message button{
+    color: #f8da64;
+    background-color: black;
+    border: none;
+    padding: 20px;
+    border-radius: 1rem;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 20px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    white-space: normal; 
+}
 
 
 .ContinueWatching-wrapper .lower .lower-inner .ContinueWatch-card .l1 img{

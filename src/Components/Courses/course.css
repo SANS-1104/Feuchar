@@ -61,6 +61,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 
@@ -140,7 +141,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .grid-container {
     grid-template-columns: 1fr; /* 1 column on small devices */
   }
@@ -150,8 +151,26 @@
   .Coursecard-image img{
     height: auto;
   }
+  .course-title-outer .course-title-inner{
+    padding-top: 2rem;
+  }
+  
 }
 
+
+
+@media (max-width: 450px) {
+  .Coursecard-text .Coursetitle{
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .Coursecard-image img{
+    height: 250px;
+  }
+  .app-container {
+    padding-top: 0;
+  }
+}
 
 /* .card-text p {
   font-size: 1rem;

@@ -101,10 +101,21 @@ export default function BillingDetails() {
       const result = res.data;
 
       if (res.status === 200 && result.payment_link) {
-        toast.success("Redirecting to payment...");
+        // toast.success("Redirecting to payment...");
+        toast.success("On Successful payment check mail!!");
+        setFormData({
+          fname: '',
+          lname: '',
+          email: '',
+          phone: '',
+          street: '',
+          city: '',
+          country: '',
+          zip: '',
+        });
         setTimeout(() => {
           window.open(result.payment_link, "_blank");
-        }, 2000); 
+        }, 3000); 
       }else {
         toast.error("Failed to initiate payment." || result.message );
       }

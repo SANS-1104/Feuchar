@@ -89,7 +89,7 @@
     transition: transform 0.3s ease;
     border-radius: 20px;
     gap: 1rem;
-    width: 350px; 
+    width: 100%; 
     max-width: 450px;
     height: auto; 
     border: 2px solid #cbc9c9d9;

@@ -55,6 +55,19 @@
     width: 200%;
 }
 
+@media only screen and (max-width: 1024px) {
+    .MyCourse-wrapper{
+        padding: 0 2rem;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .MyCourse-wrapper .l2{
+        justify-content: center;
+    }
+    .MyCourse-wrapper .l2 .l22{
+        justify-content: center;
+    }
+}
 @media only screen and (max-width: 1300px) {
     .MyCourseSearchBar{
         width: 150%;

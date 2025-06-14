@@ -34,7 +34,7 @@ export default function YourMentors() {
         <div className="mentor-header-row">
           <div className="t1">INSTRUCTOR</div>
           <div className="t2">COURSE TYPE</div>
-          <div className="t3">COURSE TITLE</div>
+          {/* <div className="t3">COURSE TITLE</div> */}
           <div className="t4">ACTIONS</div>
         </div>
 
