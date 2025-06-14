@@ -62,14 +62,14 @@ export default function WebinarSeats({webinar}) {
               <div className="timerNum">{timeLeft.minutes}</div>
               <div className="timerDesc">MINUTES</div>
             </div>
-            {/* <div className="colon">:</div>
+            <div className="colon">:</div>
             <div className="timer">
               <div className="timerNum">{timeLeft.seconds}</div>
               <div className="timerDesc">SECONDS</div>
-            </div> */}
+            </div>
           </div>
         </div>
-        <div className="right">
+        <div className="right hideSmall">
           <img src='/images/webinar3.png' alt='' />
         </div>
       </div>

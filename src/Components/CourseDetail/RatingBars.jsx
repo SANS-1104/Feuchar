@@ -3,10 +3,10 @@ import './CourseDetail.css';
 
 const ratings = [
   { stars: 5, percent: 95 },
-  { stars: 4, percent: 80 },
-  { stars: 3, percent: 65 },
-  { stars: 2, percent: 30 },
-  { stars: 1, percent: 15 },
+  { stars: 4, percent: 60 },
+  { stars: 3, percent: 40 },
+  { stars: 2, percent: 15 },
+  { stars: 1, percent: 10 },
 ];
 
 const RatingBars = () => {

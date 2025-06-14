@@ -67,7 +67,7 @@ export default function Testimonial() {
             <div className='head'>What Our Students Say About Our Courses</div>
             <div className='subHead'>Read the success stories of our students. Discover why they chose Feuchar for being a Numerologist.</div>
           </div>
-          <div className='right'>
+          <div className='right hideSmall'>
             <img src='/images/studentDesign.png' alt='' />
           </div>
         </div>

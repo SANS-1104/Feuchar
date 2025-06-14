@@ -2,6 +2,7 @@ export const webinarData = [
   {
     id: 1,
     title: "Numerology Webinar",
+    urlTitle:"numerology-webinar",
     dateOfWebinar: "22 June 2025",
     cardIntroimage: "/images/webinarCard2.jpg",
     oldPrice: 499,
@@ -10,6 +11,7 @@ export const webinarData = [
     webinarHerot2: "Numerology Power packed 3 Hour live webinar",
     webinarHerot3: "LEARN NUMEROLOGY TO SOLVE ALL YOUR HEALTH, RELATIONSHIP & CAREER PROBLEMS",
     webinarHerotime:"",
+    ytThumbnail: "/images/numerologyWebinarYT.png",
     webinarAgendaFocus:"Numerology",
     webinarAgendaTitle:"Change Your Luck Challenge",
     webinarAgendaDuration:"3 Hours on 22 June",
@@ -125,6 +127,7 @@ export const webinarData = [
   {
     id: 2,
     title: "Astrology Webinar",
+    urlTitle:"astrology-webinar",
     dateOfWebinar: "22 June 2025",
     cardIntroimage: "/images/webinarCard1.jpg",
     oldPrice: 499,
@@ -133,6 +136,7 @@ export const webinarData = [
     webinarHerot2: "Astrology Power packed 3 Hour live webinar",
     webinarHerot3: "LEARN ASTROLOGY TO SOLVE ALL YOUR HEALTH, RELATIONSHIP & CAREER PROBLEMS",
     webinarHerotime:"",
+    ytThumbnail: "/images/astrologyWebinarYT.png",
     webinarAgendaFocus:"Astrology",
     webinarAgendaTitle:"See your past, present and Future",
     webinarAgendaDuration:"3 hours on 22 June",

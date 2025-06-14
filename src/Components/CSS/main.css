@@ -100,6 +100,15 @@ body {
     color: #636363;
     text-decoration: none;
 }
+
+.footer-outer-cover .footer-inner-cover .l2 .right{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 .footer-outer-cover .footer-inner-cover .l2 .right h2{
     font-family: var(--font-secondary);
     font-weight: 500;
@@ -166,9 +175,10 @@ body {
   flex-direction: column;
   background-color: #000; /* black background */
   color: white;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   max-width: 300px;
-  margin: 2rem auto;
+  /* margin: 2rem auto; */
+  margin-bottom: 2rem;
   font-family: 'Inter', sans-serif;
   margin-top: 0;
 }
@@ -264,6 +274,13 @@ body {
         width: 100px;
         height: 100px;
         transform: translate(0,0);
+    }
+    .contactForm {
+        width: 100%;
+        max-width: 100%;
+    }
+    .inputBox {
+        width: 100%;
     }
 }
 

@@ -12,8 +12,8 @@ const WebinarSection2 = () => {
   const itemsPerPage = 4;
 
   const navigate = useNavigate();
-  const handleCardClick = (id) => {
-    navigate(`/webinar/${id}`);
+  const handleCardClick = (urlTitle) => {
+    navigate(`/webinar/${urlTitle}`);
   };
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const WebinarSection2 = () => {
     <div className="webinar-app-container">
       <div className="webinar-grid-container">
         {currentItems.map((project) => (
-          <div key={project.id} onClick={() => handleCardClick(project.id)} style={{ cursor: "pointer" }}>
+          <div key={project.id} onClick={() => handleCardClick(project.urlTitle)} style={{ cursor: "pointer" }}>
           <WebinarCard
             key={project.id}
             title={project.title}

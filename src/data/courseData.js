@@ -3,10 +3,12 @@ export const projects = [
   {
     id: 1,
     title: "Numerology Basic to Advance (AI powered) Course equivalent to Diploma + BA + MA",
+    urlTitle:"numerology-course",
     subtitle: "",
     image: "/images/courses1.png",
     oldPrice: 25000,
     newPrice: 9999,
+    ytThumbnail: "/images/numerologyCourseYT.png",
     tutor: [
       {
       name: "Sanjay Sehgal",
@@ -145,7 +147,9 @@ export const projects = [
   {
     id: 2,
     title: "Astrology Basic to Advance (AI powered) Course equivalent to Diploma + BA + MA",
+    urlTitle:"astrology-course",
     subtitle: "",
+    ytThumbnail: "/images/astrologyCourseYT.png",
     tutor: [
       {
       name: "Sukhdev Chamoli",

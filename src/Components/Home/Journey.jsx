@@ -18,7 +18,7 @@ export default function Journey(){
                     <div className='journey-arrow'><FaArrowRight /></div>
                     <div className='journey-card'>
                         <img src='/images/journey3.png' alt='Journey Step 3' />
-                        <div className='journey-text'>Earn ₹2 Cr Working from Anywhere</div>
+                        <div className='journey-text'>Earn upto ₹2 Cr Working from Anywhere</div>
                     </div>
                 </div>
         </div>

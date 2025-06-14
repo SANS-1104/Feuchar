@@ -13,8 +13,8 @@ import Testimonial2 from "./Testimonial2";
 import DownloadForm from "./DownloadForm";
 
 const CourseDetailPage = () => {
-  const { id } = useParams();
-  const course = projects.find((c) => c.id.toString() === id);
+  const { urlTitle } = useParams();
+  const course = projects.find((c) => c.urlTitle === urlTitle);
 
   const [showForm, setShowForm] = useState(false);
 

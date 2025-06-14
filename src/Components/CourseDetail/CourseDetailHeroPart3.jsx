@@ -70,10 +70,15 @@ export default function CourseDetailHeroPart3({course}) {
                         <div className="t10"> Materials Included </div>
                         <div className="t11">
                             <ul>
-                                <li>Get enrolled</li>
-                                <li>Take classes | Submit assignments | Interact with mentor</li>
-                                <li>Complete course | Get certified | Get onboarded</li>
-                                <li>Earn unlimited</li>
+                                <li>Live classes</li>
+                                <li>Recording of live classes</li>
+                                <li>Study material pdf</li>
+                                <li>Class notes</li>
+                                <li>Class ppt</li>
+                                <li>Relevant books pdf</li>
+                                <li>Online powerful softwares</li>
+                                <li>Access to our premium group of expert professionals</li>
+                                <li>Free Access to our earning platform (Worth ₹5000)</li>
                             </ul>
                         </div>
                     </div>

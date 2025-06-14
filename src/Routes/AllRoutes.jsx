@@ -87,10 +87,10 @@ const AllRoutes = () => {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/webinar" element={<WebinarPage />} />
-        <Route path="/webinar/:id" element={<WebinarDetailPage />} />
-        <Route path="/webinar-tickets/:id" element={<WebinarCheckoutPage />} />
+        <Route path="/webinar/:urlTitle" element={<WebinarDetailPage />} />
+        <Route path="/webinar-tickets/:urlTitle" element={<WebinarCheckoutPage />} />
         <Route path="/courses" element={<CoursePage />} />
-        <Route path="/course/:id" element={<CourseDetailPage />} />
+        <Route path="/course/:urlTitle" element={<CourseDetailPage />} />
         <Route path="/login" element={<AuthContainer />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/forgetPass" element={<ForgetPass />} />

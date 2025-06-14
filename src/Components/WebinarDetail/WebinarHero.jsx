@@ -36,7 +36,7 @@ export default function WebinarHero({webinar}) {
     const navigate = useNavigate();
 
     const handleNavigation = () => {
-        navigate(`/webinar-tickets/${webinar.id}`, { state: { webinar } });
+        navigate(`/webinar-tickets/${webinar.urlTitle}`, { state: { webinar } });
     };
 
 

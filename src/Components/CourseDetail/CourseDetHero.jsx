@@ -13,14 +13,21 @@ export default function CourseDetHero({course}) {
                 </div>
                 <div className="courseDet-HeroCont-layer2">
                     <div className="left">
-                        <div className="leftA">
+                        <div 
+                            className="leftA"  
+                            style={{
+                                backgroundImage: `url(${course.ytThumbnail})`,
+                                backgroundSize: 'contain',
+                                backgroundPosition: 'center',
+                                backgroundRepeat: 'no-repeat'
+                            }}
+                        >
                             <div className="img2">
                                 <a href={course.ytVideo} target='blank' rel="noopener noreferrer">
                                     <img src="/images/courseDet4.png" alt="YouTube" className="" />
                                 </a>
                             </div>
                         </div>
-                        
                     </div>
                     <div className="right">
                         <div className="rightA">

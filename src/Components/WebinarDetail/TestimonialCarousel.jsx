@@ -47,7 +47,7 @@ const TestimonialCarousel = ({ webinar }) => {
               <img src={testimonial.img} alt={testimonial.name} />
               <div className='card-TestDesc'>
                 <div>{testimonial.name}</div>
-                <small>{testimonial.role}</small>
+                {/* <small>{testimonial.role}</small> */}
               </div>
             </div>
           </div>

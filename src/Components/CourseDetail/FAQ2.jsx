@@ -22,7 +22,7 @@ export default function FAQ2({course}) {
               <ChipGroup2 onSelect={setSelectedCategory} />
             </div>
           </div>
-          <div className='right FAQright'>
+          <div className='right FAQright hideSmall'>
             <img src='/images/FAQLogo.png' alt='FAQ' />
           </div>
         </div>

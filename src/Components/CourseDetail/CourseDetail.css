@@ -233,7 +233,7 @@
 }
 
 
-.courseDet-HeroCont-outer .courseDet-HeroCont-inner .courseDet-HeroCont-layer2 .left .leftA::before{
+/* .courseDet-HeroCont-outer .courseDet-HeroCont-inner .courseDet-HeroCont-layer2 .left .leftA::before{
     content: "";
     background-image: url("../../../public/images/courseDet1.jpg");
     z-index: 1;
@@ -247,7 +247,7 @@
     left: 0;
     z-index: 1;
     border-radius: 20px;
-}
+} */
 
 
 

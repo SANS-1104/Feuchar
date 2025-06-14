@@ -129,7 +129,7 @@ function ContactForm2() {
           </label>
         </div>
         <button type="submit" className="submit-btn">Send Message</button>
-        <img src='/images/letter_send.png' alt='' className='letterSend' />
+        <img src='/images/letter_send.png' alt='' className='letterSend hideSmall' />
       </form>
     </div>
   );

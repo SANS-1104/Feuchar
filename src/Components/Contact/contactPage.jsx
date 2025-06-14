@@ -50,8 +50,12 @@ export default function ContactPage(){
                                 </div>
                             </div>
                         </div>
-                        <div className="leftcol2">
-                            <div className="l3"><div className="socialGlobe"><img src="/images/contactglobe.png" alt=""/></div></div>
+                        <div className="leftcol2 ">
+                            <div className="l3">
+                                <div className="socialGlobe hideSmall">
+                                    <img src="/images/contactglobe.png" alt=""/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="right">

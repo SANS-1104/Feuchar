@@ -48,7 +48,7 @@ export default function StudentSaying() {
             <div className='subHead'>
                 Discover the real success stories of students who transformed their careers after learning numerology with us. From side income to packages up to ₹2 Cr—your journey could be next.            </div>
           </div>
-          <div className='right'>
+          <div className='right hideSmall'>
             <img src='/images/studentDesign.png' alt='' />
           </div>
         </div>

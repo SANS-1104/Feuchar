@@ -829,6 +829,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
 .Outer-future .inner-future .l1 img{
@@ -846,6 +847,11 @@
     vertical-align: middle;
     color: white;
     margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .Outer-future .inner-future .l3{
@@ -907,8 +913,13 @@
     border: none;
 }
 @media only screen and (max-width: 1024px) {
+    .Outer-future {
+        padding: 4rem 4px;
+    }
     .Outer-future .inner-future .l2{
-        font-size: 50px;
+        font-size: 30px;
+        line-height: 40px;
+        margin: 0;
     }
     .Outer-future .inner-future .l3 .avatarImg img{
         height: 30px;
@@ -925,7 +936,7 @@
     .Outer-future .inner-future .l4 button.explore{
         font-size: 14px;
         padding: 0.8rem;
-        margin-bottom: 1rem;
+        /* margin-bottom: 1rem; */
     }
     .Outer-future .inner-future .l4 button.register{
         font-size: 14px;
@@ -1332,7 +1343,7 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-@media (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
     .outerStudentSay .innerStudentSay{
         width: 100%;
         margin: 1rem;
@@ -1375,3 +1386,8 @@
     font-size: 15px !important;
 }
 
+@media only screen and (max-width: 1024px) {
+    .HomeTestimonialCard-outer{
+        height: fit-content !important;
+    }
+}

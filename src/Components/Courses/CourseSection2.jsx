@@ -10,8 +10,8 @@ const CourseSection2 = () => {
   const itemsPerPage = 4;
 
   const navigate = useNavigate();
-  const handleCardClick = (id) => {
-    navigate(`/course/${id}`);
+  const handleCardClick = (urlTitle) => {
+    navigate(`/course/${urlTitle}`);
   };
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const CourseSection2 = () => {
     <div className="app-container">
       <div className="grid-container">
         {currentItems.map((project) => (
-          <div key={project.id} onClick={() => handleCardClick(project.id)} style={{ cursor: "pointer" }}>
+          <div key={project.id} onClick={() => handleCardClick(project.urlTitle)} style={{ cursor: "pointer" }}>
           <CourseCard
             key={project.id}
             title={project.title}

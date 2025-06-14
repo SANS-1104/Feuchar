@@ -7,7 +7,10 @@ export default function Future(){
         <div className='Outer-future out-max-wdh'>
             <div className='inner-future max-wdh'>
                 <div className='l1'><img src='/images/icon.png' alt=''/></div>
-                <div className='l2'>Built for the future. <br></br>Available today.</div>
+                <div className='l2'>
+                    <div className="a">Built for the future</div>
+                    <div className="b">&nbsp;Available today.</div>
+                </div>
                 <div className='l3'>
                    <div className='avatarImg'><img src='/images/avatar.png' alt=''/></div>
                    <div className='content'><p>More than 6k people trust us</p></div>

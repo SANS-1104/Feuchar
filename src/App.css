@@ -116,3 +116,9 @@
     height: fit-content !important;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .hideSmall{
+    display: none;
+  }
+}

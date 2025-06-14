@@ -21,7 +21,7 @@ export default function FAQ() {
             <div className='subHead'>Ease into the world of Feuchar with clarity. Our FAQs cover queries of everyone.</div>
             <div className='chips'><ChipGroup onSelect={setSelectedCategory} /></div>
           </div>
-          <div className='right FAQright'>
+          <div className='right FAQright hideSmall'>
             <img src='/images/FAQLogo.png' alt='' />
           </div>
         </div>

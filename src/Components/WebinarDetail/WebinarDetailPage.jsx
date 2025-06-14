@@ -12,8 +12,9 @@ import WebinarSeats from './WebinarSeats';
 import { webinarData } from '../../data/webinarData';
 
 export default function WebinarDetailPage() {
-    const { id } = useParams();
-    const webinar = webinarData.find((c) => c.id.toString() === id);
+    // const { id } = useParams();
+    const {urlTitle} = useParams();
+    const webinar = webinarData.find((c) => c.urlTitle === urlTitle);
     return (
         <div className="webinarPage max-wdh">
             <Helmet>
